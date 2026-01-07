@@ -16,7 +16,11 @@
       "linter": {
         "rules": {
           "correctness": {
+            "noUnusedVariables": "off",
             "noUnusedImports": "off"
+          },
+          "style": {
+            "useConst": "off"
           }
         }
       }
