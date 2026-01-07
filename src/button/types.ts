@@ -10,8 +10,8 @@ export interface BaseButtonProps extends HTMLButtonAttributes {
   children: Snippet;
 }
 
-export interface ButtonProps extends Omit<BaseButtonProps, "type"> {
-  type?: ColorType;
+export interface ButtonProps extends BaseButtonProps {
+  color?: ColorType;
   icon?: Component;
   iconPosition?: "left" | "right";
 }

@@ -1,6 +1,12 @@
 <script lang="ts">
     import { Heart } from "@lucide/svelte";
-    import {BaseButton, GhostButton, OutlineButton, SolidButton, TextButton} from "../src/button";
+    import {
+        BaseButton,
+        GhostButton,
+        OutlineButton,
+        SolidButton,
+        TextButton,
+    } from "../src/button";
     import type { ColorType } from "../src/types";
 
     const colors: ColorType[] = ["default", "primary", "warning", "danger"];
@@ -36,32 +42,56 @@
 
     <div class="flex flex-col gap-4 items-center">
         <div class="flex gap-4">
-            {#each colors as type}
-                <SolidButton {type} {loading} {disabled} icon={withIcon ? Heart : null} {iconPosition}>
+            {#each colors as color}
+                <SolidButton
+                    {color}
+                    {loading}
+                    {disabled}
+                    icon={withIcon ? Heart : null}
+                    {iconPosition}
+                >
                     Solid Button
                 </SolidButton>
             {/each}
         </div>
 
         <div class="flex gap-4">
-            {#each colors as type}
-                <OutlineButton {type} {loading} {disabled} icon={withIcon ? Heart : null} {iconPosition}>
+            {#each colors as color}
+                <OutlineButton
+                    {color}
+                    {loading}
+                    {disabled}
+                    icon={withIcon ? Heart : null}
+                    {iconPosition}
+                >
                     Outline Button
                 </OutlineButton>
             {/each}
         </div>
 
         <div class="flex gap-4">
-            {#each colors as type}
-                <GhostButton {type} {loading} {disabled} icon={withIcon ? Heart : null} {iconPosition}>
+            {#each colors as color}
+                <GhostButton
+                    {color}
+                    {loading}
+                    {disabled}
+                    icon={withIcon ? Heart : null}
+                    {iconPosition}
+                >
                     Ghost Button
                 </GhostButton>
             {/each}
         </div>
 
         <div class="flex gap-4">
-            {#each colors as type}
-                <TextButton {type} {loading} {disabled} icon={withIcon ? Heart : null} {iconPosition}>
+            {#each colors as color}
+                <TextButton
+                    {color}
+                    {loading}
+                    {disabled}
+                    icon={withIcon ? Heart : null}
+                    {iconPosition}
+                >
                     Text Button
                 </TextButton>
             {/each}
