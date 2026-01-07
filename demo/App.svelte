@@ -12,7 +12,7 @@
 </script>
 
 <div class="grid place-content-center gap-8 h-screen dark:bg-gray-950">
-    <div class="flex gap-4 justify-center">
+    <div class="flex gap-4 justify-center text-gray-950 dark:text-gray-50">
         <div class="flex gap-2">
             <p>Loading</p>
             <input type="checkbox" bind:checked={loading} />
