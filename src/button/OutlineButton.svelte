@@ -19,7 +19,7 @@
 <BaseButton className={
   clsx(
     className,
-    "flex gap-1.5 items-center border rounded-md shadow px-2 py-1.5 transition-all",
+    "flex gap-1.5 items-center border-2 rounded-md shadow px-2 py-1.5 transition-all",
     {
       "active:scale-95 hover:opacity-90 hover:shadow-md": !disabled,
       "opacity-70": disabled,

@@ -21,7 +21,7 @@
     className,
     "flex gap-1.5 items-center px-2 py-1.5 transition-all",
     {
-      "active:scale-95 hover:opacity-90 hover:underline underline-offset-3": !disabled,
+      "active:scale-95 hover:opacity-90 hover:underline decoration-2 underline-offset-3": !disabled,
       "opacity-70": disabled,
     },
     {
