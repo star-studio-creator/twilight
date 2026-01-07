@@ -1,23 +1,25 @@
 <script lang="ts">
     import { clsx } from "clsx";
-    import type { Snippet } from "svelte";
+    import type { Component, Snippet } from "svelte";
     import BaseButton from "./BaseButton.svelte";
 
     interface Props {
       className?: string,
       type?: "default" | "primary" | "warning" | "danger"
       onClick?: () => void,
+      icon?: Component,
+      iconPosition?: "left" | "right"
       disabled?: boolean,
       children: Snippet
     }
 
-    const {className, type = "default", onClick, disabled, children, ...props}: Props = $props();
+    const {className, type = "default", onClick, icon, iconPosition = "left", disabled, children, ...props}: Props = $props();
 </script>
 
 <BaseButton className={
   clsx(
     className,
-    "border rounded-md shadow px-2 py-1.5 transition-all dark:text-gray-50",
+    "flex gap-1.5 items-center border rounded-md shadow px-2 py-1.5 transition-all dark:text-gray-50",
     {
       "active:scale-95 hover:opacity-90 hover:shadow-md": !disabled,
       "opacity-70": disabled,
@@ -36,5 +38,15 @@
     },
   )
 } {onClick} {disabled} {...props}>
-  {@render children()}
+    {@const Icon = icon}
+  
+    {#if iconPosition === "left"}
+        <Icon size={18} />
+    {/if}
+  
+    {@render children()}
+  
+    {#if iconPosition === "right"}
+        <Icon size={18} />
+    {/if}
 </BaseButton>
