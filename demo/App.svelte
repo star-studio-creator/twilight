@@ -1,7 +1,14 @@
 <script lang="ts">
-    import { HelloWorld } from "../src/index";
+    import {BaseButton, GhostButton, IconButton, OutlineButton, SolidButton, TextButton} from "../src/button";
 </script>
 
 <div class="grid place-content-center h-screen">
-    <HelloWorld />
+    <div class="flex flex-col gap-4">
+        <SolidButton />
+        <OutlineButton />
+        <GhostButton />
+        <TextButton />
+        <IconButton />
+        <BaseButton />
+    </div>
 </div>
