@@ -1,62 +1,72 @@
 <script lang="ts">
     import { Heart } from "@lucide/svelte";
     import {BaseButton, GhostButton, OutlineButton, SolidButton, TextButton} from "../src/button";
+
+    // biome-ignore lint/suspicious/noExplicitAny: 避免类型报错
+    const types: any = ["default", "primary", "warning", "danger"];
+
+    let loading = $state(false);
+    let disabled = $state(false);
+    let withIcon = $state(false);
+    let iconPosition: "left" | "right" = $state("left");
 </script>
 
-<div class="grid place-content-center h-screen dark:bg-gray-950">
+<div class="grid place-content-center gap-8 h-screen dark:bg-gray-950">
+    <div class="flex gap-4 justify-center">
+        <div class="flex gap-2">
+            <p>Loading</p>
+            <input type="checkbox" bind:checked={loading} />
+        </div>
+        <div class="flex gap-2">
+            <p>Disabled</p>
+            <input type="checkbox" bind:checked={disabled} />
+        </div>
+        <div class="flex gap-2">
+            <p>With Icon</p>
+            <input type="checkbox" bind:checked={withIcon} />
+        </div>
+        <div class="flex gap-2">
+            <p>Icon Position</p>
+            <select bind:value={iconPosition}>
+                <option value="left">Left</option>
+                <option value="right">Right</option>
+            </select>
+        </div>
+    </div>
+
     <div class="flex flex-col gap-4 items-center">
         <div class="flex gap-4">
-            <SolidButton>Solid Button</SolidButton>
-            <SolidButton type="primary">Solid Button</SolidButton>
-            <SolidButton type="warning" icon={Heart}>Solid Button</SolidButton>
-            <SolidButton type="danger" icon={Heart} iconPosition="right">Solid Button</SolidButton>
-        </div>
-        <div class="flex gap-4">
-            <SolidButton disabled>Solid Button</SolidButton>
-            <SolidButton type="primary" disabled>Solid Button</SolidButton>
-            <SolidButton type="warning" icon={Heart} disabled>Solid Button</SolidButton>
-            <SolidButton type="danger" iconPosition="right" disabled>Solid Button</SolidButton>
+            {#each types as type}
+                <SolidButton {type} {loading} {disabled} icon={withIcon ? Heart : null} {iconPosition}>
+                    Solid Button
+                </SolidButton>
+            {/each}
         </div>
 
         <div class="flex gap-4">
-            <OutlineButton>Outline Button</OutlineButton>
-            <OutlineButton type="primary">Outline Button</OutlineButton>
-            <OutlineButton type="warning" icon={Heart}>Outline Button</OutlineButton>
-            <OutlineButton type="danger" icon={Heart} iconPosition="right">Outline Button</OutlineButton>
-        </div>
-        <div class="flex gap-4">
-            <OutlineButton disabled>Outline Button</OutlineButton>
-            <OutlineButton type="primary" disabled>Outline Button</OutlineButton>
-            <OutlineButton type="warning" icon={Heart} disabled>Outline Button</OutlineButton>
-            <OutlineButton type="danger" icon={Heart} iconPosition="right" disabled>Outline Button</OutlineButton>
+            {#each types as type}
+                <OutlineButton {type} {loading} {disabled} icon={withIcon ? Heart : null} {iconPosition}>
+                    Outline Button
+                </OutlineButton>
+            {/each}
         </div>
 
         <div class="flex gap-4">
-            <GhostButton>Ghost Button</GhostButton>
-            <GhostButton type="primary">Ghost Button</GhostButton>
-            <GhostButton type="warning" icon={Heart}>Ghost Button</GhostButton>
-            <GhostButton type="danger" icon={Heart} iconPosition="right">Ghost Button</GhostButton>
-        </div>
-        <div class="flex gap-4">
-            <GhostButton disabled>Ghost Button</GhostButton>
-            <GhostButton type="primary" disabled>Ghost Button</GhostButton>
-            <GhostButton type="warning" icon={Heart} disabled>Ghost Button</GhostButton>
-            <GhostButton type="danger" icon={Heart} iconPosition="right" disabled>Ghost Button</GhostButton>
+            {#each types as type}
+                <GhostButton {type} {loading} {disabled} icon={withIcon ? Heart : null} {iconPosition}>
+                    Ghost Button
+                </GhostButton>
+            {/each}
         </div>
 
         <div class="flex gap-4">
-            <TextButton>Text Button</TextButton>
-            <TextButton type="primary">Text Button</TextButton>
-            <TextButton type="warning" icon={Heart}>Text Button</TextButton>
-            <TextButton type="danger" icon={Heart} iconPosition="right">Text Button</TextButton>
-        </div>
-        <div class="flex gap-4">
-            <TextButton disabled>Text Button</TextButton>
-            <TextButton type="primary" disabled>Text Button</TextButton>
-            <TextButton type="warning" icon={Heart} disabled>Text Button</TextButton>
-            <TextButton type="danger" icon={Heart} iconPosition="right" disabled>Text Button</TextButton>
+            {#each types as type}
+                <TextButton {type} {loading} {disabled} icon={withIcon ? Heart : null} {iconPosition}>
+                    Text Button
+                </TextButton>
+            {/each}
         </div>
 
-        <BaseButton>Base Button</BaseButton>
+        <BaseButton {loading} {disabled}>Base Button</BaseButton>
     </div>
 </div>

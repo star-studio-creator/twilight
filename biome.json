@@ -18,6 +18,9 @@
           "correctness": {
             "noUnusedVariables": "off",
             "noUnusedImports": "off"
+          },
+          "style": {
+            "useConst": "off"
           }
         }
       }
