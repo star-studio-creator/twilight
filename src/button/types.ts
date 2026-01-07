@@ -1,6 +1,7 @@
 import type { Component, Snippet } from "svelte";
+import type { HTMLButtonAttributes } from "svelte/elements";
 
-export interface BaseButtonProps {
+export interface BaseButtonProps extends HTMLButtonAttributes {
   className?: string;
   onClick?: () => void;
   loading?: boolean;
@@ -8,7 +9,7 @@ export interface BaseButtonProps {
   children: Snippet;
 }
 
-export interface ButtonProps extends BaseButtonProps {
+export interface ButtonProps extends Omit<BaseButtonProps, "type"> {
   type?: "default" | "primary" | "warning" | "danger";
   icon?: Component;
   iconPosition?: "left" | "right";
