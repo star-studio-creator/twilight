@@ -1,19 +1,20 @@
 <script lang="ts">
+    import { LoaderCircle } from "@lucide/svelte";
     import { clsx } from "clsx";
-    import type { Component, Snippet } from "svelte";
     import BaseButton from "./BaseButton.svelte";
+    import type { ButtonProps } from "./types"
 
-    interface Props {
-      className?: string,
-      type?: "default" | "primary" | "warning" | "danger"
-      onClick?: () => void,
-      icon?: Component,
-      iconPosition?: "left" | "right"
-      disabled?: boolean,
-      children: Snippet
-    }
-
-    const {className, type = "default", onClick, icon, iconPosition = "left", disabled, children, ...props}: Props = $props();
+    const {
+      className = "",
+      type = "default",
+      onClick = () => {},
+      icon = null,
+      iconPosition = "left",
+      loading = false,
+      disabled = false,
+      children,
+      ...props
+    }: ButtonProps = $props();
 </script>
 
 <BaseButton className={
@@ -41,12 +42,20 @@
     {@const Icon = icon}
 
     {#if iconPosition === "left"}
-        <Icon size={18} />
+        {#if loading}
+          <LoaderCircle class="animate-spin" size={18} />
+        {:else}
+          <Icon size={18} />
+        {/if}
     {/if}
 
     {@render children()}
 
     {#if iconPosition === "right"}
-        <Icon size={18} />
+        {#if loading}
+          <LoaderCircle class="animate-spin" size={18} />
+        {:else}
+          <Icon size={18} />
+        {/if}
     {/if}
 </BaseButton>
