@@ -4,6 +4,9 @@
     "enabled": true,
     "clientKind": "git"
   },
+  "files": {
+    "includes": ["**/*.*", "!demo/index.css"]
+  },
   "formatter": {
     "indentStyle": "space"
   },
