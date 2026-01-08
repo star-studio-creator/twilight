@@ -1,140 +1,20 @@
 <script lang="ts">
-    import { Check, Heart, X } from "@lucide/svelte";
-    import {
-        BaseButton,
-        GhostButton,
-        OutlineButton,
-        SolidButton,
-        TextButton,
-    } from "../src/button";
-    import { Switch } from "../src/switch";
-    import type { ColorType } from "../src/types";
-
-    const colors: ColorType[] = ["default", "primary", "warning", "danger"];
-
-    let loading = $state(false);
-    let disabled = $state(false);
-    let withIcon = $state(false);
-    let iconPosition: "left" | "right" = $state("left");
-
-    let switchSelected = $state(false);
+    import { ChevronLeft } from "@lucide/svelte";
+    import { Router } from "sv-router";
+    import { GhostButton } from "../src/button";
+    import { isActive, navigate } from "./router";
 </script>
 
 <div
-    class="grid place-content-center gap-8 h-screen dark:bg-gray-950 text-gray-950 dark:text-gray-50"
+    class="flex flex-col gap-8 text-gray-950 dark:text-gray-50 max-w-[60vw] mx-auto my-8"
 >
-    <div class="flex gap-4 justify-center">
-        <label class="flex gap-2">
-            Loading
-            <Switch bind:selected={loading} />
-        </label>
-        <label class="flex gap-2">
-            Disabled
-            <Switch bind:selected={disabled} />
-        </label>
-        <label class="flex gap-2">
-            With Icon
-            <Switch bind:selected={withIcon} />
-        </label>
-        <div class="flex gap-2">
-            <p>Icon Position</p>
-            <select bind:value={iconPosition}>
-                <option value="left">Left</option>
-                <option value="right">Right</option>
-            </select>
-        </div>
-    </div>
+    {#if isActive("/")}
+        <h1 class="text-center text-2xl font-bold">暮光 / Twilight</h1>
+    {:else}
+        <GhostButton onClick={() => navigate("/")} icon={ChevronLeft}>
+            Back
+        </GhostButton>
+    {/if}
 
-    <div class="flex flex-col gap-4 items-center">
-        <div class="flex gap-4">
-            {#each colors as color}
-                <SolidButton
-                    {color}
-                    {loading}
-                    {disabled}
-                    icon={withIcon ? Heart : null}
-                    {iconPosition}
-                >
-                    Solid Button
-                </SolidButton>
-            {/each}
-        </div>
-
-        <div class="flex gap-4">
-            {#each colors as color}
-                <OutlineButton
-                    {color}
-                    {loading}
-                    {disabled}
-                    icon={withIcon ? Heart : null}
-                    {iconPosition}
-                >
-                    Outline Button
-                </OutlineButton>
-            {/each}
-        </div>
-
-        <div class="flex gap-4">
-            {#each colors as color}
-                <GhostButton
-                    {color}
-                    {loading}
-                    {disabled}
-                    icon={withIcon ? Heart : null}
-                    {iconPosition}
-                >
-                    Ghost Button
-                </GhostButton>
-            {/each}
-        </div>
-
-        <div class="flex gap-4">
-            {#each colors as color}
-                <TextButton
-                    {color}
-                    {loading}
-                    {disabled}
-                    icon={withIcon ? Heart : null}
-                    {iconPosition}
-                >
-                    Text Button
-                </TextButton>
-            {/each}
-        </div>
-
-        <BaseButton {loading} {disabled}>Base Button</BaseButton>
-
-        <div class="flex gap-4">
-            <label class="flex gap-2">
-                Default
-                <Switch bind:selected={switchSelected} {disabled} />
-            </label>
-            <label class="flex gap-2">
-                Primary
-                <Switch
-                    color="primary"
-                    bind:selected={switchSelected}
-                    icon={switchSelected ? Check : X}
-                    {disabled}
-                />
-            </label>
-            <label class="flex gap-2">
-                Warning
-                <Switch
-                    color="warning"
-                    bind:selected={switchSelected}
-                    {disabled}
-                />
-            </label>
-            <label class="flex gap-2">
-                Danger
-                <Switch
-                    color="danger"
-                    bind:selected={switchSelected}
-                    {disabled}
-                />
-            </label>
-        </div>
-        <p>Selected: {switchSelected ? "Yes" : "No"}</p>
-    </div>
+    <Router />
 </div>
