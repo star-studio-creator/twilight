@@ -3,6 +3,6 @@
     "target": "ES2024",
     "moduleResolution": "bundler",
     "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-  },
+    "isolatedModules": true
+  }
 }
