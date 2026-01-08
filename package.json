@@ -23,12 +23,12 @@
   },
   "exports": {
     "./button": {
-      "import": "./dist/button/index.js",
-      "types": "./dist/button/index.d.ts"
+      "import": "./dist/button.js",
+      "types": "./dist/button.d.ts"
     },
     "./switch": {
-      "import": "./dist/switch/index.js",
-      "types": "./dist/switch/index.d.ts"
+      "import": "./dist/switch.js",
+      "types": "./dist/switch.d.ts"
     }
   },
   "devDependencies": {

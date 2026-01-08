@@ -14,8 +14,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: {
-        button: "./src/button/index.ts",
-        switch: "./src/switch/index.ts",
+        button: "./src/button.ts",
+        switch: "./src/switch.ts",
       },
       formats: ["es"],
     },
