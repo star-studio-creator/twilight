@@ -56,7 +56,7 @@
     >
         {#if icon}
             {@const Icon = icon}
-            <Icon size={16} />
+            <Icon size={14} />
         {/if}
     </div>
 </button>

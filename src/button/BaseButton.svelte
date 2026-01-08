@@ -14,7 +14,7 @@
 
 <button
     type="button"
-    class={clsx(className, {
+    class={clsx(className, "w-min text-nowrap", {
         "cursor-pointer": !loading && !disabled,
         // 禁用优先级比加载状态更高
         "cursor-wait": loading && !disabled,
