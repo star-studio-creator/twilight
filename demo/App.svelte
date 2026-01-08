@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Heart } from "@lucide/svelte";
+    import { Check, Heart, X } from "@lucide/svelte";
     import {
         BaseButton,
         GhostButton,
@@ -7,6 +7,7 @@
         SolidButton,
         TextButton,
     } from "../src/button";
+    import { Switch } from "../src/switch";
     import type { ColorType } from "../src/types";
 
     const colors: ColorType[] = ["default", "primary", "warning", "danger"];
@@ -15,22 +16,26 @@
     let disabled = $state(false);
     let withIcon = $state(false);
     let iconPosition: "left" | "right" = $state("left");
+
+    let switchSelected = $state(false);
 </script>
 
-<div class="grid place-content-center gap-8 h-screen dark:bg-gray-950">
-    <div class="flex gap-4 justify-center text-gray-950 dark:text-gray-50">
-        <div class="flex gap-2">
-            <p>Loading</p>
-            <input type="checkbox" bind:checked={loading} />
-        </div>
-        <div class="flex gap-2">
-            <p>Disabled</p>
-            <input type="checkbox" bind:checked={disabled} />
-        </div>
-        <div class="flex gap-2">
-            <p>With Icon</p>
-            <input type="checkbox" bind:checked={withIcon} />
-        </div>
+<div
+    class="grid place-content-center gap-8 h-screen dark:bg-gray-950 text-gray-950 dark:text-gray-50"
+>
+    <div class="flex gap-4 justify-center">
+        <label class="flex gap-2">
+            Loading
+            <Switch bind:selected={loading} />
+        </label>
+        <label class="flex gap-2">
+            Disabled
+            <Switch bind:selected={disabled} />
+        </label>
+        <label class="flex gap-2">
+            With Icon
+            <Switch bind:selected={withIcon} />
+        </label>
         <div class="flex gap-2">
             <p>Icon Position</p>
             <select bind:value={iconPosition}>
@@ -98,5 +103,38 @@
         </div>
 
         <BaseButton {loading} {disabled}>Base Button</BaseButton>
+
+        <div class="flex gap-4">
+            <label class="flex gap-2">
+                Default
+                <Switch bind:selected={switchSelected} {disabled} />
+            </label>
+            <label class="flex gap-2">
+                Primary
+                <Switch
+                    color="primary"
+                    bind:selected={switchSelected}
+                    icon={switchSelected ? Check : X}
+                    {disabled}
+                />
+            </label>
+            <label class="flex gap-2">
+                Warning
+                <Switch
+                    color="warning"
+                    bind:selected={switchSelected}
+                    {disabled}
+                />
+            </label>
+            <label class="flex gap-2">
+                Danger
+                <Switch
+                    color="danger"
+                    bind:selected={switchSelected}
+                    {disabled}
+                />
+            </label>
+        </div>
+        <p>Selected: {switchSelected ? "Yes" : "No"}</p>
     </div>
 </div>
