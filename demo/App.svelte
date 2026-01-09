@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { ChevronLeft } from "@lucide/svelte";
+    import ChevronLeft from "@lucide/svelte/icons/chevron-left";
     import { Router } from "sv-router";
     import { GhostButton } from "../src/button";
     import { isActive, navigate } from "./router";
