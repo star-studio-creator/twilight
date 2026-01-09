@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Heart } from "@lucide/svelte";
+    import Heart from "@lucide/svelte/icons/heart";
     import { Switch } from "../../../src/switch";
     import type { ColorType } from "../../../src/types";
 

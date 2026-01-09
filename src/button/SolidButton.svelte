@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { LoaderCircle } from "@lucide/svelte";
+    import LoaderCircle from "@lucide/svelte/icons/loader-circle";
     import { clsx } from "clsx";
     import BaseButton from "./BaseButton.svelte";
     import type { ButtonProps } from "./types";
