@@ -15,7 +15,7 @@
         className,
         "flex items-center gap-1 px-2 border rounded-full",
         {
-            "text-gray-950 dark:text-gray-200": color === "default",
+            "text-neutral-950 dark:text-neutral-200": color === "default",
             "text-green-600 dark:text-green-700": color === "success",
             "text-blue-600 dark:text-blue-700": color === "primary",
             "text-orange-500 dark:text-orange-600": color === "warning",

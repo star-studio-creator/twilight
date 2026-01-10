@@ -25,7 +25,7 @@
             "opacity-70": disabled,
         },
         {
-            "text-gray-950 dark:text-gray-50": color === "default",
+            "text-neutral-950 dark:text-neutral-50": color === "default",
             "text-blue-600 dark:text-blue-700": color === "primary",
             "text-orange-500 dark:text-orange-600": color === "warning",
             "text-red-600 dark:text-red-700": color === "danger",

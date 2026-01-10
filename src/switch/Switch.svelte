@@ -28,9 +28,9 @@
             "cursor-not-allowed opacity-50": disabled,
         },
         !selected &&
-            "bg-gray-300 dark:bg-gray-700 shadow-gray-300/30 dark:shadow-gray-700/30",
+            "bg-neutral-300 dark:bg-neutral-700 shadow-neutral-300/30 dark:shadow-neutral-700/30",
         selected && {
-            "bg-gray-950 dark:bg-gray-500 shadow-gray-950/30 dark:shadow-gray-500/30":
+            "bg-neutral-950 dark:bg-neutral-500 shadow-neutral-950/30 dark:shadow-neutral-500/30":
                 color === "default",
             "bg-blue-600 dark:bg-blue-700 shadow-blue-600/30 dark:shadow-blue-700/30":
                 color === "primary",
@@ -49,7 +49,7 @@
 >
     <div
         class={[
-            "grid place-content-center bg-gray-50 text-gray-950 size-5 rounded-full transition-transform pointer-events-none",
+            "grid place-content-center bg-neutral-50 text-neutral-950 size-5 rounded-full transition-transform pointer-events-none",
             selected && "translate-x-4",
         ]}
     >

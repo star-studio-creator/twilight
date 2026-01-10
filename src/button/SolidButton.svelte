@@ -19,14 +19,14 @@
 <BaseButton
     class={[
         className,
-        "flex gap-1.5 items-center rounded-md shadow px-2 py-1.5 transition-all text-gray-50",
+        "flex gap-1.5 items-center rounded-md shadow px-2 py-1.5 transition-all text-neutral-50",
         {
             "active:scale-95 hover:opacity-90 hover:shadow-md":
                 !loading && !disabled,
             "opacity-70": loading || disabled,
         },
         {
-            "bg-gray-950 shadow-gray-950/30 dark:text-gray-950 dark:bg-gray-50 dark:shadow-gray-50/30":
+            "bg-neutral-950 shadow-neutral-950/30 dark:text-neutral-950 dark:bg-neutral-50 dark:shadow-neutral-50/30":
                 color === "default",
             "bg-blue-600 shadow-blue-600/30 dark:bg-blue-700 dark:shadow-blue-700/30":
                 color === "primary",
