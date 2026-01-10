@@ -3,6 +3,7 @@
     import { navigate } from "../router";
 
     const routes: Record<string, string> = {
+        Badge: "/components/badge",
         Button: "/components/button",
         Switch: "/components/switch",
     };

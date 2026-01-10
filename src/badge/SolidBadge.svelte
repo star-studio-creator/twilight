@@ -1,0 +1,38 @@
+<script lang="ts">
+    import type { BadgeProps } from "./types";
+
+    const {
+        class: className,
+        color = "default",
+        icon = null,
+        iconPosition = "left",
+        children,
+    }: BadgeProps = $props();
+</script>
+
+<span
+    class={[
+        className,
+        "flex items-center gap-1 px-2 rounded-full text-gray-50",
+        {
+            "bg-gray-950 dark:text-gray-950 dark:bg-gray-50":
+                color === "default",
+            "bg-green-600 dark:bg-green-700": color === "success",
+            "bg-blue-600 dark:bg-blue-700": color === "primary",
+            "bg-orange-500 dark:bg-orange-600": color === "warning",
+            "bg-red-600 dark:bg-red-700": color === "danger",
+        },
+    ]}
+>
+    {#if iconPosition === "left"}
+        {@const Icon = icon}
+        <Icon size={16} />
+    {/if}
+
+    {@render children()}
+
+    {#if iconPosition === "right"}
+        {@const Icon = icon}
+        <Icon size={16} />
+    {/if}
+</span>
