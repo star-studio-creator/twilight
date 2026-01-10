@@ -1,6 +1,5 @@
 <script lang="ts">
     import LoaderCircle from "@lucide/svelte/icons/loader-circle";
-    import { clsx } from "clsx";
     import BaseButton from "./BaseButton.svelte";
     import type { ButtonProps } from "./types";
 
@@ -18,7 +17,7 @@
 </script>
 
 <BaseButton
-    class={clsx(
+    class={[
         className,
         "flex gap-1.5 items-center rounded-md px-2 py-1.5 transition-all",
         {
@@ -38,7 +37,7 @@
                 color === "warning" ||
                 color === "danger",
         },
-    )}
+    ]}
     {onClick}
     {disabled}
     {...props}
