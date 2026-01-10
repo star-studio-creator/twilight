@@ -3,7 +3,7 @@
     import type { BaseButtonProps } from "./types";
 
     const {
-        className = "",
+        class: className = "",
         onClick = () => {},
         loading = false,
         disabled = false,

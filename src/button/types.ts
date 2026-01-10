@@ -3,7 +3,7 @@ import type { HTMLButtonAttributes } from "svelte/elements";
 import type { ColorType } from "../types";
 
 export interface BaseButtonProps extends HTMLButtonAttributes {
-  className?: string;
+  class?: string;
   onClick?: () => void;
   loading?: boolean;
   disabled?: boolean;
