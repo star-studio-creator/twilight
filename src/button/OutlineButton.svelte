@@ -5,7 +5,7 @@
     import type { ButtonProps } from "./types";
 
     const {
-        className = "",
+        class: className = "",
         color = "default",
         onClick = () => {},
         icon = null,
@@ -18,7 +18,7 @@
 </script>
 
 <BaseButton
-    className={clsx(
+    class={clsx(
         className,
         "flex gap-1.5 items-center border-2 border-current rounded-md shadow shadow-current/30 px-2 py-1.5 transition-all",
         {
