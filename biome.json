@@ -5,7 +5,7 @@
     "clientKind": "git"
   },
   "files": {
-    "includes": ["**/*.*", "!demo/index.css"]
+    "includes": ["**", "!demo/index.css"]
   },
   "formatter": {
     "indentStyle": "space"
