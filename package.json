@@ -43,7 +43,6 @@
   },
   "peerDependencies": {
     "@lucide/svelte": "^0.562.0",
-    "clsx": "^2.1.0",
     "svelte": "^5.46.0",
     "tailwindcss": "^4.1.0"
   }
