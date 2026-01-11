@@ -5,6 +5,7 @@
     const routes: Record<string, string> = {
         Badge: "/components/badge",
         Button: "/components/button",
+        Checkbox: "/components/checkbox",
         Switch: "/components/switch",
     };
 </script>
