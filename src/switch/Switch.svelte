@@ -1,27 +1,27 @@
 <script lang="ts">
-    import type { Component } from "svelte";
-    import type { ColorType } from "../types";
+import type { Component } from "svelte";
+import type { ColorType } from "../types";
 
-    interface Props {
-        color?: ColorType;
-        selected: boolean;
-        icon?: Component;
-        disabled?: boolean;
-    }
+interface Props {
+  color?: ColorType;
+  selected: boolean;
+  icon?: Component;
+  disabled?: boolean;
+}
 
-    let {
-        color = "default",
-        selected = $bindable(),
-        icon = null,
-        disabled = false,
-    }: Props = $props();
+let {
+  color = "default",
+  selected = $bindable(),
+  icon = null,
+  disabled = false,
+}: Props = $props();
 </script>
 
 <div class="flex items-center relative">
-    <input
-        type="checkbox"
-        role="switch"
-        class={[
+  <input
+    type="checkbox"
+    role="switch"
+    class={[
             "appearance-none w-10 h-6 rounded-full transition-all",
             {
                 "cursor-pointer active:scale-95 hover:opacity-90 hover:shadow-md":
@@ -41,20 +41,20 @@
                     color === "danger",
             },
         ]}
-        bind:checked={selected}
-        aria-checked={selected}
-        {disabled}
-    />
+    bind:checked={selected}
+    aria-checked={selected}
+    {disabled}
+  >
 
-    <div
-        class={[
+  <div
+    class={[
             "absolute ml-0.5 grid place-content-center bg-neutral-50 text-neutral-950 size-5 rounded-full transition-transform pointer-events-none",
             selected && "translate-x-4",
         ]}
-    >
-        {#if icon}
-            {@const Icon = icon}
-            <Icon size={14} />
-        {/if}
-    </div>
+  >
+    {#if icon}
+      {@const Icon = icon}
+      <Icon size={14} />
+    {/if}
+  </div>
 </div>

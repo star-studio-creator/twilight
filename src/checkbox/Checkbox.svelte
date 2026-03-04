@@ -1,27 +1,27 @@
 <script lang="ts">
-    import Check from "@lucide/svelte/icons/check";
-    import type { ClassValue, HTMLInputAttributes } from "svelte/elements";
-    import type { ColorType } from "../types";
+import Check from "@lucide/svelte/icons/check";
+import type { ClassValue, HTMLInputAttributes } from "svelte/elements";
+import type { ColorType } from "../types";
 
-    interface Props extends HTMLInputAttributes {
-        class?: ClassValue;
-        color?: ColorType;
-        checked: boolean;
-        disabled?: boolean;
-    }
+interface Props extends HTMLInputAttributes {
+  class?: ClassValue;
+  color?: ColorType;
+  checked: boolean;
+  disabled?: boolean;
+}
 
-    let {
-        class: className = "",
-        color = "default",
-        checked = $bindable(),
-        disabled = false,
-    }: Props = $props();
+let {
+  class: className = "",
+  color = "default",
+  checked = $bindable(),
+  disabled = false,
+}: Props = $props();
 </script>
 
 <div class="flex items-center relative">
-    <input
-        type="checkbox"
-        class={[
+  <input
+    type="checkbox"
+    class={[
             className,
             "appearance-none size-5 rounded-md shadow transition-all",
             {
@@ -42,15 +42,15 @@
                     color === "danger",
             },
         ]}
-        bind:checked
-        {disabled}
-    />
+    bind:checked
+    {disabled}
+  >
 
-    {#if checked}
-        <Check
-            class="absolute ml-0.5 mt-0.5 text-neutral-50"
-            size={16}
-            strokeWidth={3}
-        />
-    {/if}
+  {#if checked}
+    <Check
+      class="absolute ml-0.5 mt-0.5 text-neutral-50"
+      size={16}
+      strokeWidth={3}
+    />
+  {/if}
 </div>
