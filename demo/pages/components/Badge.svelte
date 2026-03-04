@@ -5,11 +5,11 @@
     import type { ColorType } from "../../../src/types";
 
     const colors: (ColorType | "success")[] = [
-        "default",
-        "success",
         "primary",
-        "warning",
+        "secondary",
         "danger",
+        "success",
+        "unstyled",
     ];
 
     let withIcon = $state(false);
