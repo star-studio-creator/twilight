@@ -3,7 +3,7 @@
     import { Switch } from "../../../src/switch";
     import type { ColorType } from "../../../src/types";
 
-    const colors: ColorType[] = ["default", "primary", "warning", "danger"];
+    const colors: ColorType[] = ["primary", "secondary", "danger"];
 
     let selected = $state(false);
 

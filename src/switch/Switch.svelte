@@ -10,7 +10,7 @@
     }
 
     let {
-        color = "default",
+        color = "primary",
         selected = $bindable(),
         icon = null,
         disabled = false,
@@ -31,12 +31,10 @@
             !selected &&
                 "bg-neutral-300 dark:bg-neutral-700 shadow-neutral-300/30 dark:shadow-neutral-700/30",
             selected && {
-                "bg-neutral-950 dark:bg-neutral-500 shadow-neutral-950/30 dark:shadow-neutral-500/30":
-                    color === "default",
                 "bg-blue-600 dark:bg-blue-700 shadow-blue-600/30 dark:shadow-blue-700/30":
                     color === "primary",
-                "bg-orange-500 dark:bg-orange-600 shadow-orange-500/30 dark:shadow-orange-600/30":
-                    color === "warning",
+                "bg-neutral-950 dark:bg-neutral-500 shadow-neutral-950/30 dark:shadow-neutral-500/30":
+                    color === "secondary",
                 "bg-red-600 dark:bg-red-700 shadow-red-600/30 dark:shadow-red-700/30":
                     color === "danger",
             },

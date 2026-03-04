@@ -11,7 +11,7 @@ export interface BaseButtonProps extends HTMLButtonAttributes {
 }
 
 export interface ButtonProps extends BaseButtonProps {
-  color?: ColorType;
+  color: ColorType;
   icon?: Component;
   iconPosition?: "left" | "right";
 }

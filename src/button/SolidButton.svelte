@@ -5,7 +5,7 @@
 
     const {
         class: className = "",
-        color = "default",
+        color = "primary",
         onClick = () => {},
         icon = null,
         iconPosition = "left",
@@ -26,12 +26,10 @@
             "opacity-70": loading || disabled,
         },
         {
-            "bg-neutral-950 shadow-neutral-950/30 dark:text-neutral-950 dark:bg-neutral-50 dark:shadow-neutral-50/30":
-                color === "default",
             "bg-blue-600 shadow-blue-600/30 dark:bg-blue-700 dark:shadow-blue-700/30":
                 color === "primary",
-            "bg-orange-500 shadow-orange-500/30 dark:bg-orange-600 dark:shadow-orange-600/30":
-                color === "warning",
+            "bg-neutral-950 shadow-neutral-950/30 dark:text-neutral-950 dark:bg-neutral-50 dark:shadow-neutral-50/30":
+                color === "secondary",
             "bg-red-600 shadow-red-600/30 dark:bg-red-700 dark:shadow-red-700/30":
                 color === "danger",
         },
