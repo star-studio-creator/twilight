@@ -42,6 +42,7 @@
             },
         ]}
         bind:checked={selected}
+        aria-checked={selected}
         {disabled}
     />
 
