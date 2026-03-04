@@ -4,6 +4,7 @@ import { OutlineBadge, SolidBadge } from "../../../src/badge";
 import Switch from "../../../src/switch/Switch.svelte";
 import type { ColorType } from "../../../src/types";
 
+<<<<<<< feat/update-biome
 const colors: (ColorType | "success")[] = [
   "primary",
   "secondary",
@@ -11,6 +12,15 @@ const colors: (ColorType | "success")[] = [
   "success",
   "unstyled",
 ];
+=======
+    const colors: (ColorType | "success")[] = [
+        "primary",
+        "secondary",
+        "danger",
+        "success",
+        "unstyled",
+    ];
+>>>>>>> main
 
 let withIcon = $state(false);
 let iconPosition: "left" | "right" = $state("left");

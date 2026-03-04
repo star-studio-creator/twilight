@@ -10,7 +10,11 @@ import {
 import { Switch } from "../../../src/switch";
 import type { ColorType } from "../../../src/types";
 
+<<<<<<< feat/update-biome
 const colors: ColorType[] = ["primary", "secondary", "danger", "unstyled"];
+=======
+    const colors: ColorType[] = ["primary", "secondary", "danger", "unstyled"];
+>>>>>>> main
 
 let loading = $state(false);
 let disabled = $state(false);

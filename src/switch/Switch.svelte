@@ -9,12 +9,21 @@ interface Props {
   disabled?: boolean;
 }
 
+<<<<<<< feat/update-biome
 let {
   color = "primary",
   selected = $bindable(),
   icon = null,
   disabled = false,
 }: Props = $props();
+=======
+    let {
+        color = "primary",
+        selected = $bindable(),
+        icon = null,
+        disabled = false,
+    }: Props = $props();
+>>>>>>> main
 </script>
 
 <div class="flex items-center relative">
