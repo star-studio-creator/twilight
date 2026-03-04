@@ -1,32 +1,34 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.3.11/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.4.5/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git"
   },
-  "files": {
-    "includes": ["**", "!demo/index.css"]
-  },
   "formatter": {
     "indentStyle": "space"
   },
-  "html": {
-    "experimentalFullSupportEnabled": true
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
   },
-  "overrides": [
-    {
-      "includes": ["**/*.svelte"],
-      "linter": {
-        "rules": {
-          "correctness": {
-            "noUnusedVariables": "off",
-            "noUnusedImports": "off"
-          },
-          "style": {
-            "useConst": "off"
-          }
-        }
+  "html": {
+    "experimentalFullSupportEnabled": true,
+    "formatter": {
+      "enabled": true
+    }
+  },
+  "linter": {
+    "rules": {
+      "complexity": {
+        "useLiteralKeys": "off"
+      },
+      "suspicious": {
+        "noExplicitAny": "off"
+      },
+      "style": {
+        "useTemplate": "off"
       }
     }
-  ]
+  }
 }
