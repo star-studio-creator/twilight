@@ -10,21 +10,12 @@ interface Props extends HTMLInputAttributes {
   disabled?: boolean;
 }
 
-<<<<<<< feat/update-biome
 let {
   class: className = "",
   color = "primary",
   checked = $bindable(),
   disabled = false,
 }: Props = $props();
-=======
-    let {
-        class: className = "",
-        color = "primary",
-        checked = $bindable(),
-        disabled = false,
-    }: Props = $props();
->>>>>>> main
 </script>
 
 <div class="flex items-center relative">
