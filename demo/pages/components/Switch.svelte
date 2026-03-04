@@ -3,7 +3,7 @@ import Heart from "@lucide/svelte/icons/heart";
 import { Switch } from "../../../src/switch";
 import type { ColorType } from "../../../src/types";
 
-const colors: ColorType[] = ["default", "primary", "warning", "danger"];
+const colors: ColorType[] = ["primary", "secondary", "danger", "unstyled"];
 
 let selected = $state(false);
 

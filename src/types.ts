@@ -1,1 +1,1 @@
-export type ColorType = "default" | "primary" | "warning" | "danger";
+export type ColorType = "primary" | "secondary" | "danger" | "unstyled";

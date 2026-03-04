@@ -10,7 +10,7 @@ import {
 import { Switch } from "../../../src/switch";
 import type { ColorType } from "../../../src/types";
 
-const colors: ColorType[] = ["default", "primary", "warning", "danger"];
+const colors: ColorType[] = ["primary", "secondary", "danger", "unstyled"];
 
 let loading = $state(false);
 let disabled = $state(false);
