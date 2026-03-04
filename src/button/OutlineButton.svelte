@@ -1,23 +1,23 @@
 <script lang="ts">
-    import LoaderCircle from "@lucide/svelte/icons/loader-circle";
-    import BaseButton from "./BaseButton.svelte";
-    import type { ButtonProps } from "./types";
+import LoaderCircle from "@lucide/svelte/icons/loader-circle";
+import BaseButton from "./BaseButton.svelte";
+import type { ButtonProps } from "./types";
 
-    const {
-        class: className = "",
-        color = "primary",
-        onClick = () => {},
-        icon = null,
-        iconPosition = "left",
-        loading = false,
-        disabled = false,
-        children,
-        ...props
-    }: ButtonProps = $props();
+const {
+  class: className = "",
+  color = "primary",
+  onClick = () => {},
+  icon = null,
+  iconPosition = "left",
+  loading = false,
+  disabled = false,
+  children,
+  ...props
+}: ButtonProps = $props();
 </script>
 
 <BaseButton
-    class={[
+  class={[
         className,
         "flex gap-1.5 items-center border-2 border-current rounded-md shadow shadow-current/30 px-2 py-1.5 transition-all",
         {
@@ -31,27 +31,27 @@
             "text-red-600 dark:text-red-700": color === "danger",
         },
     ]}
-    {onClick}
-    {disabled}
-    {...props}
+  {onClick}
+  {disabled}
+  {...props}
 >
-    {@const Icon = icon}
+  {@const Icon = icon}
 
-    {#if iconPosition === "left"}
-        {#if loading}
-            <LoaderCircle class="animate-spin" size={18} />
-        {:else}
-            <Icon size={18} />
-        {/if}
+  {#if iconPosition === "left"}
+    {#if loading}
+      <LoaderCircle class="animate-spin" size={18} />
+    {:else}
+      <Icon size={18} />
     {/if}
+  {/if}
 
-    {@render children()}
+  {@render children()}
 
-    {#if iconPosition === "right"}
-        {#if loading}
-            <LoaderCircle class="animate-spin" size={18} />
-        {:else}
-            <Icon size={18} />
-        {/if}
+  {#if iconPosition === "right"}
+    {#if loading}
+      <LoaderCircle class="animate-spin" size={18} />
+    {:else}
+      <Icon size={18} />
     {/if}
+  {/if}
 </BaseButton>

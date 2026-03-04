@@ -1,17 +1,17 @@
 <script lang="ts">
-    import type { BadgeProps } from "./types";
+import type { BadgeProps } from "./types";
 
-    const {
-        class: className,
-        color = "primary",
-        icon = null,
-        iconPosition = "left",
-        children,
-    }: BadgeProps = $props();
+const {
+  class: className,
+  color = "primary",
+  icon = null,
+  iconPosition = "left",
+  children,
+}: BadgeProps = $props();
 </script>
 
 <span
-    class={[
+  class={[
         className,
         "flex items-center gap-1 px-2 rounded-full",
         {
@@ -24,15 +24,15 @@
         },
     ]}
 >
-    {#if iconPosition === "left"}
-        {@const Icon = icon}
-        <Icon size={16} />
-    {/if}
+  {#if iconPosition === "left"}
+    {@const Icon = icon}
+    <Icon size={16} />
+  {/if}
 
-    {@render children()}
+  {@render children()}
 
-    {#if iconPosition === "right"}
-        {@const Icon = icon}
-        <Icon size={16} />
-    {/if}
+  {#if iconPosition === "right"}
+    {@const Icon = icon}
+    <Icon size={16} />
+  {/if}
 </span>

@@ -1,19 +1,19 @@
 <script lang="ts">
-    import type { BaseButtonProps } from "./types";
+import type { BaseButtonProps } from "./types";
 
-    const {
-        class: className = "",
-        onClick = () => {},
-        loading = false,
-        disabled = false,
-        children,
-        ...props
-    }: BaseButtonProps = $props();
+const {
+  class: className = "",
+  onClick = () => {},
+  loading = false,
+  disabled = false,
+  children,
+  ...props
+}: BaseButtonProps = $props();
 </script>
 
 <button
-    type="button"
-    class={[
+  type="button"
+  class={[
         className,
         "w-min text-nowrap",
         {
@@ -23,9 +23,9 @@
             "cursor-not-allowed": disabled,
         },
     ]}
-    onclick={onClick}
-    disabled={loading || disabled}
-    {...props}
+  onclick={onClick}
+  disabled={loading || disabled}
+  {...props}
 >
-    {@render children()}
+  {@render children()}
 </button>
