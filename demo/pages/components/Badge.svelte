@@ -9,6 +9,7 @@
         "secondary",
         "danger",
         "success",
+        "unstyled",
     ];
 
     let withIcon = $state(false);

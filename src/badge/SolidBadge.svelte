@@ -13,8 +13,9 @@
 <span
     class={[
         className,
-        "flex items-center gap-1 px-2 rounded-full text-neutral-50",
+        "flex items-center gap-1 px-2 rounded-full",
         {
+            "text-neutral-50": color !== "unstyled",
             "bg-blue-600 dark:bg-blue-700": color === "primary",
             "bg-neutral-950 dark:text-neutral-950 dark:bg-neutral-50":
                 color === "secondary",
