@@ -21,10 +21,10 @@ const {
           "gap-1 text-lg px-2": size === "lg",
         },
         {
-            "text-blue-600 dark:text-blue-700": color === "primary",
-            "text-neutral-950 dark:text-neutral-200": color === "secondary",
-            "text-red-600 dark:text-red-700": color === "danger",
-            "text-green-600 dark:text-green-700": color === "success",
+            "text-blue-600 dark:text-blue-500": color === "primary",
+            "text-neutral-950 dark:text-neutral-300": color === "secondary",
+            "text-red-600 dark:text-red-500": color === "danger",
+            "text-green-600 dark:text-green-500": color === "success",
         },
     ]}
 >
