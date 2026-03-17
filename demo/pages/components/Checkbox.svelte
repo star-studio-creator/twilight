@@ -1,9 +1,7 @@
 <script lang="ts">
 import { Checkbox } from "../../../src/checkbox";
 import { Switch } from "../../../src/switch";
-import type { ColorType } from "../../../src/types";
-
-const colors: ColorType[] = ["primary", "secondary", "danger", "unstyled"];
+import { COLORS } from "../../constants";
 
 let checked = $state(false);
 
@@ -20,7 +18,7 @@ let disabled = $state(false);
 <p class="text-center">Selected: {checked ? "Yes" : "No"}</p>
 
 <div class="flex gap-4 justify-center">
-  {#each colors as color}
+  {#each COLORS as color}
     <label class="flex gap-2 items-center">
       {color}
       <Checkbox {color} bind:checked {disabled} />

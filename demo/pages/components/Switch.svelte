@@ -1,9 +1,7 @@
 <script lang="ts">
 import Heart from "@lucide/svelte/icons/heart";
 import { Switch } from "../../../src/switch";
-import type { ColorType } from "../../../src/types";
-
-const colors: ColorType[] = ["primary", "secondary", "danger", "unstyled"];
+import { COLORS } from "../../constants";
 
 let selected = $state(false);
 
@@ -25,7 +23,7 @@ let withIcon = $state(false);
 <p class="text-center">Selected: {selected ? "Yes" : "No"}</p>
 
 <div class="flex gap-4 justify-center">
-  {#each colors as color}
+  {#each COLORS as color}
     <label class="flex gap-2">
       {color}
       <Switch {color} bind:selected icon={withIcon ? Heart : null} {disabled} />

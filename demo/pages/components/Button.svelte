@@ -8,9 +8,7 @@ import {
   TextButton,
 } from "../../../src/button";
 import { Switch } from "../../../src/switch";
-import type { ColorType } from "../../../src/types";
-
-const colors: ColorType[] = ["primary", "secondary", "danger", "unstyled"];
+import { COLORS, DEMO_TEXT } from "../../constants";
 
 let loading = $state(false);
 let disabled = $state(false);
@@ -42,7 +40,7 @@ let iconPosition: "left" | "right" = $state("left");
 
 <div class="flex flex-col gap-4 items-center">
   <div class="flex gap-4">
-    {#each colors as color}
+    {#each COLORS as color}
       <SolidButton
         {color}
         {loading}
@@ -50,13 +48,13 @@ let iconPosition: "left" | "right" = $state("left");
         icon={withIcon ? Heart : null}
         {iconPosition}
       >
-        Solid Button
+        {DEMO_TEXT}
       </SolidButton>
     {/each}
   </div>
 
   <div class="flex gap-4">
-    {#each colors as color}
+    {#each COLORS as color}
       <OutlineButton
         {color}
         {loading}
@@ -64,13 +62,13 @@ let iconPosition: "left" | "right" = $state("left");
         icon={withIcon ? Heart : null}
         {iconPosition}
       >
-        Outline Button
+        {DEMO_TEXT}
       </OutlineButton>
     {/each}
   </div>
 
   <div class="flex gap-4">
-    {#each colors as color}
+    {#each COLORS as color}
       <GhostButton
         {color}
         {loading}
@@ -78,13 +76,13 @@ let iconPosition: "left" | "right" = $state("left");
         icon={withIcon ? Heart : null}
         {iconPosition}
       >
-        Ghost Button
+        {DEMO_TEXT}
       </GhostButton>
     {/each}
   </div>
 
   <div class="flex gap-4">
-    {#each colors as color}
+    {#each COLORS as color}
       <TextButton
         {color}
         {loading}
@@ -92,10 +90,10 @@ let iconPosition: "left" | "right" = $state("left");
         icon={withIcon ? Heart : null}
         {iconPosition}
       >
-        Text Button
+        {DEMO_TEXT}
       </TextButton>
     {/each}
   </div>
 
-  <BaseButton {loading} {disabled}>Base Button</BaseButton>
+  <BaseButton {loading} {disabled}>{DEMO_TEXT}</BaseButton>
 </div>

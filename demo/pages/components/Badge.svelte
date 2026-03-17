@@ -2,16 +2,10 @@
 import Heart from "@lucide/svelte/icons/heart";
 import { OutlineBadge, SolidBadge } from "../../../src/badge";
 import Switch from "../../../src/switch/Switch.svelte";
-import type { ColorType, IconPosition, SizeType } from "../../../src/types";
+import type { ColorType, IconPosition } from "../../../src/types";
+import { COLORS, DEMO_TEXT, SIZES } from "../../constants";
 
-const CONTENT = "示例 Demo";
-const SIZES: SizeType[] = ["sm", "md", "lg"];
-const COLORS: (ColorType | "success")[] = [
-  "primary",
-  "secondary",
-  "danger",
-  "success",
-];
+const COLORS_FULL: (ColorType | "success")[] = [...COLORS, "success"];
 
 let withIcon = $state(false);
 let iconPosition: IconPosition = $state("left");
@@ -34,14 +28,14 @@ let iconPosition: IconPosition = $state("left");
 <h2 class="text-xl font-bold">OutlineBadge</h2>
 {#each SIZES as size}
   <div class="flex gap-4">
-    {#each COLORS as color}
+    {#each COLORS_FULL as color}
       <OutlineBadge
         {size}
         {color}
         icon={withIcon ? Heart : null}
         {iconPosition}
       >
-        {CONTENT}
+        {DEMO_TEXT}
       </OutlineBadge>
     {/each}
   </div>
@@ -50,9 +44,9 @@ let iconPosition: IconPosition = $state("left");
 <h2 class="text-xl font-bold">SolidBadge</h2>
 {#each SIZES as size}
   <div class="flex gap-4">
-    {#each COLORS as color}
+    {#each COLORS_FULL as color}
       <SolidBadge {size} {color} icon={withIcon ? Heart : null} {iconPosition}>
-        {CONTENT}
+        {DEMO_TEXT}
       </SolidBadge>
     {/each}
   </div>
