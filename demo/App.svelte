@@ -6,7 +6,7 @@ import { isActive, navigate } from "./router";
 </script>
 
 <div
-  class="flex flex-col gap-8 text-neutral-950 dark:text-neutral-50 max-w-[60vw] mx-auto my-8"
+  class="flex flex-col gap-4 text-neutral-950 dark:text-neutral-50 max-w-[60vw] mx-auto my-8"
 >
   {#if isActive("/")}
     <h1 class="text-center text-2xl font-bold">暮光 / Twilight</h1>
