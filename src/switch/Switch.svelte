@@ -6,7 +6,6 @@ interface Props {
   size?: SizeType;
   color?: ColorType;
   enabled: boolean;
-  icon?: Component;
   disabled?: boolean;
 }
 
@@ -14,7 +13,6 @@ let {
   size = "md",
   color = "primary",
   enabled = $bindable(),
-  icon = null,
   disabled = false,
 }: Props = $props();
 </script>
@@ -53,7 +51,7 @@ let {
 
   <div
     class={[
-            "absolute top-1 left-1 grid place-content-center bg-neutral-50 text-neutral-950 rounded-full transition-transform pointer-events-none",
+            "absolute top-1 left-1 grid bg-neutral-50 rounded-full transition-transform pointer-events-none",
             {
               "text-xs size-3": size === "sm",
               "text-sm size-4": size === "md",
@@ -65,10 +63,5 @@ let {
               "translate-x-5": size === "lg",
             },
         ]}
-  >
-    {#if icon}
-      {@const Icon = icon}
-      <Icon size="1em" />
-    {/if}
-  </div>
+  ></div>
 </div>
