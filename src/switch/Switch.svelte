@@ -1,5 +1,4 @@
 <script lang="ts">
-import type { Component } from "svelte";
 import type { ColorType, SizeType } from "../types";
 
 interface Props {
