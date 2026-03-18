@@ -1,6 +1,6 @@
 import type { Component, Snippet } from "svelte";
 import type { ClassValue, HTMLButtonAttributes } from "svelte/elements";
-import type { ColorType } from "../types";
+import type { ColorType, SizeType } from "../types";
 
 export interface BaseButtonProps extends HTMLButtonAttributes {
   class?: ClassValue;
@@ -11,6 +11,7 @@ export interface BaseButtonProps extends HTMLButtonAttributes {
 }
 
 export interface ButtonProps extends BaseButtonProps {
+  size: SizeType;
   color: ColorType;
   icon?: Component;
   iconPosition?: "left" | "right";

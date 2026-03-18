@@ -5,6 +5,7 @@ import type { ButtonProps } from "./types";
 
 const {
   class: className = "",
+  size = "md",
   color = "primary",
   onClick = () => {},
   icon = null,
@@ -19,11 +20,11 @@ const {
 <BaseButton
   class={[
         className,
-        "flex gap-1.5 items-center rounded-md shadow px-2 py-1.5 transition-all",
+        "flex items-center rounded-md shadow transition-all",
         {
-            "active:scale-95 hover:opacity-90 hover:shadow-md":
-                !loading && !disabled,
-            "opacity-70": loading || disabled,
+          "gap-0.5 text-sm px-1.5 py-1": size === "sm",
+          "gap-1 px-2 py-1.5": size === "md",
+          "gap-1 text-lg px-2 py-1.5": size === "lg",
         },
         {
             "text-neutral-50": color !== "unstyled",
@@ -33,6 +34,11 @@ const {
                 color === "secondary",
             "bg-red-600 shadow-red-600/30 dark:bg-red-700 dark:shadow-red-700/30":
                 color === "danger",
+        },
+        {
+            "active:scale-95 hover:opacity-90 hover:shadow-md":
+                !loading && !disabled,
+            "opacity-70": loading || disabled,
         },
     ]}
   {onClick}
@@ -44,9 +50,9 @@ const {
 
   {#if iconPosition === "left"}
     {#if loading}
-      <LoaderCircle class="animate-spin" size={18} />
-    {:else}
-      <Icon size={18} />
+      <LoaderCircle class="animate-spin" size="1em" />
+    {:else if icon !== null}
+      <Icon size="1em" />
     {/if}
   {/if}
 
@@ -54,9 +60,9 @@ const {
 
   {#if iconPosition === "right"}
     {#if loading}
-      <LoaderCircle class="animate-spin" size={18} />
-    {:else}
-      <Icon size={18} />
+      <LoaderCircle class="animate-spin" size="1em" />
+    {:else if icon !== null}
+      <Icon size="1em" />
     {/if}
   {/if}
 </BaseButton>
