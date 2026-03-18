@@ -14,7 +14,7 @@ let iconPosition: IconPosition = $state("left");
 <div class="flex gap-2">
   <label class="flex gap-2">
     Icon
-    <Switch bind:selected={withIcon} />
+    <Switch bind:enabled={withIcon} />
   </label>
 
   {#if withIcon}

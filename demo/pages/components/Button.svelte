@@ -8,26 +8,27 @@ import {
   TextButton,
 } from "../../../src/button";
 import { Switch } from "../../../src/switch";
+import type { IconPosition } from "../../../src/types";
 import { COLORS, DEMO_TEXT } from "../../constants";
 
 let loading = $state(false);
 let disabled = $state(false);
 let withIcon = $state(false);
-let iconPosition: "left" | "right" = $state("left");
+let iconPosition: IconPosition = $state("left");
 </script>
 
 <div class="flex gap-4 justify-center">
   <label class="flex gap-2">
     Loading
-    <Switch bind:selected={loading} />
+    <Switch bind:enabled={loading} />
   </label>
   <label class="flex gap-2">
     Disabled
-    <Switch bind:selected={disabled} />
+    <Switch bind:enabled={disabled} />
   </label>
   <label class="flex gap-2">
     With Icon
-    <Switch bind:selected={withIcon} />
+    <Switch bind:enabled={withIcon} />
   </label>
   <div class="flex gap-2">
     <p>Icon Position</p>

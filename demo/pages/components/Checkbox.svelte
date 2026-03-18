@@ -10,7 +10,7 @@ let checked = $state(false);
 
 <label class="flex gap-2">
   禁用
-  <Switch bind:selected={disabled} />
+  <Switch bind:enabled={disabled} />
 </label>
 
 <p>当前状态：{checked ? "已勾选" : "未勾选"}</p>
