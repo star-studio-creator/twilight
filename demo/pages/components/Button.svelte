@@ -8,28 +8,27 @@ import {
   TextButton,
 } from "../../../src/button";
 import { Switch } from "../../../src/switch";
-import type { ColorType } from "../../../src/types";
-
-const colors: ColorType[] = ["primary", "secondary", "danger", "unstyled"];
+import type { IconPosition } from "../../../src/types";
+import { COLORS, DEMO_TEXT } from "../../constants";
 
 let loading = $state(false);
 let disabled = $state(false);
 let withIcon = $state(false);
-let iconPosition: "left" | "right" = $state("left");
+let iconPosition: IconPosition = $state("left");
 </script>
 
 <div class="flex gap-4 justify-center">
   <label class="flex gap-2">
     Loading
-    <Switch bind:selected={loading} />
+    <Switch bind:enabled={loading} />
   </label>
   <label class="flex gap-2">
     Disabled
-    <Switch bind:selected={disabled} />
+    <Switch bind:enabled={disabled} />
   </label>
   <label class="flex gap-2">
     With Icon
-    <Switch bind:selected={withIcon} />
+    <Switch bind:enabled={withIcon} />
   </label>
   <div class="flex gap-2">
     <p>Icon Position</p>
@@ -42,7 +41,7 @@ let iconPosition: "left" | "right" = $state("left");
 
 <div class="flex flex-col gap-4 items-center">
   <div class="flex gap-4">
-    {#each colors as color}
+    {#each COLORS as color}
       <SolidButton
         {color}
         {loading}
@@ -50,13 +49,13 @@ let iconPosition: "left" | "right" = $state("left");
         icon={withIcon ? Heart : null}
         {iconPosition}
       >
-        Solid Button
+        {DEMO_TEXT}
       </SolidButton>
     {/each}
   </div>
 
   <div class="flex gap-4">
-    {#each colors as color}
+    {#each COLORS as color}
       <OutlineButton
         {color}
         {loading}
@@ -64,13 +63,13 @@ let iconPosition: "left" | "right" = $state("left");
         icon={withIcon ? Heart : null}
         {iconPosition}
       >
-        Outline Button
+        {DEMO_TEXT}
       </OutlineButton>
     {/each}
   </div>
 
   <div class="flex gap-4">
-    {#each colors as color}
+    {#each COLORS as color}
       <GhostButton
         {color}
         {loading}
@@ -78,13 +77,13 @@ let iconPosition: "left" | "right" = $state("left");
         icon={withIcon ? Heart : null}
         {iconPosition}
       >
-        Ghost Button
+        {DEMO_TEXT}
       </GhostButton>
     {/each}
   </div>
 
   <div class="flex gap-4">
-    {#each colors as color}
+    {#each COLORS as color}
       <TextButton
         {color}
         {loading}
@@ -92,10 +91,10 @@ let iconPosition: "left" | "right" = $state("left");
         icon={withIcon ? Heart : null}
         {iconPosition}
       >
-        Text Button
+        {DEMO_TEXT}
       </TextButton>
     {/each}
   </div>
 
-  <BaseButton {loading} {disabled}>Base Button</BaseButton>
+  <BaseButton {loading} {disabled}>{DEMO_TEXT}</BaseButton>
 </div>

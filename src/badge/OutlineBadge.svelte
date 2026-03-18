@@ -3,6 +3,7 @@ import type { BadgeProps } from "./types";
 
 const {
   class: className,
+  size = "md",
   color = "primary",
   icon = null,
   iconPosition = "left",
@@ -13,24 +14,29 @@ const {
 <span
   class={[
         className,
-        "flex items-center gap-1 px-2 border rounded-full",
+        "flex items-center border rounded-md",
         {
-            "text-blue-600 dark:text-blue-700": color === "primary",
-            "text-neutral-950 dark:text-neutral-200": color === "secondary",
-            "text-red-600 dark:text-red-700": color === "danger",
-            "text-green-600 dark:text-green-700": color === "success",
+          "gap-0.5 text-sm px-1": size === "sm",
+          "gap-1 px-1.5": size === "md",
+          "gap-1 text-lg px-2": size === "lg",
+        },
+        {
+            "text-blue-600 dark:text-blue-500": color === "primary",
+            "text-neutral-950 dark:text-neutral-300": color === "secondary",
+            "text-red-600 dark:text-red-500": color === "danger",
+            "text-green-600 dark:text-green-500": color === "success",
         },
     ]}
 >
-  {#if iconPosition === "left"}
+  {#if icon && iconPosition === "left"}
     {@const Icon = icon}
-    <Icon size={16} />
+    <Icon size="1em" />
   {/if}
 
   {@render children()}
 
   {#if iconPosition === "right"}
     {@const Icon = icon}
-    <Icon size={16} />
+    <Icon size="1em" />
   {/if}
 </span>

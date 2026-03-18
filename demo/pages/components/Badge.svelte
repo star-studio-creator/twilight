@@ -2,46 +2,52 @@
 import Heart from "@lucide/svelte/icons/heart";
 import { OutlineBadge, SolidBadge } from "../../../src/badge";
 import Switch from "../../../src/switch/Switch.svelte";
-import type { ColorType } from "../../../src/types";
+import type { ColorType, IconPosition } from "../../../src/types";
+import { COLORS, DEMO_TEXT, SIZES } from "../../constants";
 
-const colors: (ColorType | "success")[] = [
-  "primary",
-  "secondary",
-  "danger",
-  "success",
-  "unstyled",
-];
+const COLORS_FULL: (ColorType | "success")[] = [...COLORS, "success"];
 
 let withIcon = $state(false);
-let iconPosition: "left" | "right" = $state("left");
+let iconPosition: IconPosition = $state("left");
 </script>
 
-<div class="flex gap-4 justify-center">
+<div class="flex gap-2">
   <label class="flex gap-2">
-    With Icon
-    <Switch bind:selected={withIcon} />
+    Icon
+    <Switch bind:enabled={withIcon} />
   </label>
-  <div class="flex gap-2">
-    <p>Icon Position</p>
+
+  {#if withIcon}
     <select bind:value={iconPosition}>
-      <option value="left">Left</option>
-      <option value="right">Right</option>
+      <option value="left">左侧</option>
+      <option value="right">右侧</option>
     </select>
+  {/if}
+</div>
+
+<h2 class="text-xl font-bold">OutlineBadge</h2>
+{#each SIZES as size}
+  <div class="flex gap-4">
+    {#each COLORS_FULL as color}
+      <OutlineBadge
+        {size}
+        {color}
+        icon={withIcon ? Heart : null}
+        {iconPosition}
+      >
+        {DEMO_TEXT}
+      </OutlineBadge>
+    {/each}
   </div>
-</div>
+{/each}
 
-<div class="flex gap-2 justify-center">
-  {#each colors as color}
-    <OutlineBadge {color} icon={withIcon ? Heart : null} {iconPosition}>
-      OutlineBadge
-    </OutlineBadge>
-  {/each}
-</div>
-
-<div class="flex gap-2 justify-center">
-  {#each colors as color}
-    <SolidBadge {color} icon={withIcon ? Heart : null} {iconPosition}>
-      SolidBadge
-    </SolidBadge>
-  {/each}
-</div>
+<h2 class="text-xl font-bold">SolidBadge</h2>
+{#each SIZES as size}
+  <div class="flex gap-4">
+    {#each COLORS_FULL as color}
+      <SolidBadge {size} {color} icon={withIcon ? Heart : null} {iconPosition}>
+        {DEMO_TEXT}
+      </SolidBadge>
+    {/each}
+  </div>
+{/each}

@@ -1,29 +1,27 @@
 <script lang="ts">
 import { Checkbox } from "../../../src/checkbox";
 import { Switch } from "../../../src/switch";
-import type { ColorType } from "../../../src/types";
-
-const colors: ColorType[] = ["primary", "secondary", "danger", "unstyled"];
-
-let checked = $state(false);
+import { COLORS, DEMO_TEXT, SIZES } from "../../constants";
 
 let disabled = $state(false);
+
+let checked = $state(false);
 </script>
 
-<div class="flex gap-4 justify-center">
-  <label class="flex gap-2">
-    Disabled
-    <Switch bind:selected={disabled} />
-  </label>
-</div>
+<label class="flex gap-2">
+  禁用
+  <Switch bind:enabled={disabled} />
+</label>
 
-<p class="text-center">Selected: {checked ? "Yes" : "No"}</p>
+<p>当前状态：{checked ? "已勾选" : "未勾选"}</p>
 
-<div class="flex gap-4 justify-center">
-  {#each colors as color}
-    <label class="flex gap-2 items-center">
-      {color}
-      <Checkbox {color} bind:checked {disabled} />
-    </label>
-  {/each}
-</div>
+{#each SIZES as size}
+  <div class="flex gap-4">
+    {#each COLORS as color}
+      <label class="flex gap-2">
+        <Checkbox {size} {color} bind:checked {disabled} />
+        {DEMO_TEXT}
+      </label>
+    {/each}
+  </div>
+{/each}
