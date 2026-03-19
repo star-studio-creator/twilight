@@ -8,6 +8,7 @@ const routes: Record<string, string> = {
   Card: "/components/card",
   Checkbox: "/components/checkbox",
   Input: "/components/input",
+  Slider: "/components/slider",
   Switch: "/components/switch",
 };
 </script>
