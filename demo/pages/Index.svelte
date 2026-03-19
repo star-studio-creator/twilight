@@ -5,6 +5,7 @@ import { navigate } from "../router";
 const routes: Record<string, string> = {
   Badge: "/components/badge",
   Button: "/components/button",
+  Card: "/components/card",
   Checkbox: "/components/checkbox",
   Input: "/components/input",
   Switch: "/components/switch",
