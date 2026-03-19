@@ -14,20 +14,20 @@ let textAreaInputValue = $state("");
 let textInputValue = $state("");
 </script>
 
-<div class="flex items-center gap-2">
-  <label class="flex items-center gap-2">
+<div class="flex gap-2">
+  <label class="flex gap-2">
     占位符文本
     <TextInput bind:value={placeholder} />
   </label>
 
-  <label class="flex items-center gap-2">
+  <label class="flex gap-2">
     禁用
     <Switch bind:enabled={disabled} />
   </label>
 </div>
 
-<div class="flex items-center gap-2">
-  <label class="flex items-center gap-2">
+<div class="flex gap-2">
+  <label class="flex gap-2">
     文本块行数
     <NumberInput bind:value={textAreaInputRows} />
   </label>
