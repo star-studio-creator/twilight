@@ -6,7 +6,7 @@
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "paths": {
-      "@/*": ["./src/*"],
-    },
-  },
+      "@/*": ["./src/*"]
+    }
+  }
 }
