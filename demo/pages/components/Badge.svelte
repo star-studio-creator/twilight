@@ -1,7 +1,7 @@
 <script lang="ts">
 import Heart from "@lucide/svelte/icons/heart";
-import { OutlineBadge, SolidBadge } from "@/badge/badge";
-import { Switch } from "@/switch/switch";
+import { OutlineBadge, SolidBadge } from "@/badge";
+import { Switch } from "@/switch";
 import type { ColorType, IconPosition } from "@/types";
 import { COLORS, DEMO_TEXT, SIZES } from "../../constants";
 

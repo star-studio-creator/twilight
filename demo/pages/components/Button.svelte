@@ -1,13 +1,7 @@
 <script lang="ts">
 import Heart from "@lucide/svelte/icons/heart";
-import {
-  BaseButton,
-  GhostButton,
-  OutlineButton,
-  SolidButton,
-  TextButton,
-} from "@/button/button";
-import { Switch } from "@/switch/switch";
+import { GhostButton, OutlineButton, SolidButton, TextButton } from "@/button";
+import { Switch } from "@/switch";
 import type { IconPosition } from "@/types";
 import { COLORS, DEMO_TEXT, SIZES } from "../../constants";
 

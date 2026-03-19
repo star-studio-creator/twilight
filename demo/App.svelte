@@ -1,7 +1,7 @@
 <script lang="ts">
 import ChevronLeft from "@lucide/svelte/icons/chevron-left";
 import { Router } from "sv-router";
-import { GhostButton } from "@/button/button";
+import { GhostButton } from "@/button";
 import { isActive, navigate } from "./router";
 </script>
 

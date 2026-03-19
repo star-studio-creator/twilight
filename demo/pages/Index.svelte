@@ -1,5 +1,5 @@
 <script lang="ts">
-import { GhostButton } from "@/button/button";
+import { GhostButton } from "@/button";
 import { navigate } from "../router";
 
 const routes: Record<string, string> = {

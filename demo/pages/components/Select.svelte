@@ -1,6 +1,6 @@
 <script lang="ts">
-import { Select } from "@/select/select";
-import { Switch } from "@/switch/switch";
+import { Select } from "@/select";
+import { Switch } from "@/switch";
 import { SIZES } from "../../constants";
 
 const options = {
