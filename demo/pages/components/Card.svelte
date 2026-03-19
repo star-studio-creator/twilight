@@ -1,5 +1,5 @@
 <script lang="ts">
-import { Card } from "../../../src/card";
+import { Card } from "@/card/card";
 import { COLORS, DEMO_TEXT, SIZES } from "../../constants";
 </script>
 

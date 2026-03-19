@@ -1,4 +1,4 @@
-import type { ColorType, SizeType } from "../src/types";
+import type { ColorType, SizeType } from "@/types";
 
 export const DEMO_TEXT = "示例 Demo";
 export const SIZES: SizeType[] = ["sm", "md", "lg"];

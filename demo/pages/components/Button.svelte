@@ -6,9 +6,9 @@ import {
   OutlineButton,
   SolidButton,
   TextButton,
-} from "../../../src/button";
-import { Switch } from "../../../src/switch";
-import type { IconPosition } from "../../../src/types";
+} from "@/button/button";
+import { Switch } from "@/switch/switch";
+import type { IconPosition } from "@/types";
 import { COLORS, DEMO_TEXT, SIZES } from "../../constants";
 
 let loading = $state(false);

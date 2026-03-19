@@ -1,6 +1,6 @@
 <script lang="ts">
-import { NumberInput, TextAreaInput, TextInput } from "../../../src/input";
-import { Switch } from "../../../src/switch";
+import { NumberInput, TextAreaInput, TextInput } from "@/input/input";
+import { Switch } from "@/switch/switch";
 import { DEMO_TEXT, SIZES } from "../../constants";
 
 let placeholder = $state("");

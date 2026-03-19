@@ -1,8 +1,8 @@
 <script lang="ts">
 import Heart from "@lucide/svelte/icons/heart";
-import { OutlineBadge, SolidBadge } from "../../../src/badge";
-import Switch from "../../../src/switch/Switch.svelte";
-import type { ColorType, IconPosition } from "../../../src/types";
+import { OutlineBadge, SolidBadge } from "@/badge/badge";
+import { Switch } from "@/switch/switch";
+import type { ColorType, IconPosition } from "@/types";
 import { COLORS, DEMO_TEXT, SIZES } from "../../constants";
 
 const COLORS_FULL: (ColorType | "success")[] = [...COLORS, "success"];

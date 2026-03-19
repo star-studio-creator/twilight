@@ -1,5 +1,5 @@
 <script lang="ts">
-import { Switch } from "../../../src/switch";
+import { Switch } from "@/switch/switch";
 import { COLORS, DEMO_TEXT, SIZES } from "../../constants";
 
 let disabled = $state(false);
