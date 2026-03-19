@@ -1,7 +1,5 @@
 <script lang="ts">
-import NumberInput from "../../../src/input/NumberInput.svelte";
-import TextAreaInput from "../../../src/input/TextAreaInput.svelte";
-import TextInput from "../../../src/input/TextInput.svelte";
+import { NumberInput, TextAreaInput, TextInput } from "../../../src/input";
 import { Switch } from "../../../src/switch";
 import { DEMO_TEXT, SIZES } from "../../constants";
 

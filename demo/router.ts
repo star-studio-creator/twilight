@@ -1,6 +1,7 @@
 import { createRouter } from "sv-router";
 import Badge from "./pages/components/Badge.svelte";
 import Button from "./pages/components/Button.svelte";
+import Card from "./pages/components/Card.svelte";
 import Checkbox from "./pages/components/Checkbox.svelte";
 import Input from "./pages/components/Input.svelte";
 import Switch from "./pages/components/Switch.svelte";
@@ -11,6 +12,7 @@ export const { p, navigate, isActive, route } = createRouter({
   "/components": {
     "/badge": Badge,
     "/button": Button,
+    "/card": Card,
     "/checkbox": Checkbox,
     "/input": Input,
     "/switch": Switch,
