@@ -1,10 +1,10 @@
 <script lang="ts">
-import { COLORS, DEMO_TEXT, SIZES } from "@demo/constants";
-import { Switch } from "@/switch";
+  import { COLORS, DEMO_TEXT, SIZES } from "@demo/constants";
+  import { Switch } from "@/switch";
 
-let disabled = $state(false);
+  let disabled = $state(false);
 
-let enabled = $state(false);
+  let enabled = $state(false);
 </script>
 
 <label class="flex gap-2">

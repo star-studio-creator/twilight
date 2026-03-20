@@ -1,14 +1,14 @@
 <script lang="ts">
-import type { BaseButtonProps } from "./types";
+  import type { BaseButtonProps } from "./types";
 
-const {
-  class: className = "",
-  onClick = () => {},
-  loading = false,
-  disabled = false,
-  children,
-  ...props
-}: BaseButtonProps = $props();
+  const {
+    class: className = "",
+    onClick = () => {},
+    loading = false,
+    disabled = false,
+    children,
+    ...props
+  }: BaseButtonProps = $props();
 </script>
 
 <button

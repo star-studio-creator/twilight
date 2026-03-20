@@ -1,13 +1,13 @@
 <script lang="ts">
-import type { NumberInputProps } from "./types";
+  import type { NumberInputProps } from "./types";
 
-let {
-  class: className = "",
-  size = "md",
-  value = $bindable(),
-  disabled = false,
-  placeholder = "",
-}: NumberInputProps = $props();
+  let {
+    class: className = "",
+    size = "md",
+    value = $bindable(),
+    disabled = false,
+    placeholder = "",
+  }: NumberInputProps = $props();
 </script>
 
 <input

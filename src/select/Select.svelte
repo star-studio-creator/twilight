@@ -1,22 +1,22 @@
 <script lang="ts" generics="T">
-import type { ClassValue } from "svelte/elements";
-import type { SizeType } from "../types";
+  import type { ClassValue } from "svelte/elements";
+  import type { SizeType } from "../types";
 
-interface Props<T> {
-  class?: ClassValue;
-  size?: SizeType;
-  value: T;
-  options: Record<string, T>;
-  disabled?: boolean;
-}
+  interface Props<T> {
+    class?: ClassValue;
+    size?: SizeType;
+    value: T;
+    options: Record<string, T>;
+    disabled?: boolean;
+  }
 
-let {
-  class: className = "",
-  size = "md",
-  value = $bindable(),
-  options,
-  disabled = false,
-}: Props<T> = $props();
+  let {
+    class: className = "",
+    size = "md",
+    value = $bindable(),
+    options,
+    disabled = false,
+  }: Props<T> = $props();
 </script>
 
 <select

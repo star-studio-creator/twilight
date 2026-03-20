@@ -1,20 +1,20 @@
 <script lang="ts">
-import LoaderCircle from "@lucide/svelte/icons/loader-circle";
-import BaseButton from "./BaseButton.svelte";
-import type { ButtonProps } from "./types";
+  import LoaderCircle from "@lucide/svelte/icons/loader-circle";
+  import BaseButton from "./BaseButton.svelte";
+  import type { ButtonProps } from "./types";
 
-const {
-  class: className = "",
-  size = "md",
-  color = "primary",
-  onClick = () => {},
-  icon = null,
-  iconPosition = "left",
-  loading = false,
-  disabled = false,
-  children,
-  ...props
-}: ButtonProps = $props();
+  const {
+    class: className = "",
+    size = "md",
+    color = "primary",
+    onClick = () => {},
+    icon = null,
+    iconPosition = "left",
+    loading = false,
+    disabled = false,
+    children,
+    ...props
+  }: ButtonProps = $props();
 </script>
 
 <BaseButton

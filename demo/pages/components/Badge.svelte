@@ -1,14 +1,14 @@
 <script lang="ts">
-import { COLORS, DEMO_TEXT, SIZES } from "@demo/constants";
-import Heart from "@lucide/svelte/icons/heart";
-import { OutlineBadge, SolidBadge } from "@/badge";
-import { Switch } from "@/switch";
-import type { ColorType, IconPosition } from "@/types";
+  import { COLORS, DEMO_TEXT, SIZES } from "@demo/constants";
+  import Heart from "@lucide/svelte/icons/heart";
+  import { OutlineBadge, SolidBadge } from "@/badge";
+  import { Switch } from "@/switch";
+  import type { ColorType, IconPosition } from "@/types";
 
-const COLORS_FULL: (ColorType | "success")[] = [...COLORS, "success"];
+  const COLORS_FULL: (ColorType | "success")[] = [...COLORS, "success"];
 
-let withIcon = $state(false);
-let iconPosition: IconPosition = $state("left");
+  let withIcon = $state(false);
+  let iconPosition: IconPosition = $state("left");
 </script>
 
 <div class="flex gap-2">

@@ -1,19 +1,19 @@
 <script lang="ts">
-import type { ColorType, SizeType } from "../types";
+  import type { ColorType, SizeType } from "../types";
 
-interface Props {
-  size?: SizeType;
-  color?: ColorType;
-  enabled: boolean;
-  disabled?: boolean;
-}
+  interface Props {
+    size?: SizeType;
+    color?: ColorType;
+    enabled: boolean;
+    disabled?: boolean;
+  }
 
-let {
-  size = "md",
-  color = "primary",
-  enabled = $bindable(),
-  disabled = false,
-}: Props = $props();
+  let {
+    size = "md",
+    color = "primary",
+    enabled = $bindable(),
+    disabled = false,
+  }: Props = $props();
 </script>
 
 <div class="relative">
