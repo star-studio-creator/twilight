@@ -9,6 +9,7 @@
     "dist"
   ],
   "type": "module",
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/star-studio-creator/twilight.git"
