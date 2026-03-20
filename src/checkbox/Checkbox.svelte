@@ -1,23 +1,23 @@
 <script lang="ts">
-import Check from "@lucide/svelte/icons/check";
-import type { ClassValue, HTMLInputAttributes } from "svelte/elements";
-import type { ColorType, SizeType } from "../types";
+  import Check from "@lucide/svelte/icons/check";
+  import type { ClassValue, HTMLInputAttributes } from "svelte/elements";
+  import type { ColorType, SizeType } from "../types";
 
-interface Props extends Omit<HTMLInputAttributes, "size"> {
-  class?: ClassValue;
-  size?: SizeType;
-  color?: ColorType;
-  checked: boolean;
-  disabled?: boolean;
-}
+  interface Props extends Omit<HTMLInputAttributes, "size"> {
+    class?: ClassValue;
+    size?: SizeType;
+    color?: ColorType;
+    checked: boolean;
+    disabled?: boolean;
+  }
 
-let {
-  class: className = "",
-  size = "md",
-  color = "primary",
-  checked = $bindable(),
-  disabled = false,
-}: Props = $props();
+  let {
+    class: className = "",
+    size = "md",
+    color = "primary",
+    checked = $bindable(),
+    disabled = false,
+  }: Props = $props();
 </script>
 
 <div class="relative">

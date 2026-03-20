@@ -1,14 +1,14 @@
 <script lang="ts">
-import type { TextAreaInputProps } from "./types";
+  import type { TextAreaInputProps } from "./types";
 
-let {
-  class: className = "",
-  size = "md",
-  value = $bindable(),
-  rows = 5,
-  disabled = false,
-  placeholder = "",
-}: TextAreaInputProps = $props();
+  let {
+    class: className = "",
+    size = "md",
+    value = $bindable(),
+    rows = 5,
+    disabled = false,
+    placeholder = "",
+  }: TextAreaInputProps = $props();
 </script>
 
 <textarea

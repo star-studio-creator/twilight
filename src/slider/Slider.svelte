@@ -1,23 +1,23 @@
 <script lang="ts">
-import type { ClassValue } from "svelte/elements";
+  import type { ClassValue } from "svelte/elements";
 
-interface Props {
-  class?: ClassValue;
-  value: number;
-  min: number;
-  max: number;
-  step?: number;
-  disabled?: boolean;
-}
+  interface Props {
+    class?: ClassValue;
+    value: number;
+    min: number;
+    max: number;
+    step?: number;
+    disabled?: boolean;
+  }
 
-let {
-  class: className = "",
-  value = $bindable(),
-  min,
-  max,
-  step = 1,
-  disabled = false,
-}: Props = $props();
+  let {
+    class: className = "",
+    value = $bindable(),
+    min,
+    max,
+    step = 1,
+    disabled = false,
+  }: Props = $props();
 </script>
 
 <input

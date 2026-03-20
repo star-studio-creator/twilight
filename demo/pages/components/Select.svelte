@@ -1,21 +1,21 @@
 <script lang="ts">
-import { SIZES } from "@demo/constants";
-import { Select } from "@/select";
-import { Switch } from "@/switch";
+  import { SIZES } from "@demo/constants";
+  import { Select } from "@/select";
+  import { Switch } from "@/switch";
 
-const options = {
-  TypeScript: "typescript",
-  JavaScript: "javascript",
-  C: "c",
-  "C++": "c++",
-  Java: "java",
-  Golang: "golang",
-  Rust: "rust",
-};
+  const options = {
+    TypeScript: "typescript",
+    JavaScript: "javascript",
+    C: "c",
+    "C++": "c++",
+    Java: "java",
+    Golang: "golang",
+    Rust: "rust",
+  };
 
-let disabled = $state(false);
+  let disabled = $state(false);
 
-let value = $state("typescript");
+  let value = $state("typescript");
 </script>
 
 <div class="flex gap-2">

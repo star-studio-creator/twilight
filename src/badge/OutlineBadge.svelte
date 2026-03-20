@@ -1,14 +1,14 @@
 <script lang="ts">
-import type { BadgeProps } from "./types";
+  import type { BadgeProps } from "./types";
 
-const {
-  class: className,
-  size = "md",
-  color = "primary",
-  icon = null,
-  iconPosition = "left",
-  children,
-}: BadgeProps = $props();
+  const {
+    class: className,
+    size = "md",
+    color = "primary",
+    icon = null,
+    iconPosition = "left",
+    children,
+  }: BadgeProps = $props();
 </script>
 
 <span

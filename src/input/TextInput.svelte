@@ -1,14 +1,14 @@
 <script lang="ts">
-import type { TextInputProps } from "./types";
+  import type { TextInputProps } from "./types";
 
-let {
-  class: className = "",
-  size = "md",
-  value = $bindable(),
-  disabled = false,
-  shadowed = false,
-  placeholder = "",
-}: TextInputProps = $props();
+  let {
+    class: className = "",
+    size = "md",
+    value = $bindable(),
+    disabled = false,
+    shadowed = false,
+    placeholder = "",
+  }: TextInputProps = $props();
 </script>
 
 <input

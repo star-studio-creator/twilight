@@ -1,15 +1,15 @@
 <script lang="ts">
-import { DEMO_TEXT } from "@demo/constants";
-import { NumberInput } from "@/input";
-import { Slider } from "@/slider";
-import { Switch } from "@/switch";
+  import { DEMO_TEXT } from "@demo/constants";
+  import { NumberInput } from "@/input";
+  import { Slider } from "@/slider";
+  import { Switch } from "@/switch";
 
-let min = $state(0);
-let max = $state(10);
-let step = $state(1);
-let disabled = $state(false);
+  let min = $state(0);
+  let max = $state(10);
+  let step = $state(1);
+  let disabled = $state(false);
 
-let value = $state(0);
+  let value = $state(0);
 </script>
 
 <div class="flex gap-2">

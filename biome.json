@@ -15,7 +15,8 @@
   "html": {
     "experimentalFullSupportEnabled": true,
     "formatter": {
-      "enabled": true
+      "enabled": true,
+      "indentScriptAndStyle": true
     }
   },
   "linter": {

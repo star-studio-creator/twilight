@@ -1,17 +1,17 @@
 <script lang="ts">
-import { DEMO_TEXT, SIZES } from "@demo/constants";
-import { NumberInput, TextAreaInput, TextInput } from "@/input";
-import { Switch } from "@/switch";
+  import { DEMO_TEXT, SIZES } from "@demo/constants";
+  import { NumberInput, TextAreaInput, TextInput } from "@/input";
+  import { Switch } from "@/switch";
 
-let placeholder = $state("");
-let disabled = $state(false);
+  let placeholder = $state("");
+  let disabled = $state(false);
 
-let textAreaInputRows = $state(5);
-let textInputShadowed = $state(false);
+  let textAreaInputRows = $state(5);
+  let textInputShadowed = $state(false);
 
-let numberInputValue = $state(0);
-let textAreaInputValue = $state("");
-let textInputValue = $state("");
+  let numberInputValue = $state(0);
+  let textAreaInputValue = $state("");
+  let textInputValue = $state("");
 </script>
 
 <div class="flex gap-2">
