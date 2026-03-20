@@ -1,7 +1,7 @@
 <script lang="ts">
-import { NumberInput, TextAreaInput, TextInput } from "../../../src/input";
-import { Switch } from "../../../src/switch";
-import { DEMO_TEXT, SIZES } from "../../constants";
+import { DEMO_TEXT, SIZES } from "@demo/constants";
+import { NumberInput, TextAreaInput, TextInput } from "@/input";
+import { Switch } from "@/switch";
 
 let placeholder = $state("");
 let disabled = $state(false);

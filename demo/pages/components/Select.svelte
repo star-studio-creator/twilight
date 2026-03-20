@@ -1,7 +1,7 @@
 <script lang="ts">
-import { Select } from "../../../src/select";
-import { Switch } from "../../../src/switch";
-import { SIZES } from "../../constants";
+import { SIZES } from "@demo/constants";
+import { Select } from "@/select";
+import { Switch } from "@/switch";
 
 const options = {
   TypeScript: "typescript",

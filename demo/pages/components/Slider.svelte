@@ -1,8 +1,8 @@
 <script lang="ts">
-import { NumberInput } from "../../../src/input";
-import { Slider } from "../../../src/slider";
-import { Switch } from "../../../src/switch";
-import { DEMO_TEXT, SIZES } from "../../constants";
+import { DEMO_TEXT } from "@demo/constants";
+import { NumberInput } from "@/input";
+import { Slider } from "@/slider";
+import { Switch } from "@/switch";
 
 let min = $state(0);
 let max = $state(10);

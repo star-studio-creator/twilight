@@ -1,7 +1,7 @@
 <script lang="ts">
-import { Checkbox } from "../../../src/checkbox";
-import { Switch } from "../../../src/switch";
-import { COLORS, DEMO_TEXT, SIZES } from "../../constants";
+import { COLORS, DEMO_TEXT, SIZES } from "@demo/constants";
+import { Checkbox } from "@/checkbox";
+import { Switch } from "@/switch";
 
 let disabled = $state(false);
 

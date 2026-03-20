@@ -1,6 +1,6 @@
 <script lang="ts">
-import { GhostButton } from "../../src/button";
-import { navigate } from "../router";
+import { navigate } from "@demo/router";
+import { GhostButton } from "@/button";
 
 const routes: Record<string, string> = {
   Badge: "/components/badge",

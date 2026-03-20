@@ -9,6 +9,7 @@
     "dist"
   ],
   "type": "module",
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/star-studio-creator/twilight.git"
@@ -22,15 +23,37 @@
     "publish": "bun publish"
   },
   "exports": {
+    "./badge": {
+      "svelte": "./dist/badge/index.js",
+      "types": "./dist/badge/index.d.ts"
+    },
     "./button": {
-      "import": "./dist/button.js",
-      "svelte": "./dist/button.js",
-      "types": "./dist/button.d.ts"
+      "svelte": "./dist/button/index.js",
+      "types": "./dist/button/index.d.ts"
+    },
+    "./card": {
+      "svelte": "./dist/card/index.js",
+      "types": "./dist/card/index.d.ts"
+    },
+    "./checkbox": {
+      "svelte": "./dist/checkbox/index.js",
+      "types": "./dist/checkbox/index.d.ts"
+    },
+    "./input": {
+      "svelte": "./dist/input/index.js",
+      "types": "./dist/input/index.d.ts"
+    },
+    "./select": {
+      "svelte": "./dist/select/index.js",
+      "types": "./dist/select/index.d.ts"
+    },
+    "./slider": {
+      "svelte": "./dist/slider/index.js",
+      "types": "./dist/slider/index.d.ts"
     },
     "./switch": {
-      "import": "./dist/switch.js",
-      "svelte": "./dist/switch.js",
-      "types": "./dist/switch.d.ts"
+      "svelte": "./dist/switch/index.js",
+      "types": "./dist/switch/index.d.ts"
     }
   },
   "devDependencies": {
