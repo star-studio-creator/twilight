@@ -1,6 +1,6 @@
 <script lang="ts">
+import { COLORS, DEMO_TEXT, SIZES } from "@demo/constants";
 import { Card } from "@/card";
-import { COLORS, DEMO_TEXT, SIZES } from "../../constants";
 </script>
 
 {#each SIZES as size}

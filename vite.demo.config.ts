@@ -4,8 +4,8 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   root: "demo",
+  plugins: [tailwindcss(), svelte()],
   resolve: {
     tsconfigPaths: true,
   },
-  plugins: [tailwindcss(), svelte()],
 });

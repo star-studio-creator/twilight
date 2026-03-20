@@ -1,9 +1,9 @@
 <script lang="ts">
+import { COLORS, DEMO_TEXT, SIZES } from "@demo/constants";
 import Heart from "@lucide/svelte/icons/heart";
 import { GhostButton, OutlineButton, SolidButton, TextButton } from "@/button";
 import { Switch } from "@/switch";
 import type { IconPosition } from "@/types";
-import { COLORS, DEMO_TEXT, SIZES } from "../../constants";
 
 let loading = $state(false);
 let disabled = $state(false);

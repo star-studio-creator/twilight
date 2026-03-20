@@ -1,6 +1,6 @@
 <script lang="ts">
+import { COLORS, DEMO_TEXT, SIZES } from "@demo/constants";
 import { Switch } from "@/switch";
-import { COLORS, DEMO_TEXT, SIZES } from "../../constants";
 
 let disabled = $state(false);
 
