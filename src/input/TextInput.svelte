@@ -22,7 +22,7 @@
       "hover:shadow-md": !disabled,
       "cursor-not-allowed opacity-70": disabled,
     },
-    "border rounded-md shadow border-neutral-300 shadow-neutral-300/20 transition-shadow",
+    "border rounded-md shadow border-neutral-300 shadow-neutral-300/20 dark:border-neutral-600 dark:shadow-neutral-600/20 transition-shadow",
     className,
   ]}
   type={shadowed ? "password" : "text"}
