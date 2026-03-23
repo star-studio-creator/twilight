@@ -19,28 +19,24 @@
 
 <BaseButton
   class={[
-        className,
-        "flex items-center rounded-md shadow transition-all",
-        {
-          "gap-0.5 text-sm px-1.5 py-1": size === "sm",
-          "gap-1 px-2 py-1.5": size === "md",
-          "gap-1 text-lg px-2 py-1.5": size === "lg",
-        },
-        {
-            "text-neutral-50": color !== "unstyled",
-            "bg-blue-600 shadow-blue-600/30 dark:bg-blue-700 dark:shadow-blue-700/30":
-                color === "primary",
-            "bg-neutral-950 shadow-neutral-950/30 dark:text-neutral-950 dark:bg-neutral-50 dark:shadow-neutral-50/30":
-                color === "secondary",
-            "bg-red-600 shadow-red-600/30 dark:bg-red-700 dark:shadow-red-700/30":
-                color === "danger",
-        },
-        {
-            "active:scale-95 hover:opacity-90 hover:shadow-md":
-                !loading && !disabled,
-            "opacity-70": loading || disabled,
-        },
-    ]}
+    {
+      "gap-0.5 text-sm px-1.5 py-1": size === "sm",
+      "gap-1 px-2 py-1.5": size === "md",
+      "gap-1 text-lg px-2 py-1.5": size === "lg",
+    },
+    {
+      "text-neutral-50": color !== "unstyled",
+      "bg-blue-600 shadow-blue-600/20 dark:bg-blue-700 dark:shadow-blue-700/20": color === "primary",
+      "bg-neutral-950 shadow-neutral-950/20 dark:bg-neutral-600 dark:shadow-neutral-600/20": color === "secondary",
+      "bg-red-600 shadow-red-600/20 dark:bg-red-700 dark:shadow-red-700/20": color === "danger",
+    },
+    {
+      "active:scale-95 hover:shadow-md": !disabled && !loading,
+      "opacity-70": disabled,
+    },
+    "flex items-center rounded-md shadow transition-all",
+    className,
+  ]}
   {onClick}
   {loading}
   {disabled}

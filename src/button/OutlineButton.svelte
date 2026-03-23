@@ -19,25 +19,25 @@
 
 <BaseButton
   class={[
-        className,
-        "flex gap-1 items-center border-2 border-current rounded-md shadow shadow-current/30 transition-all",
-        {
-          "gap-0.5 text-sm px-1.5 py-1": size === "sm",
-          "gap-1 px-2 py-1.5": size === "md",
-          "gap-1 text-lg px-2 py-1.5": size === "lg",
-        },
-        {
-            "text-blue-600 dark:text-blue-700": color === "primary",
-            "text-neutral-950 dark:text-neutral-50": color === "secondary",
-            "text-red-600 dark:text-red-700": color === "danger",
-        },
-        {
-            "active:scale-95 hover:bg-current/5 hover:opacity-90 hover:shadow-md":
-                !disabled,
-            "opacity-70": disabled,
-        },
-    ]}
+    {
+      "gap-0.5 text-sm px-1.5 py-1": size === "sm",
+      "gap-1 px-2 py-1.5": size === "md",
+      "gap-1 text-lg px-2 py-1.5": size === "lg",
+    },
+    {
+      "text-blue-600 dark:text-blue-400": color === "primary",
+      "text-neutral-950 dark:text-neutral-300": color === "secondary",
+      "text-red-600 dark:text-red-500": color === "danger",
+    },
+    {
+      "active:scale-95 hover:bg-current/5 hover:dark:bg-current/10 hover:shadow-md": !disabled && !loading,
+      "opacity-70": disabled,
+    },
+    "flex items-center border border-current rounded-md shadow shadow-current/20 transition-all",
+    className,
+  ]}
   {onClick}
+  {loading}
   {disabled}
   {...props}
 >
