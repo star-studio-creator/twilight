@@ -24,40 +24,36 @@
   <input
     type="checkbox"
     class={[
-            className,
-            "appearance-none rounded-md shadow transition-all",
-            {
-              "size-4": size === "sm",
-              "size-5": size === "md",
-              "size-6": size === "lg",
-            },
-            !checked &&
-                "bg-neutral-300 dark:bg-neutral-700 shadow-neutral-300/30 dark:shadow-neutral-700/30",
-            checked && {
-                "bg-blue-600 dark:bg-blue-700 shadow-blue-600/30 dark:shadow-blue-700/30":
-                    color === "primary",
-                "bg-neutral-950 dark:bg-neutral-500 shadow-neutral-950/30 dark:shadow-neutral-500/30":
-                    color === "secondary",
-                "bg-red-600 dark:bg-red-700 shadow-red-600/30 dark:shadow-red-700/30":
-                    color === "danger",
-            },
-            {
-                "cursor-pointer active:scale-95 hover:opacity-90 hover:shadow-md":
-                    !disabled,
-                "cursor-not-allowed opacity-50": disabled,
-            },
-        ]}
+      {
+        "size-4": size === "sm",
+        "size-5": size === "md",
+        "size-6": size === "lg",
+      },
+      !checked && "bg-neutral-300 shadow-neutral-300/20 dark:bg-neutral-700 dark:shadow-neutral-700/20",
+      checked && {
+        "bg-blue-600 shadow-blue-600/20 dark:bg-blue-700 dark:shadow-blue-700/20": color === "primary",
+        "bg-neutral-950 shadow-neutral-950/20 dark:bg-neutral-600 dark:shadow-neutral-600/20": color === "secondary",
+        "bg-red-600 shadow-red-600/20 dark:bg-red-700 dark:shadow-red-700/20": color === "danger",
+      },
+      {
+        "cursor-pointer active:scale-95 hover:shadow-md": !disabled,
+        "cursor-not-allowed opacity-50": disabled,
+      },
+      "appearance-none rounded-md shadow transition-all",
+      className,
+    ]}
     bind:checked
     {disabled}
   >
   {#if checked}
     <Check
-      class={["absolute top-0 left-0 text-neutral-50",
+      class={[
         {
           "top-1 left-0.5 size-3": size === "sm",
           "top-0.5 left-0.5 size-4": size === "md",
           "top-0.5 left-0.5 size-5": size === "lg",
         },
+        "absolute pointer-events-none text-neutral-50",
       ]}
       strokeWidth={3}
     />

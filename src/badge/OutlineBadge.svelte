@@ -13,20 +13,20 @@
 
 <span
   class={[
-        className,
-        "flex items-center border rounded-md",
-        {
-          "gap-0.5 text-sm px-1": size === "sm",
-          "gap-1 px-1.5": size === "md",
-          "gap-1 text-lg px-2": size === "lg",
-        },
-        {
-            "text-blue-600 dark:text-blue-500": color === "primary",
-            "text-neutral-950 dark:text-neutral-300": color === "secondary",
-            "text-red-600 dark:text-red-500": color === "danger",
-            "text-green-600 dark:text-green-500": color === "success",
-        },
-    ]}
+    {
+      "gap-0.5 text-sm px-1": size === "sm",
+      "gap-1 px-1.5": size === "md",
+      "gap-1 text-lg px-2": size === "lg",
+    },
+    {
+      "text-blue-600 dark:text-blue-400": color === "primary",
+      "text-neutral-950 dark:text-neutral-300": color === "secondary",
+      "text-red-600 dark:text-red-500": color === "danger",
+      "text-green-600 dark:text-green-500": color === "success",
+    },
+    "flex items-center border rounded-md",
+    className,
+  ]}
 >
   {#if icon && iconPosition === "left"}
     {@const Icon = icon}

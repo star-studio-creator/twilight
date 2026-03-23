@@ -21,17 +21,17 @@
 
 <select
   class={[
-    className,
     {
       "text-sm px-2 py-0.5": size === "sm",
       "px-2 py-0.5": size === "md",
       "text-lg px-3 py-1": size === "lg",
     },
     {
-      "cursor-pointer": !disabled,
-      "opacity-70 cursor-not-allowed": disabled,
+      "cursor-pointer hover:shadow-md": !disabled,
+      "cursor-not-allowed opacity-70": disabled,
     },
-    "px-2 py-0.5 border border-neutral-300 rounded-md shadow-md shadow-neutral-300/30"
+    "border rounded-md shadow border-neutral-300 shadow-neutral-300/20 dark:border-neutral-600 dark:shadow-neutral-600/20 transition-shadow",
+    className,
   ]}
   bind:value
   {disabled}
