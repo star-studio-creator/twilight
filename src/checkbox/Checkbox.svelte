@@ -29,7 +29,7 @@
         "size-5": size === "md",
         "size-6": size === "lg",
       },
-      !checked && "bg-neutral-200 shadow-neutral-200/20 dark:bg-neutral-700 dark:shadow-neutral-700/20",
+      !checked && "bg-neutral-300 shadow-neutral-300/20 dark:bg-neutral-700 dark:shadow-neutral-700/20",
       checked && {
         "bg-blue-600 shadow-blue-600/20 dark:bg-blue-700 dark:shadow-blue-700/20": color === "primary",
         "bg-neutral-950 shadow-neutral-950/20 dark:bg-neutral-600 dark:shadow-neutral-600/20": color === "secondary",
