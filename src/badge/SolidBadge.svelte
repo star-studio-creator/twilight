@@ -13,21 +13,21 @@
 
 <span
   class={[
-        {
-          "gap-0.5 text-sm px-1": size === "sm",
-          "gap-1 px-1.5": size === "md",
-          "gap-1 text-lg px-2": size === "lg",
-        },
-        {
-          "text-neutral-50": color !== "unstyled",
-            "bg-blue-600 dark:bg-blue-700": color === "primary",
-            "bg-neutral-950 dark:bg-neutral-600": color === "secondary",
-            "bg-red-600 dark:bg-red-700": color === "danger",
-            "bg-green-600 dark:bg-green-700": color === "success",
-        },
-        "flex items-center rounded-md",
-        className,
-    ]}
+    {
+      "gap-0.5 text-sm px-1": size === "sm",
+      "gap-1 px-1.5": size === "md",
+      "gap-1 text-lg px-2": size === "lg",
+    },
+    {
+      "text-neutral-50": color !== "unstyled",
+      "bg-blue-600 dark:bg-blue-700": color === "primary",
+      "bg-neutral-950 dark:bg-neutral-600": color === "secondary",
+      "bg-red-600 dark:bg-red-700": color === "danger",
+      "bg-green-600 dark:bg-green-700": color === "success",
+    },
+    "flex items-center rounded-md",
+    className,
+  ]}
 >
   {#if icon && iconPosition === "left"}
     {@const Icon = icon}
