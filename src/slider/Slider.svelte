@@ -22,13 +22,13 @@
 
 <input
   class={[
-        className,
-        "appearance-none h-1.5 rounded-full bg-blue-600 dark:bg-blue-700",
-        {
-          "cursor-pointer": !disabled,
-          "cursor-not-allowed opacity-70": disabled,
-        },
-    ]}
+    {
+      "cursor-pointer": !disabled,
+      "cursor-not-allowed opacity-70": disabled,
+    },
+    "appearance-none h-1.5 rounded-full bg-blue-600 dark:bg-blue-700",
+    className,
+  ]}
   type="range"
   bind:value
   {min}
