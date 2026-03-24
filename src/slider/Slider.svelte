@@ -19,7 +19,15 @@
     disabled = false,
   }: Props = $props();
 
-  const progress = $derived(((value - min) / (max - min)) * 100);
+  const progress = $derived.by(() => {
+    const range = max - min;
+
+    if (range === 0) {
+      return 0;
+    }
+
+    return Math.min(100, Math.max(0, ((value - min) / range) * 100));
+  });
 </script>
 
 <input
