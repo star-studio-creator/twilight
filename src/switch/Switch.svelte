@@ -19,47 +19,35 @@
   }: Props = $props();
 </script>
 
-<div class="relative">
-  <input
-    class={[
-      {
-        "w-8 h-5": size === "sm",
-        "w-10 h-6": size === "md",
-        "w-12 h-7": size === "lg",
-      },
-      !enabled && "bg-neutral-300 shadow-neutral-300/20 dark:bg-neutral-700 dark:shadow-neutral-700/20",
-      enabled && {
-        "bg-blue-600 shadow-blue-600/20 dark:bg-blue-700 dark:shadow-blue-700/20": color === "primary",
-        "bg-neutral-950 shadow-neutral-950/20 dark:bg-neutral-600 dark:shadow-neutral-600/20": color === "secondary",
-        "bg-red-600 shadow-red-600/20 dark:bg-red-700 dark:shadow-red-700/20": color === "danger",
-      },
-      {
-        "cursor-pointer active:scale-95 hover:shadow-md": !disabled,
-        "cursor-not-allowed opacity-50": disabled,
-      },
-      "appearance-none rounded-full transition-all",
-      className,
-    ]}
-    type="checkbox"
-    role="switch"
-    bind:checked={enabled}
-    aria-checked={enabled}
-    {disabled}
-  >
-
-  <div
-    class={[
-      {
-        "size-3": size === "sm",
-        "size-4": size === "md",
-        "size-5": size === "lg",
-      },
-      enabled && {
-        "translate-x-3": size === "sm",
-        "translate-x-4": size === "md",
-        "translate-x-5": size === "lg",
-      },
-      "absolute top-1 left-1 pointer-events-none bg-neutral-50 rounded-full transition-transform",
-    ]}
-  ></div>
-</div>
+<input
+  class={[
+    {
+      "w-8 h-5 after:size-3": size === "sm",
+      "w-10 h-6 after:size-4": size === "md",
+      "w-12 h-7 after:size-5": size === "lg",
+    },
+    enabled && {
+      "after:translate-x-3": size === "sm",
+      "after:translate-x-4": size === "md",
+      "after:translate-x-5": size === "lg",
+    },
+    !enabled && "bg-neutral-300 shadow-neutral-300/20 dark:bg-neutral-700 dark:shadow-neutral-700/20",
+    enabled && {
+      "bg-blue-600 shadow-blue-600/20 dark:bg-blue-700 dark:shadow-blue-700/20": color === "primary",
+      "bg-neutral-950 shadow-neutral-950/20 dark:bg-neutral-600 dark:shadow-neutral-600/20": color === "secondary",
+      "bg-red-600 shadow-red-600/20 dark:bg-red-700 dark:shadow-red-700/20": color === "danger",
+    },
+    {
+      "cursor-pointer active:scale-95 hover:shadow-md": !disabled,
+      "cursor-not-allowed opacity-50": disabled,
+    },
+    "relative appearance-none rounded-full transition-all",
+    "after:absolute after:top-1 after:left-1 after:rounded-full after:bg-neutral-50 after:transition-transform after:content-['']",
+    className,
+  ]}
+  type="checkbox"
+  role="switch"
+  bind:checked={enabled}
+  aria-checked={enabled}
+  {disabled}
+>
