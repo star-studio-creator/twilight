@@ -1,7 +1,9 @@
 <script lang="ts">
+  import type { ClassValue } from "svelte/elements";
   import type { ColorType, SizeType } from "../types";
 
   interface Props {
+    class?: ClassValue;
     size?: SizeType;
     color?: ColorType;
     enabled: boolean;
@@ -9,6 +11,7 @@
   }
 
   let {
+    class: className = "",
     size = "md",
     color = "primary",
     enabled = $bindable(),
@@ -35,6 +38,7 @@
         "cursor-not-allowed opacity-50": disabled,
       },
       "appearance-none rounded-full transition-all",
+      className,
     ]}
     type="checkbox"
     role="switch"
