@@ -3,7 +3,7 @@
 
   const {
     class: className = "",
-    onClick = () => {},
+    onclick = () => {},
     loading = false,
     disabled = false,
     children,
@@ -23,7 +23,7 @@
     "w-min text-nowrap",
     className,
   ]}
-  onclick={onClick}
+  {onclick}
   disabled={loading || disabled}
   {...props}
 >

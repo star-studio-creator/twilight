@@ -4,7 +4,7 @@ import type { ColorType, IconPosition, SizeType } from "../types";
 
 export interface BaseButtonProps extends HTMLButtonAttributes {
   class?: ClassValue;
-  onClick?: () => void;
+  onclick?: () => void;
   loading?: boolean;
   disabled?: boolean;
   children: Snippet;
