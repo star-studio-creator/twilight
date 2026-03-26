@@ -1,11 +1,11 @@
 <script lang="ts">
   import X from "@lucide/svelte/icons/x";
   import type { Component, Snippet } from "svelte";
+  import { cubicOut } from "svelte/easing";
   import type { ClassValue } from "svelte/elements";
   import { fade, scale } from "svelte/transition";
   import GhostButton from "@/button/GhostButton.svelte";
   import type { SizeType } from "@/types";
-  import { cubicOut } from "svelte/easing";
 
   interface Props {
     class?: ClassValue;
