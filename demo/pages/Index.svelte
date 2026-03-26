@@ -1,4 +1,5 @@
 <script lang="ts">
+  import AppWindow from "@lucide/svelte/icons/app-window";
   import Check from "@lucide/svelte/icons/check";
   import Settings2 from "@lucide/svelte/icons/settings-2";
   import SquareFunction from "@lucide/svelte/icons/square-function";
@@ -21,6 +22,7 @@
     { name: "Card", path: "/components/card", icon: SquareMenu },
     { name: "Checkbox", path: "/components/checkbox", icon: Check },
     { name: "Input", path: "/components/input", icon: TextCursorInput },
+    { name: "Modal", path: "/components/modal", icon: AppWindow },
     { name: "Select", path: "/components/select", icon: SquareMousePointer },
     { name: "Slider", path: "/components/slider", icon: Settings2 },
     { name: "Switch", path: "/components/switch", icon: ToggleRight },
