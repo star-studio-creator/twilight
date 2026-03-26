@@ -43,6 +43,10 @@
       "svelte": "./dist/input/index.js",
       "types": "./dist/input/index.d.ts"
     },
+    "./modal": {
+      "svelte": "./dist/modal/index.js",
+      "types": "./dist/modal/index.d.ts"
+    },
     "./select": {
       "svelte": "./dist/select/index.js",
       "types": "./dist/select/index.d.ts"

@@ -7,7 +7,7 @@
     class: className = "",
     size = "md",
     color = "primary",
-    onClick = () => {},
+    onclick = () => {},
     icon = null,
     iconPosition = "left",
     loading = false,
@@ -36,7 +36,7 @@
     "flex items-center transition-all",
     className,
   ]}
-  {onClick}
+  {onclick}
   {loading}
   {disabled}
   {...props}
