@@ -74,7 +74,7 @@
           "w-xl": size === "md",
           "w-2xl": size === "lg",
         },
-        "flex flex-col gap-4 max-h-[90vh] p-6",
+        "flex flex-col gap-4 max-h-[90vh] p-5",
         "bg-neutral-50 shadow-neutral-50/20 dark:bg-neutral-950 dark:shadow-neutral-950/20 rounded-lg shadow-lg",
         ]}
       role="dialog"
@@ -95,13 +95,13 @@
 
         {#if closeable}
           <GhostButton
-            class="text-sm p-1.5"
+            class="text-xl p-1.5"
             size="unstyled"
             color="secondary"
             onclick={handleClose}
             aria-label="关闭"
           >
-            <X class="1em" />
+            <X size="1em" strokeWidth={2} />
           </GhostButton>
         {/if}
       </div>
