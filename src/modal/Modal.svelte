@@ -62,7 +62,9 @@
           "w-2xl": size === "lg",
         },
         "flex flex-col gap-4 max-h-[90vh] p-6 bg-neutral-50 rounded-lg shadow-lg",
-      ]}
+        ]}
+      role="dialog"
+      aria-modal="true"
     >
       <div class="flex justify-between items-center">
         <div class="flex items-center gap-2 text-xl font-bold">
@@ -72,7 +74,7 @@
             <Icon size="1em" />
           {/if}
 
-          <p>{title}</p>
+          <h2>{title}</h2>
         </div>
 
         {#if closeable}
@@ -81,6 +83,7 @@
             size="unstyled"
             color="secondary"
             onclick={handleClose}
+            aria-label="关闭"
           >
             <X class="1em" />
           </GhostButton>

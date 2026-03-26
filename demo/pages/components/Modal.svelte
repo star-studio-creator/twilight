@@ -56,6 +56,8 @@
   {closeable}
   icon={withIcon ? AppWindow : null}
 >
+  <SolidButton onclick={() => open = false}>关闭模态窗</SolidButton>
+
   {#each { length: 10 } as _}
     <p>{DEMO_TEXT}</p>
   {/each}
