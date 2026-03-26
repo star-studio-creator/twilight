@@ -60,7 +60,7 @@
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div
-    class="fixed top-0 left-0 grid place-content-center w-screen h-screen bg-black/10 z-20"
+    class="fixed top-0 left-0 z-20 grid w-screen h-screen place-content-center bg-black/10 backdrop-blur-xs"
     onclick={handleBackdropClick}
     {@attach portal}
   >
