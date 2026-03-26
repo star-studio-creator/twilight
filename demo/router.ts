@@ -3,6 +3,7 @@ import Button from "@demo/pages/components/Button.svelte";
 import Card from "@demo/pages/components/Card.svelte";
 import Checkbox from "@demo/pages/components/Checkbox.svelte";
 import Input from "@demo/pages/components/Input.svelte";
+import Modal from "@demo/pages/components/Modal.svelte";
 import Select from "@demo/pages/components/Select.svelte";
 import Slider from "@demo/pages/components/Slider.svelte";
 import Switch from "@demo/pages/components/Switch.svelte";
@@ -17,6 +18,7 @@ export const { p, navigate, isActive, route } = createRouter({
     "/card": Card,
     "/checkbox": Checkbox,
     "/input": Input,
+    "/modal": Modal,
     "/select": Select,
     "/slider": Slider,
     "/switch": Switch,
