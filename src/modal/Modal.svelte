@@ -2,8 +2,10 @@
   import X from "@lucide/svelte/icons/x";
   import type { Component, Snippet } from "svelte";
   import type { ClassValue } from "svelte/elements";
+  import { fade, scale } from "svelte/transition";
   import GhostButton from "@/button/GhostButton.svelte";
   import type { SizeType } from "@/types";
+  import { cubicOut } from "svelte/easing";
 
   interface Props {
     class?: ClassValue;
@@ -62,6 +64,7 @@
   <div
     class="fixed top-0 left-0 z-20 grid w-screen h-screen place-content-center bg-black/10 dark:bg-white/10 backdrop-blur-xs"
     onclick={handleBackdropClick}
+    transition:fade={{ duration: 100 }}
     {@attach portal}
   >
     <div
@@ -76,6 +79,8 @@
         ]}
       role="dialog"
       aria-modal="true"
+      in:scale={{ start: 0.95, duration: 150, easing: cubicOut }}
+      out:scale={{ start: 0.98, duration: 100 }}
     >
       <div class="flex justify-between items-center">
         <div class="flex items-center gap-2 text-xl font-bold">
