@@ -27,6 +27,8 @@
     children,
   }: Props = $props();
 
+  const titleId = $props.id();
+
   function portal(node: HTMLElement) {
     document.body.appendChild(node);
   }
@@ -79,6 +81,7 @@
         ]}
       role="dialog"
       aria-modal="true"
+      aria-labelledby={titleId}
       in:scale={{ start: 0.95, duration: 150, easing: cubicOut }}
       out:scale={{ start: 0.98, duration: 100 }}
     >
@@ -90,7 +93,7 @@
             <Icon size="1em" />
           {/if}
 
-          <h2>{title}</h2>
+          <h2 id={titleId}>{title}</h2>
         </div>
 
         {#if closeable}
