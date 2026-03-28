@@ -76,7 +76,7 @@
           "w-xl": size === "md",
           "w-2xl": size === "lg",
         },
-        "flex flex-col gap-4 max-h-[90vh] p-5",
+        "flex flex-col gap-4 max-w-[90vw] max-h-[90vh] p-5",
         "bg-neutral-50 shadow-neutral-50/20 dark:bg-neutral-950 dark:shadow-neutral-950/20 rounded-lg shadow-lg",
         ]}
       role="dialog"
