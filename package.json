@@ -47,6 +47,10 @@
       "svelte": "./dist/disclosure/index.js",
       "types": "./dist/disclosure/index.d.ts"
     },
+    "./field": {
+      "svelte": "./dist/field/index.js",
+      "types": "./dist/field/index.d.ts"
+    },
     "./input": {
       "svelte": "./dist/input/index.js",
       "types": "./dist/input/index.d.ts"

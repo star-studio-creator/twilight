@@ -1,5 +1,6 @@
 <script lang="ts">
   import { DEMO_TEXT, SIZES } from "@demo/constants";
+  import { Field } from "@/field";
   import { NumberInput, TextAreaInput, TextInput } from "@/input";
   import { Switch } from "@/switch";
 
@@ -12,6 +13,7 @@
   let numberInputValue = $state(0);
   let textAreaInputValue = $state("");
   let textInputValue = $state("");
+  let fieldValue = $state("");
 </script>
 
 <div class="flex gap-2">
@@ -38,12 +40,30 @@
   </label>
 </div>
 
+<h2 class="text-xl font-bold">Field</h2>
+<Field
+  class="max-w-md"
+  label="示例字段"
+  description="这是一个轻量的字段说明文案。"
+>
+  <TextInput
+    id="field-demo-input"
+    bind:value={fieldValue}
+    {disabled}
+    {placeholder}
+  />
+</Field>
+<p>
+  <span class="font-bold">Field 输入值：</span>
+  {fieldValue}
+</p>
+
 <h2 class="text-xl font-bold">NumberInput</h2>
 <p>
   <span class="font-bold">数字输入值：</span>
   {numberInputValue}
 </p>
-{#each SIZES as size}
+{#each SIZES as size (size)}
   <label class="flex items-center gap-2">
     {DEMO_TEXT}
     <NumberInput
@@ -60,7 +80,7 @@
   <span class="font-bold">文本块输入值：</span>
   {textAreaInputValue}
 </p>
-{#each SIZES as size}
+{#each SIZES as size (size)}
   <label class="flex items-center gap-2">
     {DEMO_TEXT}
     <TextAreaInput
@@ -78,7 +98,7 @@
   <span class="font-bold">文本输入值：</span>
   {textInputValue}
 </p>
-{#each SIZES as size}
+{#each SIZES as size (size)}
   <label class="flex items-center gap-2">
     {DEMO_TEXT}
     <TextInput

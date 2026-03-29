@@ -3,6 +3,7 @@
   import BellRing from "@lucide/svelte/icons/bell-ring";
   import Check from "@lucide/svelte/icons/check";
   import ChevronsUpDown from "@lucide/svelte/icons/chevrons-up-down";
+  import FormInput from "@lucide/svelte/icons/form-input";
   import Settings2 from "@lucide/svelte/icons/settings-2";
   import SquareFunction from "@lucide/svelte/icons/square-function";
   import SquareMenu from "@lucide/svelte/icons/square-menu";
@@ -29,6 +30,7 @@
       path: "/components/disclosure",
       icon: ChevronsUpDown,
     },
+    { name: "Field", path: "/components/field", icon: FormInput },
     { name: "Input", path: "/components/input", icon: TextCursorInput },
     { name: "Modal", path: "/components/modal", icon: AppWindow },
     { name: "Select", path: "/components/select", icon: SquareMousePointer },
