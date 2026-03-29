@@ -2,6 +2,7 @@ import Badge from "@demo/pages/components/Badge.svelte";
 import Button from "@demo/pages/components/Button.svelte";
 import Card from "@demo/pages/components/Card.svelte";
 import Checkbox from "@demo/pages/components/Checkbox.svelte";
+import Disclosure from "@demo/pages/components/Disclosure.svelte";
 import Input from "@demo/pages/components/Input.svelte";
 import Modal from "@demo/pages/components/Modal.svelte";
 import Select from "@demo/pages/components/Select.svelte";
@@ -17,6 +18,7 @@ export const { p, navigate, isActive, route } = createRouter({
     "/button": Button,
     "/card": Card,
     "/checkbox": Checkbox,
+    "/disclosure": Disclosure,
     "/input": Input,
     "/modal": Modal,
     "/select": Select,

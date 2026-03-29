@@ -30,7 +30,7 @@
       "text-red-600 dark:text-red-500": color === "danger",
     },
     {
-      "active:scale-95 hover:bg-current/5 hover:dark:bg-current/10 hover:shadow-md": !disabled && !loading,
+      "active:scale-95 hover:bg-current/5 dark:hover:bg-current/10 hover:shadow-md": !disabled && !loading,
       "opacity-70": disabled,
     },
     "flex items-center border border-current rounded-md shadow shadow-current/20 transition-all",

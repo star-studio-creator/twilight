@@ -39,6 +39,10 @@
       "svelte": "./dist/checkbox/index.js",
       "types": "./dist/checkbox/index.d.ts"
     },
+    "./disclosure": {
+      "svelte": "./dist/disclosure/index.js",
+      "types": "./dist/disclosure/index.d.ts"
+    },
     "./input": {
       "svelte": "./dist/input/index.js",
       "types": "./dist/input/index.d.ts"
