@@ -75,6 +75,10 @@
       "svelte": "./dist/switch/index.js",
       "types": "./dist/switch/index.d.ts"
     },
+    "./tabs": {
+      "svelte": "./dist/tabs/index.js",
+      "types": "./dist/tabs/index.d.ts"
+    },
     "./theme": {
       "default": "./dist/theme/index.js",
       "types": "./dist/theme/index.d.ts"

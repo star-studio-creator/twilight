@@ -12,6 +12,7 @@
   import Tag from "@lucide/svelte/icons/tag";
   import TextCursorInput from "@lucide/svelte/icons/text-cursor-input";
   import ToggleRight from "@lucide/svelte/icons/toggle-right";
+  import PanelsTopLeft from "@lucide/svelte/icons/panels-top-left";
   import type { Component } from "svelte";
 
   interface Route {
@@ -38,6 +39,7 @@
     { name: "Select", path: "/components/select", icon: SquareMousePointer },
     { name: "Slider", path: "/components/slider", icon: Settings2 },
     { name: "Switch", path: "/components/switch", icon: ToggleRight },
+    { name: "Tabs", path: "/components/tabs", icon: PanelsTopLeft },
   ];
 </script>
 

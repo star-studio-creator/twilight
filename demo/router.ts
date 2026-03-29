@@ -11,6 +11,7 @@ import Placeholder from "@demo/pages/components/Placeholder.svelte";
 import Select from "@demo/pages/components/Select.svelte";
 import Slider from "@demo/pages/components/Slider.svelte";
 import Switch from "@demo/pages/components/Switch.svelte";
+import Tabs from "@demo/pages/components/Tabs.svelte";
 import Index from "@demo/pages/Index.svelte";
 import { createRouter } from "sv-router";
 
@@ -30,5 +31,6 @@ export const { p, navigate, isActive, route } = createRouter({
     "/select": Select,
     "/slider": Slider,
     "/switch": Switch,
+    "/tabs": Tabs,
   },
 });
