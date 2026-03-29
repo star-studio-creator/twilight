@@ -5,6 +5,7 @@
   import ChevronsUpDown from "@lucide/svelte/icons/chevrons-up-down";
   import FormInput from "@lucide/svelte/icons/form-input";
   import Hammer from "@lucide/svelte/icons/hammer";
+  import PanelsTopLeft from "@lucide/svelte/icons/panels-top-left";
   import Settings2 from "@lucide/svelte/icons/settings-2";
   import SquareFunction from "@lucide/svelte/icons/square-function";
   import SquareMenu from "@lucide/svelte/icons/square-menu";
@@ -12,7 +13,6 @@
   import Tag from "@lucide/svelte/icons/tag";
   import TextCursorInput from "@lucide/svelte/icons/text-cursor-input";
   import ToggleRight from "@lucide/svelte/icons/toggle-right";
-  import PanelsTopLeft from "@lucide/svelte/icons/panels-top-left";
   import type { Component } from "svelte";
 
   interface Route {
