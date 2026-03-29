@@ -59,6 +59,10 @@
       "svelte": "./dist/modal/index.js",
       "types": "./dist/modal/index.d.ts"
     },
+    "./placeholder": {
+      "svelte": "./dist/placeholder/index.js",
+      "types": "./dist/placeholder/index.d.ts"
+    },
     "./select": {
       "svelte": "./dist/select/index.js",
       "types": "./dist/select/index.d.ts"

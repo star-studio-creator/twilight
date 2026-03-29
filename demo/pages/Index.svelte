@@ -4,6 +4,7 @@
   import Check from "@lucide/svelte/icons/check";
   import ChevronsUpDown from "@lucide/svelte/icons/chevrons-up-down";
   import FormInput from "@lucide/svelte/icons/form-input";
+  import Hammer from "@lucide/svelte/icons/hammer";
   import Settings2 from "@lucide/svelte/icons/settings-2";
   import SquareFunction from "@lucide/svelte/icons/square-function";
   import SquareMenu from "@lucide/svelte/icons/square-menu";
@@ -33,6 +34,7 @@
     { name: "Field", path: "/components/field", icon: FormInput },
     { name: "Input", path: "/components/input", icon: TextCursorInput },
     { name: "Modal", path: "/components/modal", icon: AppWindow },
+    { name: "Placeholder", path: "/components/placeholder", icon: Hammer },
     { name: "Select", path: "/components/select", icon: SquareMousePointer },
     { name: "Slider", path: "/components/slider", icon: Settings2 },
     { name: "Switch", path: "/components/switch", icon: ToggleRight },

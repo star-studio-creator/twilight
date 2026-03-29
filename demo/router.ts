@@ -7,6 +7,7 @@ import Disclosure from "@demo/pages/components/Disclosure.svelte";
 import Field from "@demo/pages/components/Field.svelte";
 import Input from "@demo/pages/components/Input.svelte";
 import Modal from "@demo/pages/components/Modal.svelte";
+import Placeholder from "@demo/pages/components/Placeholder.svelte";
 import Select from "@demo/pages/components/Select.svelte";
 import Slider from "@demo/pages/components/Slider.svelte";
 import Switch from "@demo/pages/components/Switch.svelte";
@@ -25,6 +26,7 @@ export const { p, navigate, isActive, route } = createRouter({
     "/field": Field,
     "/input": Input,
     "/modal": Modal,
+    "/placeholder": Placeholder,
     "/select": Select,
     "/slider": Slider,
     "/switch": Switch,
