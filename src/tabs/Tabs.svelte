@@ -12,7 +12,7 @@
   let { active = $bindable(), items }: Props = $props();
 </script>
 
-<div class="flex" role="tablist">
+<div class="flex">
   {#each items as item (item.value)}
     {@const itemId = `${tabsId}-item-${item.value}`}
 
@@ -23,8 +23,6 @@
       name={tabsId}
       checked={item.value === active}
       onchange={() => active = item.value}
-      role="tab"
-      aria-selected={item.value === active}
       disabled={item.disabled}
     >
 
