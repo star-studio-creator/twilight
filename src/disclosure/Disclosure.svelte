@@ -49,7 +49,7 @@
     onclick={() => open = !open}
   >
     <div class="flex justify-between items-center">
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-1">
         {#if icon}
           {@const Icon = icon}
 

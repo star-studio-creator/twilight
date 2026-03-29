@@ -1,31 +1,25 @@
 <script lang="ts">
   import { COLORS, DEMO_TEXT, SIZES } from "@demo/constants";
+  import Heart from "@lucide/svelte/icons/heart";
   import { Disclosure } from "@/disclosure";
   import { Switch } from "@/switch";
 
-  let disabled = $state(false);
+  let withIcon = $state(false);
 </script>
 
 <div class="flex gap-2">
   <label class="flex gap-2">
-    禁用
-    <Switch bind:enabled={disabled} />
+    Icon
+    <Switch bind:enabled={withIcon} />
   </label>
 </div>
 
-{#each SIZES as size (`size-${size}`)}
-  <div class="flex flex-col gap-4">
-    {#each COLORS as color (`color-${color}`)}
-      <Disclosure
-        class="w-full"
-        {size}
-        {color}
-        {disabled}
-        title={`${size} / ${color}`}
-      >
+{#each SIZES as size}
+  {#each COLORS as color}
+    <Disclosure {size} {color} title={DEMO_TEXT} icon={withIcon ? Heart : null}>
+      {#each { length: 5 } as _}
         <p>{DEMO_TEXT}</p>
-        <p>{DEMO_TEXT}</p>
-      </Disclosure>
-    {/each}
-  </div>
+      {/each}
+    </Disclosure>
+  {/each}
 {/each}
