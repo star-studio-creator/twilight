@@ -20,7 +20,7 @@
     {#if isActive("/")}
       <h1 class="text-center text-2xl font-bold">暮光 / Twilight</h1>
     {:else}
-      <GhostButton onClick={() => navigate("/")} icon={ChevronLeft}>
+      <GhostButton onclick={() => navigate("/")} icon={ChevronLeft}>
         Back
       </GhostButton>
     {/if}
