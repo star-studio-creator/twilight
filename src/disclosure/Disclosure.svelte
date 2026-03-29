@@ -24,21 +24,26 @@
     children,
   }: Props = $props();
 
+  const disclosureId = $props.id();
+  const triggerId = `${disclosureId}-trigger`;
+  const panelId = `${disclosureId}-panel`;
+
   let open = $state(false);
 </script>
 
 <div
   class={[
-  {
-    "border-blue-600 dark:border-blue-400": color === "primary",
-    "border-neutral-950 dark:border-neutral-300": color === "secondary",
-    "border-red-600 dark:border-red-500": color === "danger",
-  },
-  "border rounded-md"
-]}
+    {
+      "border-blue-600 dark:border-blue-400": color === "primary",
+      "border-neutral-950 dark:border-neutral-300": color === "secondary",
+      "border-red-600 dark:border-red-500": color === "danger",
+    },
+    "border rounded-md"
+  ]}
 >
   <button
     type="button"
+    id={triggerId}
     class={[
       {
         "text-sm px-3 py-1": size === "sm",
@@ -55,6 +60,8 @@
       "hover:bg-current/5 dark:hover:bg-current/10 shadow-current/5 dark:shadow-current/10 transition-colors"
     ]}
     onclick={() => open = !open}
+    aria-expanded={open}
+    aria-controls={panelId}
   >
     <div class="flex justify-between items-center">
       <div class="flex items-center gap-1">
@@ -80,6 +87,7 @@
 
   {#if open}
     <div
+      id={panelId}
       class={[
         {
           "text-sm px-3 py-1": size === "sm",
@@ -89,6 +97,8 @@
         className
       ]}
       transition:slide={{ duration: 150, easing: cubicOut }}
+      role="region"
+      aria-labelledby={triggerId}
     >
       {@render children()}
     </div>
