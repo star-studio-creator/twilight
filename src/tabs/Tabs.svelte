@@ -1,4 +1,4 @@
-<script lang="ts" generics="T">
+<script lang="ts" generics="T extends string">
   import type { TabItem } from "./types";
 
   interface Props {
@@ -14,7 +14,7 @@
 
 <div class="flex" role="tablist">
   {#each items as item (item.value)}
-    {@const itemId = `${tabsId}-item-${String(item.value)}`}
+    {@const itemId = `${tabsId}-item-${item.value}`}
 
     <input
       id={itemId}
