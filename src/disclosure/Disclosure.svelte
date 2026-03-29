@@ -1,7 +1,9 @@
 <script lang="ts">
   import ChevronDown from "@lucide/svelte/icons/chevron-down";
   import type { Component, Snippet } from "svelte";
+  import { cubicOut } from "svelte/easing";
   import type { ClassValue } from "svelte/elements";
+  import { slide } from "svelte/transition";
   import type { ColorType, SizeType } from "../types";
 
   interface Props {
@@ -25,7 +27,16 @@
   let open = $state(false);
 </script>
 
-<div>
+<div
+  class={[
+  {
+    "border-blue-600 dark:border-blue-400": color === "primary",
+    "border-neutral-950 dark:border-neutral-300": color === "secondary",
+    "border-red-600 dark:border-red-500": color === "danger",
+  },
+  "border rounded-md"
+]}
+>
   <button
     type="button"
     class={[
@@ -39,10 +50,7 @@
         "text-neutral-950 dark:text-neutral-300": color === "secondary",
         "text-red-600 dark:text-red-500": color === "danger",
       },
-      {
-        "border-x border-t rounded-t-md": open,
-        "border rounded-md": !open,
-      },
+      open && "border-b border-current",
       "w-full font-bold shadow hover:shadow-md cursor-pointer",
       "hover:bg-current/5 dark:hover:bg-current/10 shadow-current/5 dark:shadow-current/10 transition-colors"
     ]}
@@ -78,14 +86,9 @@
           "px-4 py-2": size === "md",
           "text-lg px-4 py-3": size === "lg",
         },
-        {
-          "border-blue-600 dark:border-blue-400": color === "primary",
-          "border-neutral-950 dark:border-neutral-300": color === "secondary",
-          "border-red-600 dark:border-red-500": color === "danger",
-        },
-        "rounded-b-md border",
         className
       ]}
+      transition:slide={{ duration: 150, easing: cubicOut }}
     >
       {@render children()}
     </div>
