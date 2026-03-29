@@ -4,6 +4,7 @@ import Button from "@demo/pages/components/Button.svelte";
 import Card from "@demo/pages/components/Card.svelte";
 import Checkbox from "@demo/pages/components/Checkbox.svelte";
 import Disclosure from "@demo/pages/components/Disclosure.svelte";
+import Field from "@demo/pages/components/Field.svelte";
 import Input from "@demo/pages/components/Input.svelte";
 import Modal from "@demo/pages/components/Modal.svelte";
 import Select from "@demo/pages/components/Select.svelte";
@@ -21,6 +22,7 @@ export const { p, navigate, isActive, route } = createRouter({
     "/card": Card,
     "/checkbox": Checkbox,
     "/disclosure": Disclosure,
+    "/field": Field,
     "/input": Input,
     "/modal": Modal,
     "/select": Select,
