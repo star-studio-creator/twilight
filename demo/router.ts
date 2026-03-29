@@ -1,3 +1,4 @@
+import Alert from "@demo/pages/components/Alert.svelte";
 import Badge from "@demo/pages/components/Badge.svelte";
 import Button from "@demo/pages/components/Button.svelte";
 import Card from "@demo/pages/components/Card.svelte";
@@ -14,6 +15,7 @@ import { createRouter } from "sv-router";
 export const { p, navigate, isActive, route } = createRouter({
   "/": Index,
   "/components": {
+    "/alert": Alert,
     "/badge": Badge,
     "/button": Button,
     "/card": Card,
