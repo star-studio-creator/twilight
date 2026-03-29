@@ -1,5 +1,4 @@
 <script lang="ts" generics="T">
-  import BaseButton from "../button/BaseButton.svelte";
   import type { TabItem } from "./types";
 
   interface Props {
@@ -7,27 +6,41 @@
     items: TabItem<T>[];
   }
 
+  const id = $props.id();
+  const tabsId = `${id}-tabs`;
+
   let { active = $bindable(), items }: Props = $props();
 </script>
 
 <div class="flex" role="tablist">
   {#each items as item (item.value)}
-    <BaseButton
+    {@const itemId = `${tabsId}-item-${String(item.value)}`}
+
+    <input
+      id={itemId}
+      type="radio"
+      class="peer sr-only"
+      name={tabsId}
+      checked={item.value === active}
+      onchange={() => active = item.value}
+      role="tab"
+      aria-selected={item.value === active}
+      disabled={item.disabled}
+    >
+
+    <label
+      for={itemId}
       class={[
         {
-          "text-blue-600 dark:text-blue-400 border-current shadow-current/20": item.value === active,
+          "text-blue-600 dark:text-blue-400 border-current shadow-current/20 peer-focus-visible:outline": item.value === active,
           "text-neutral-950 border-neutral-300 shadow-neutral-300/20 dark:text-neutral-300 dark:border-neutral-700 dark:shadow-neutral-700/20": item.value !== active,
         },
         {
-          "active:scale-95 hover:bg-current/5 dark:hover:bg-current/10 hover:shadow": !item.disabled,
-          "opacity-70": item.disabled,
+          "cursor-pointer active:scale-95 hover:bg-current/5 dark:hover:bg-current/10 hover:shadow": !item.disabled,
+          "cursor-not-allowed opacity-70": item.disabled,
         },
         "flex gap-1.5 items-center border-b-2 rounded-t px-3 py-1.5 transition-all",
       ]}
-      role="tab"
-      aria-selected={item.value === active}
-      onclick={() => active = item.value}
-      disabled={item.disabled}
     >
       {#if item.icon}
         {@const Icon = item.icon}
@@ -36,6 +49,6 @@
       {/if}
 
       <span>{item.name}</span>
-    </BaseButton>
+    </label>
   {/each}
 </div>
