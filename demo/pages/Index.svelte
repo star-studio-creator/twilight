@@ -1,5 +1,6 @@
 <script lang="ts">
   import AppWindow from "@lucide/svelte/icons/app-window";
+  import BellRing from "@lucide/svelte/icons/bell-ring";
   import Check from "@lucide/svelte/icons/check";
   import ChevronsUpDown from "@lucide/svelte/icons/chevrons-up-down";
   import Settings2 from "@lucide/svelte/icons/settings-2";
@@ -18,6 +19,7 @@
   }
 
   const routes: Route[] = [
+    { name: "Alert", path: "/components/alert", icon: BellRing },
     { name: "Badge", path: "/components/badge", icon: Tag },
     { name: "Button", path: "/components/button", icon: SquareFunction },
     { name: "Card", path: "/components/card", icon: SquareMenu },

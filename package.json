@@ -23,6 +23,10 @@
     "publish": "bun publish"
   },
   "exports": {
+    "./alert": {
+      "svelte": "./dist/alert/index.js",
+      "types": "./dist/alert/index.d.ts"
+    },
     "./badge": {
       "svelte": "./dist/badge/index.js",
       "types": "./dist/badge/index.d.ts"
