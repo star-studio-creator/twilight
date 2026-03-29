@@ -10,7 +10,7 @@
   let { active = $bindable(), items }: Props = $props();
 </script>
 
-<div class="flex">
+<div class="flex" role="tablist">
   {#each items as item (item.value)}
     <BaseButton
       class={[
@@ -24,6 +24,8 @@
         },
         "flex gap-1.5 items-center border-b-2 rounded-t px-3 py-1.5 transition-all",
       ]}
+      role="tab"
+      aria-selected={item.value === active}
       onclick={() => active = item.value}
       disabled={item.disabled}
     >
