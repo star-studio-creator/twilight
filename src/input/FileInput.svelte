@@ -10,10 +10,10 @@
     class: className = "",
     size = "md",
     value = $bindable<File[]>([]),
-    disabled = false,
     placeholder = "点击选择文件",
-    clearable = false,
+    disabled = false,
     multiple = false,
+    clearable = false,
     ...props
   }: FileInputProps = $props();
 
