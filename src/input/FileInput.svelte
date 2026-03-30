@@ -1,8 +1,8 @@
 <script lang="ts">
+  import Trash from "@lucide/svelte/icons/trash";
   import { OutlineBadge } from "@/badge";
   import { OutlineButton } from "@/button";
   import type { FileInputProps } from "./types";
-  import Trash from "@lucide/svelte/icons/trash";
 
   let inputElement: HTMLInputElement | null = null;
 
