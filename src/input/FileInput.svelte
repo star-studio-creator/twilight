@@ -19,7 +19,7 @@
 
   function onchange(event: Event) {
     const target = event.currentTarget as HTMLInputElement;
-    const files = Array.from(target.files);
+    const files = Array.from(target.files ?? []);
 
     value = multiple ? files : files.slice(0, 1);
   }
@@ -44,7 +44,11 @@
       "cursor-pointer hover:shadow-md": !disabled,
       "cursor-not-allowed opacity-70": disabled,
     },
-    "relative border rounded-md shadow border-neutral-300 shadow-neutral-300/20 dark:border-neutral-600 dark:shadow-neutral-600/20 transition-shadow",
+    {
+      "flex flex-col": value.length !== 0,
+      "grid place-content-center": value.length === 0,
+    },
+    "border rounded-md shadow border-neutral-300 shadow-neutral-300/20 dark:border-neutral-600 dark:shadow-neutral-600/20 transition-shadow",
     className,
   ]}
 >
@@ -58,40 +62,27 @@
     {...props}
   >
 
-  {#if value.length !== 0}
-    <div class="flex flex-wrap gap-2">
+  {#if value.length === 0}
+    <p class="text-neutral-600 dark:text-neutral-500">{placeholder}</p>
+  {:else}
+    <div class="flex flex-1 flex-wrap gap-2">
       {#each value as file}
-        <OutlineBadge {size} color="secondary">{file.name}</OutlineBadge>
+        <OutlineBadge class="h-min" {size} color="secondary">
+          {file.name}
+        </OutlineBadge>
       {/each}
     </div>
-  {:else}
-    <div class="grid place-content-center h-full">
-      <p class="text-neutral-600 dark:text-neutral-500">{placeholder}</p>
+
+    <div class="flex justify-between items-end">
+      <p class="text-sm text-neutral-600 dark:text-neutral-500">
+        已选择 {value.length} 个文件
+      </p>
+
+      {#if clearable && value.length > 0}
+        <OutlineButton size="sm" color="secondary" onclick={clear} icon={Trash}>
+          清空
+        </OutlineButton>
+      {/if}
     </div>
   {/if}
-
-  <div
-    class={[
-    {
-      "px-2 bottom-2": size === "sm",
-      "px-3 bottom-3": size === "md",
-      "px-4 bottom-4": size === "lg",
-    },
-    "absolute left-0 w-full flex justify-between items-end"
-  ]}
-  >
-    <p class="text-sm text-neutral-600 dark:text-neutral-500">
-      {#if value.length !== 0}
-        已选择 {value.length} 个文件
-      {:else}
-        {multiple ? "可选择多个文件" : "仅可选择一个文件"}
-      {/if}
-    </p>
-
-    {#if clearable && value.length > 0}
-      <OutlineButton size="sm" color="secondary" onclick={clear} icon={Trash}>
-        清空
-      </OutlineButton>
-    {/if}
-  </div>
 </label>
