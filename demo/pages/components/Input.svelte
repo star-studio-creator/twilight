@@ -1,7 +1,7 @@
 <script lang="ts">
   import { DEMO_TEXT, SIZES } from "@demo/constants";
   import { Field } from "@/field";
-  import { NumberInput, TextAreaInput, TextInput } from "@/input";
+  import { FileInput, NumberInput, TextAreaInput, TextInput } from "@/input";
   import { Switch } from "@/switch";
 
   let placeholder = $state("");
@@ -10,6 +10,7 @@
   let textAreaInputRows = $state(5);
   let textInputShadowed = $state(false);
 
+  let fileInputValue = $state<File[]>([]);
   let numberInputValue = $state(0);
   let textAreaInputValue = $state("");
   let textInputValue = $state("");
@@ -57,6 +58,22 @@
   <span class="font-bold">Field 输入值：</span>
   {fieldValue}
 </p>
+
+<h2 class="text-xl font-bold">FileInput</h2>
+<p>
+  <span class="font-bold">文件输入值：</span>
+  {fileInputValue.map((file) => file.name).join(", ")}
+</p>
+{#each SIZES as size (size)}
+  <FileInput
+    {size}
+    bind:value={fileInputValue}
+    accept="*"
+    multiple
+    clearable
+    {disabled}
+  />
+{/each}
 
 <h2 class="text-xl font-bold">NumberInput</h2>
 <p>
