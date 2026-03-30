@@ -1,19 +1,21 @@
 <script lang="ts">
   import { DEMO_TEXT, SIZES } from "@demo/constants";
-  import { Field } from "@/field";
-  import { NumberInput, TextAreaInput, TextInput } from "@/input";
+  import { FileInput, NumberInput, TextAreaInput, TextInput } from "@/input";
   import { Switch } from "@/switch";
 
-  let placeholder = $state("");
+  let placeholder = $state(DEMO_TEXT);
   let disabled = $state(false);
+
+  let fileMultiple = $state(false);
+  let fileClearable = $state(false);
 
   let textAreaInputRows = $state(5);
   let textInputShadowed = $state(false);
 
+  let fileInputValue = $state<File[]>([]);
   let numberInputValue = $state(0);
   let textAreaInputValue = $state("");
   let textInputValue = $state("");
-  let fieldValue = $state("");
 </script>
 
 <div class="flex gap-2">
@@ -29,6 +31,18 @@
 </div>
 
 <div class="flex gap-2">
+  <label class="flex items-center gap-2">
+    文件输入可多选
+    <Switch bind:enabled={fileMultiple} />
+  </label>
+
+  <label class="flex items-center gap-2">
+    文件输入可清空
+    <Switch bind:enabled={fileClearable} />
+  </label>
+</div>
+
+<div class="flex gap-2">
   <label class="flex gap-2">
     文本块行数
     <NumberInput bind:value={textAreaInputRows} />
@@ -40,23 +54,22 @@
   </label>
 </div>
 
-<h2 class="text-xl font-bold">Field</h2>
-<Field
-  class="max-w-md"
-  label="示例字段"
-  description="这是一个轻量的字段说明文案。"
->
-  <TextInput
-    id="field-demo-input"
-    bind:value={fieldValue}
-    {disabled}
-    {placeholder}
-  />
-</Field>
+<h2 class="text-xl font-bold">FileInput</h2>
 <p>
-  <span class="font-bold">Field 输入值：</span>
-  {fieldValue}
+  <span class="font-bold">文件输入值：</span>
+  {fileInputValue.map((file) => file.name).join(", ")}
 </p>
+{#each SIZES as size (size)}
+  <FileInput
+    {size}
+    bind:value={fileInputValue}
+    accept="*"
+    {placeholder}
+    {disabled}
+    multiple={fileMultiple}
+    clearable={fileClearable}
+  />
+{/each}
 
 <h2 class="text-xl font-bold">NumberInput</h2>
 <p>

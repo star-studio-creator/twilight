@@ -21,3 +21,8 @@ export interface TextInputProps extends BaseInputProps {
   value: string;
   shadowed?: boolean;
 }
+
+export interface FileInputProps extends BaseInputProps {
+  value: File[];
+  clearable?: boolean;
+}
