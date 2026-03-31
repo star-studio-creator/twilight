@@ -1,9 +1,9 @@
 <script lang="ts">
+  import CircleAlert from "@lucide/svelte/icons/circle-alert";
   import CircleCheck from "@lucide/svelte/icons/circle-check";
+  import CircleX from "@lucide/svelte/icons/circle-x";
   import Info from "@lucide/svelte/icons/info";
   import LoaderCircle from "@lucide/svelte/icons/loader-circle";
-  import CircleAlert from "@lucide/svelte/icons/circle-alert";
-  import CircleX from "@lucide/svelte/icons/circle-x";
   import { onMount } from "svelte";
   import { Toaster } from "svelte-sonner";
   import { getTheme, type ThemeType } from "@/theme";

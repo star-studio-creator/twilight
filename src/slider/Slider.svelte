@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type { ClassValue } from "svelte/elements";
+  import type { ClassValue, HTMLInputAttributes } from "svelte/elements";
 
-  interface Props {
+  interface Props extends Omit<HTMLInputAttributes, "type" | "value"> {
     class?: ClassValue;
     value: number;
     min: number;
@@ -17,6 +17,7 @@
     max,
     step = 1,
     disabled = false,
+    ...props
   }: Props = $props();
 
   const progress = $derived.by(() => {
@@ -59,4 +60,5 @@
   {step}
   {disabled}
   style={`background: linear-gradient(to right, var(--slider-fill) 0%, var(--slider-fill) ${progress}%, var(--slider-rest) ${progress}%, var(--slider-rest) 100%)`}
+  {...props}
 >

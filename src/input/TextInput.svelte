@@ -8,6 +8,7 @@
     disabled = false,
     shadowed = false,
     placeholder = "",
+    ...props
   }: TextInputProps = $props();
 </script>
 
@@ -29,4 +30,5 @@
   bind:value
   {disabled}
   {placeholder}
+  {...props}
 >

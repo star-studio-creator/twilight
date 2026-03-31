@@ -1,8 +1,8 @@
 <script lang="ts" generics="T">
-  import type { ClassValue } from "svelte/elements";
+  import type { ClassValue, HTMLSelectAttributes } from "svelte/elements";
   import type { SizeType } from "../types";
 
-  interface Props<T> {
+  interface Props<T> extends Omit<HTMLSelectAttributes, "size"> {
     class?: ClassValue;
     size?: SizeType;
     value: T;
@@ -16,6 +16,7 @@
     value = $bindable(),
     options,
     disabled = false,
+    ...props
   }: Props<T> = $props();
 </script>
 
@@ -35,6 +36,7 @@
   ]}
   bind:value
   {disabled}
+  {...props}
 >
   {#each Object.entries(options) as [ optionName, optionValue ]}
     <option value={optionValue}>{optionName}</option>

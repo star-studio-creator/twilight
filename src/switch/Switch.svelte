@@ -1,8 +1,9 @@
 <script lang="ts">
-  import type { ClassValue } from "svelte/elements";
+  import type { ClassValue, HTMLInputAttributes } from "svelte/elements";
   import type { ColorType, SizeType } from "../types";
 
-  interface Props {
+  interface Props
+    extends Omit<HTMLInputAttributes, "size" | "checked" | "type"> {
     class?: ClassValue;
     size?: SizeType;
     color?: ColorType;
@@ -16,6 +17,7 @@
     color = "primary",
     enabled = $bindable(),
     disabled = false,
+    ...props
   }: Props = $props();
 </script>
 
@@ -50,4 +52,5 @@
   bind:checked={enabled}
   aria-checked={enabled}
   {disabled}
+  {...props}
 >

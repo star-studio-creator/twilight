@@ -7,6 +7,7 @@
     value = $bindable(),
     disabled = false,
     placeholder = "",
+    ...props
   }: NumberInputProps = $props();
 </script>
 
@@ -28,4 +29,5 @@
   bind:value
   {disabled}
   {placeholder}
+  {...props}
 >

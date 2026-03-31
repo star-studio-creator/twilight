@@ -8,6 +8,7 @@
     rows = 5,
     disabled = false,
     placeholder = "",
+    ...props
   }: TextAreaInputProps = $props();
 </script>
 
@@ -29,4 +30,5 @@
   {rows}
   {disabled}
   {placeholder}
+  {...props}
 ></textarea>

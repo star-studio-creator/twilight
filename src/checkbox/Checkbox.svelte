@@ -17,6 +17,7 @@
     color = "primary",
     checked = $bindable(),
     disabled = false,
+    ...props
   }: Props = $props();
 </script>
 
@@ -44,6 +45,7 @@
     ]}
     bind:checked
     {disabled}
+    {...props}
   >
   {#if checked}
     <Check
