@@ -1,16 +1,36 @@
 <script lang="ts">
   import { DEMO_TEXT } from "@demo/constants";
   import { SolidButton } from "@/button";
+  import { Switch } from "@/switch";
   import { toast } from "@/toast";
+
+  let withDescription = $state(false);
 </script>
 
+<label class="flex gap-2">
+  包含描述
+  <Switch bind:enabled={withDescription} />
+</label>
+
 <div class="flex flex-wrap gap-3">
-  <SolidButton onclick={() => toast(DEMO_TEXT)}>Default</SolidButton>
-  <SolidButton onclick={() => toast(DEMO_TEXT, {description: DEMO_TEXT})}>
-    Description
+  <SolidButton
+    onclick={() => toast.success(DEMO_TEXT, {description: withDescription ? DEMO_TEXT: undefined})}
+  >
+    Success
   </SolidButton>
-  <SolidButton onclick={() => toast.success(DEMO_TEXT)}>Success</SolidButton>
-  <SolidButton onclick={() => toast.info(DEMO_TEXT)}>Info</SolidButton>
-  <SolidButton onclick={() => toast.warning(DEMO_TEXT)}>Warning</SolidButton>
-  <SolidButton onclick={() => toast.error(DEMO_TEXT)}>Error</SolidButton>
+  <SolidButton
+    onclick={() => toast.info(DEMO_TEXT, {description: withDescription ? DEMO_TEXT: undefined})}
+  >
+    Info
+  </SolidButton>
+  <SolidButton
+    onclick={() => toast.warning(DEMO_TEXT, {description: withDescription ? DEMO_TEXT: undefined})}
+  >
+    Warning
+  </SolidButton>
+  <SolidButton
+    onclick={() => toast.error(DEMO_TEXT, {description: withDescription ? DEMO_TEXT: undefined})}
+  >
+    Error
+  </SolidButton>
 </div>
