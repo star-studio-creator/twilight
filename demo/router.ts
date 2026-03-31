@@ -12,6 +12,7 @@ import Select from "@demo/pages/components/Select.svelte";
 import Slider from "@demo/pages/components/Slider.svelte";
 import Switch from "@demo/pages/components/Switch.svelte";
 import Tabs from "@demo/pages/components/Tabs.svelte";
+import Toast from "@demo/pages/components/Toast.svelte";
 import Index from "@demo/pages/Index.svelte";
 import { createRouter } from "sv-router";
 
@@ -32,5 +33,6 @@ export const { p, navigate, isActive, route } = createRouter({
     "/slider": Slider,
     "/switch": Switch,
     "/tabs": Tabs,
+    "/toast": Toast,
   },
 });

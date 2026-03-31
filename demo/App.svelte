@@ -5,6 +5,7 @@
   import { GhostButton } from "@/button";
   import Switch from "@/switch/Switch.svelte";
   import { getTheme, setTheme } from "@/theme";
+  import { Toaster } from "@/toast";
 
   let isDarkTheme = $state(getTheme() === "dark");
 
@@ -12,6 +13,8 @@
     setTheme(isDarkTheme ? "dark" : "light");
   });
 </script>
+
+<Toaster />
 
 <div
   class="relative flex flex-col gap-4 text-neutral-950 dark:text-neutral-50 max-w-[60vw] mx-auto my-8"
