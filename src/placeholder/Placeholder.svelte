@@ -11,7 +11,6 @@
   const {
     class: className = "",
     color = "primary",
-    ...props
   }: PlaceholderProps = $props();
 </script>
 
@@ -25,7 +24,6 @@
     "grid place-content-center rounded-md",
     className,
   ]}
-  {...props}
 >
   <div class="flex items-center text-lg gap-1">
     <Hammer size="1em" />
