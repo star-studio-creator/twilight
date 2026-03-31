@@ -5,6 +5,7 @@
   import ChevronsUpDown from "@lucide/svelte/icons/chevrons-up-down";
   import FormInput from "@lucide/svelte/icons/form-input";
   import Hammer from "@lucide/svelte/icons/hammer";
+  import Info from "@lucide/svelte/icons/info";
   import PanelsTopLeft from "@lucide/svelte/icons/panels-top-left";
   import Settings2 from "@lucide/svelte/icons/settings-2";
   import SquareFunction from "@lucide/svelte/icons/square-function";
@@ -40,6 +41,7 @@
     { name: "Slider", path: "/components/slider", icon: Settings2 },
     { name: "Switch", path: "/components/switch", icon: ToggleRight },
     { name: "Tabs", path: "/components/tabs", icon: PanelsTopLeft },
+    { name: "Toast", path: "/components/toast", icon: Info },
   ];
 </script>
 

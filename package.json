@@ -82,6 +82,10 @@
     "./theme": {
       "default": "./dist/theme/index.js",
       "types": "./dist/theme/index.d.ts"
+    },
+    "./toast": {
+      "default": "./dist/toast/index.js",
+      "types": "./dist/toast/index.d.ts"
     }
   },
   "devDependencies": {
@@ -95,6 +99,7 @@
   "peerDependencies": {
     "@lucide/svelte": "^0.577.0",
     "svelte": "^5.53.0",
+    "svelte-sonner": "^1.1.0",
     "tailwindcss": "^4.2.0"
   }
 }
