@@ -1,5 +1,6 @@
 <script lang="ts">
-  import type { Component, Snippet } from "svelte";
+  import type { LucideIcon } from "@lucide/svelte";
+  import type { Snippet } from "svelte";
   import type { ClassValue } from "svelte/elements";
 
   interface Props {
@@ -7,7 +8,7 @@
     label: string;
     description?: string;
     error?: string;
-    icon?: Component;
+    icon?: LucideIcon;
     children: Snippet;
   }
 

@@ -1,6 +1,7 @@
 <script lang="ts">
+  import type { LucideIcon } from "@lucide/svelte";
   import X from "@lucide/svelte/icons/x";
-  import type { Component, Snippet } from "svelte";
+  import type { Snippet } from "svelte";
   import { cubicOut } from "svelte/easing";
   import type { ClassValue } from "svelte/elements";
   import { fade, scale } from "svelte/transition";
@@ -13,7 +14,7 @@
     title: string;
     open: boolean;
     closeable?: boolean;
-    icon?: Component;
+    icon?: LucideIcon;
     children: Snippet;
   }
 

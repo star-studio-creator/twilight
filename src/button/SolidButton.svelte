@@ -1,6 +1,7 @@
 <script lang="ts">
+  import type { LucideIcon } from "@lucide/svelte";
   import LoaderCircle from "@lucide/svelte/icons/loader-circle";
-  import type { Component, Snippet } from "svelte";
+  import type { Snippet } from "svelte";
   import type { ClassValue, HTMLButtonAttributes } from "svelte/elements";
   import type { ColorType, IconPosition, SizeType } from "../types";
   import BaseButton from "./BaseButton.svelte";
@@ -12,7 +13,7 @@
     onclick?: () => void;
     loading?: boolean;
     disabled?: boolean;
-    icon?: Component;
+    icon?: LucideIcon;
     iconPosition?: IconPosition;
     children: Snippet;
   }

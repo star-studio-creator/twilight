@@ -1,6 +1,7 @@
 <script lang="ts">
+  import type { LucideIcon } from "@lucide/svelte";
   import ChevronDown from "@lucide/svelte/icons/chevron-down";
-  import type { Component, Snippet } from "svelte";
+  import type { Snippet } from "svelte";
   import { cubicOut } from "svelte/easing";
   import type { ClassValue } from "svelte/elements";
   import { slide } from "svelte/transition";
@@ -11,7 +12,7 @@
     size?: SizeType;
     color?: ColorType;
     title: string;
-    icon?: Component;
+    icon?: LucideIcon;
     children: Snippet;
   }
 

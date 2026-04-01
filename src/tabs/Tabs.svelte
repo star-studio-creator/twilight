@@ -1,10 +1,10 @@
 <script lang="ts" generics="T extends string">
-  import type { Component } from "svelte";
+  import type { LucideIcon } from "@lucide/svelte";
 
   interface TabItem<T> {
     name: string;
     value: T;
-    icon?: Component;
+    icon?: LucideIcon;
     disabled?: boolean;
   }
 

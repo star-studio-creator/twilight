@@ -1,5 +1,6 @@
 <script lang="ts">
-  import type { Component, Snippet } from "svelte";
+  import type { LucideIcon } from "@lucide/svelte";
+  import type { Snippet } from "svelte";
   import type { ClassValue, HTMLAttributes } from "svelte/elements";
   import type { ColorType, SizeType } from "../types";
 
@@ -8,7 +9,7 @@
     size?: SizeType;
     color?: ColorType;
     title: string;
-    icon?: Component;
+    icon?: LucideIcon;
     children: Snippet;
   }
 
