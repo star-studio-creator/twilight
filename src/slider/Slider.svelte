@@ -39,7 +39,7 @@
     },
     "[--slider-fill:var(--color-blue-600)] dark:[--slider-fill:var(--color-blue-700)]",
     "[--slider-rest:var(--color-neutral-300)] dark:[--slider-rest:var(--color-neutral-700)]",
-    "h-1.5 appearance-none rounded-full text-(--twilight-primary) dark:text-(--twilight-primary-dark)",
+    "h-1.5 appearance-none rounded-full text-primary dark:text-primary-dark",
     "[&::-webkit-slider-thumb]:size-4 [&::-moz-range-thumb]:size-4",
     "[&::-webkit-slider-thumb]:appearance-none [&::-moz-range-thumb]:appearance-none",
     "[&::-webkit-slider-thumb]:bg-neutral-50 [&::-moz-range-thumb]:bg-neutral-50",

@@ -15,7 +15,7 @@
 <div
   class={[
     {
-      "text-(--twilight-primary) bg-blue-100 dark:text-(--twilight-primary-dark) dark:bg-blue-950": color === "primary",
+      "text-primary bg-blue-100 dark:text-primary-dark dark:bg-blue-950": color === "primary",
       "text-neutral-950 bg-neutral-200 dark:text-neutral-300 dark:bg-neutral-800": color === "secondary",
       "text-red-600 bg-red-100 dark:text-red-500 dark:bg-red-950": color === "danger",
     },

@@ -39,7 +39,7 @@
       "gap-1 text-lg px-2 py-1.5": size === "lg",
     },
     {
-      "text-(--twilight-primary) dark:text-(--twilight-primary-dark)": color === "primary",
+      "text-primary dark:text-primary-dark": color === "primary",
       "text-neutral-950 dark:text-neutral-300": color === "secondary",
       "text-red-600 dark:text-red-500": color === "danger",
     },

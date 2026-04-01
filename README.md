@@ -2,23 +2,25 @@
 
 ## 使用
 
-请在 CSS 中将组件库加入到 Tailwind CSS 扫描范围内，并配置暗色主题应用条件：
+您需要在主 CSS 文件中：
+
+- 导入 Tailwind CSS
+- 将组件库路径加入 Tailwind CSS 扫描范围
+- 导入组件库基础 CSS
+- 导入默认主题 CSS
+- 设置暗色主题应用条件
+
+示例代码如下：
 
 ```css
+@import "tailwindcss";
+
 @source "./node_modules/@star-studio/twilight";
+
+@import "./node_modules/@star-studio/twilight/index.css";
+@import "./node_modules/@star-studio/twilight/theme/default.css";
+
 @custom-variant dark (&:where(.dark, .dark *));
-```
-
-之后，在应用入口文件中引入组件库 CSS：
-
-```typescript
-import "@star-studio/twilight/index.css";
-```
-
-如需使用默认主题（蓝色），需一并引入对应 CSS：
-
-```typescript
-import "@star-studio/twilight/theme/default.css";
 ```
 
 ## 明暗主题切换

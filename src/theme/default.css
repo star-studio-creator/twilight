@@ -8,7 +8,7 @@ html.dark body {
   background-color: var(--color-neutral-950);
 }
 
-:root {
-    --twilight-primary: var(--color-blue-600);
-    --twilight-primary-dark: var(--color-blue-700);
+@theme {
+  --color-primary: var(--color-blue-600);
+  --color-primary-dark: var(--color-blue-700);
 }
