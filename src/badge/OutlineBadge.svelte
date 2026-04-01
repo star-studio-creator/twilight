@@ -30,7 +30,7 @@
       "gap-1 text-lg px-2": size === "lg",
     },
     {
-      "text-blue-600 dark:text-blue-400": color === "primary",
+      "text-(--twilight-primary) dark:text-(--twilight-primary-dark)": color === "primary",
       "text-neutral-950 dark:text-neutral-300": color === "secondary",
       "text-red-600 dark:text-red-500": color === "danger",
       "text-green-600 dark:text-green-500": color === "success",

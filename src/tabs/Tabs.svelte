@@ -37,7 +37,7 @@
       for={itemId}
       class={[
         {
-          "text-blue-600 dark:text-blue-400 border-current shadow-current/20 peer-focus-visible:outline": item.value === active,
+          "text-(--twilight-primary) dark:text-(--twilight-primary-dark) border-current shadow-current/20 peer-focus-visible:outline": item.value === active,
           "text-neutral-950 border-neutral-300 shadow-neutral-300/20 dark:text-neutral-300 dark:border-neutral-700 dark:shadow-neutral-700/20": item.value !== active,
         },
         {

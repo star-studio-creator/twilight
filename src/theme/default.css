@@ -7,3 +7,8 @@ html.dark body {
   color: var(--color-neutral-50);
   background-color: var(--color-neutral-950);
 }
+
+:root {
+    --twilight-primary: var(--color-blue-600);
+    --twilight-primary-dark: var(--color-blue-700);
+}
