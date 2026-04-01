@@ -34,7 +34,7 @@
 <div
   class={[
     {
-      "border-blue-600 dark:border-blue-400": color === "primary",
+      "border-primary dark:border-primary-light": color === "primary",
       "border-neutral-950 dark:border-neutral-300": color === "secondary",
       "border-red-600 dark:border-red-500": color === "danger",
     },

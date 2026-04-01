@@ -37,7 +37,7 @@
       "cursor-pointer": !disabled,
       "cursor-not-allowed opacity-70": disabled,
     },
-    "[--slider-fill:var(--color-blue-600)] dark:[--slider-fill:var(--color-blue-700)]",
+    "[--slider-fill:var(--color-primary)] dark:[--slider-fill:var(--color-primary-dark)]",
     "[--slider-rest:var(--color-neutral-300)] dark:[--slider-rest:var(--color-neutral-700)]",
     "h-1.5 appearance-none rounded-full text-primary dark:text-primary-dark",
     "[&::-webkit-slider-thumb]:size-4 [&::-moz-range-thumb]:size-4",

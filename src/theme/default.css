@@ -10,5 +10,6 @@ html.dark body {
 
 @theme {
   --color-primary: var(--color-blue-600);
+  --color-primary-light: var(--color-blue-400);
   --color-primary-dark: var(--color-blue-700);
 }
