@@ -34,7 +34,7 @@
 <div
   class={[
     {
-      "border-blue-600 dark:border-blue-400": color === "primary",
+      "border-primary dark:border-primary-light": color === "primary",
       "border-neutral-950 dark:border-neutral-300": color === "secondary",
       "border-red-600 dark:border-red-500": color === "danger",
     },
@@ -51,7 +51,7 @@
         "text-lg px-4 py-3": size === "lg",
       },
       {
-        "text-blue-600 dark:text-blue-400": color === "primary",
+        "text-primary dark:text-primary-light": color === "primary",
         "text-neutral-950 dark:text-neutral-300": color === "secondary",
         "text-red-600 dark:text-red-500": color === "danger",
       },

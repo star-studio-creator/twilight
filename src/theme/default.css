@@ -1,0 +1,15 @@
+body {
+  color: var(--color-neutral-950);
+  background-color: var(--color-neutral-50);
+}
+
+html.dark body {
+  color: var(--color-neutral-50);
+  background-color: var(--color-neutral-950);
+}
+
+@theme {
+  --color-primary: var(--color-blue-600);
+  --color-primary-light: var(--color-blue-400);
+  --color-primary-dark: var(--color-blue-700);
+}

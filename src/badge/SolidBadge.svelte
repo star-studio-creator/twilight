@@ -31,7 +31,7 @@
     },
     {
       "text-neutral-50": color !== "unstyled",
-      "bg-blue-600 dark:bg-blue-700": color === "primary",
+      "bg-primary dark:bg-primary-dark": color === "primary",
       "bg-neutral-950 dark:bg-neutral-600": color === "secondary",
       "bg-red-600 dark:bg-red-700": color === "danger",
       "bg-green-600 dark:bg-green-700": color === "success",

@@ -1,13 +1,8 @@
-@import "tailwindcss" source("../");
+@import "tailwindcss";
+
+@import "../src/index.css";
+@import "../src/theme/default.css";
+
+@source "../src";
+
 @custom-variant dark (&:where(.dark, .dark *));
-
-body {
-  @apply bg-neutral-50 dark:bg-neutral-950;
-  @apply text-neutral-950 dark:text-neutral-50;
-}
-
-.theme-switching *,
-.theme-switching *::before,
-.theme-switching *::after {
-  transition: none !important;
-}
