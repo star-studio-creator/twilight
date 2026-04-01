@@ -2,31 +2,26 @@
 
 ## 使用
 
-使用前，应在 `index.css` 中将组件库目录添加到 Tailwind CSS 扫描范围内：
+请在 CSS 中将组件库加入到 Tailwind CSS 扫描范围内，并配置暗色主题应用条件：
 
 ```css
 @source "./node_modules/@star-studio/twilight";
-```
-
-## 暗色主题
-
-您需在 `index.css` 中将暗色主题应用条件改为 `.dark` 类：
-
-```css
 @custom-variant dark (&:where(.dark, .dark *));
 ```
 
-如需避免切换时包含颜色渐变的组件出现闪烁，应添加以下 CSS 类：
+之后，在应用入口文件中引入组件库 CSS：
 
-```css
-.theme-switching *,
-.theme-switching *::before,
-.theme-switching *::after {
-  transition: none !important;
-}
+```typescript
+import "@star-studio/twilight/index.css";
 ```
 
-代码示例：
+如需使用默认主题（蓝色），需一并引入对应 CSS：
+
+```typescript
+import "@star-studio/twilight/theme/default.css";
+```
+
+## 明暗主题切换
 
 ```typescript
 import { getTheme, setTheme, toggleTheme } from "@star-studio/twilight/theme";

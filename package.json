@@ -9,7 +9,9 @@
     "dist"
   ],
   "type": "module",
-  "sideEffects": false,
+  "sideEffects": [
+    "**/*.css"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/star-studio-creator/twilight.git"
@@ -23,6 +25,7 @@
     "publish": "bun publish"
   },
   "exports": {
+    "./index.css": "./dist/index.css",
     "./alert": {
       "svelte": "./dist/alert/index.js",
       "types": "./dist/alert/index.d.ts"
@@ -83,6 +86,7 @@
       "default": "./dist/theme/index.js",
       "types": "./dist/theme/index.d.ts"
     },
+    "./theme/default.css": "./dist/theme/default.css",
     "./toast": {
       "default": "./dist/toast/index.js",
       "types": "./dist/toast/index.d.ts"

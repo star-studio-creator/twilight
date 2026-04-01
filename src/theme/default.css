@@ -1,0 +1,9 @@
+body {
+  color: var(--color-neutral-950);
+  background-color: var(--color-neutral-50);
+}
+
+html.dark body {
+  color: var(--color-neutral-50);
+  background-color: var(--color-neutral-950);
+}
