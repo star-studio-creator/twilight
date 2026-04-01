@@ -1,8 +1,18 @@
 <script lang="ts">
   import Trash from "@lucide/svelte/icons/trash";
+  import type { ClassValue, HTMLInputAttributes } from "svelte/elements";
   import { OutlineBadge } from "@/badge";
   import { OutlineButton } from "@/button";
-  import type { FileInputProps } from "./types";
+  import type { SizeType } from "../types";
+
+  interface Props extends Omit<HTMLInputAttributes, "size"> {
+    class?: ClassValue;
+    size?: SizeType;
+    value: File[];
+    placeholder?: string;
+    disabled?: boolean;
+    clearable?: boolean;
+  }
 
   let inputElement: HTMLInputElement | null = null;
 
@@ -15,7 +25,7 @@
     multiple = false,
     clearable = false,
     ...props
-  }: FileInputProps = $props();
+  }: Props = $props();
 
   function onchange(event: Event) {
     const target = event.currentTarget as HTMLInputElement;

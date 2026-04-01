@@ -1,20 +1,34 @@
 <script lang="ts">
   import LoaderCircle from "@lucide/svelte/icons/loader-circle";
+  import type { Component, Snippet } from "svelte";
+  import type { ClassValue, HTMLButtonAttributes } from "svelte/elements";
+  import type { ColorType, IconPosition, SizeType } from "../types";
   import BaseButton from "./BaseButton.svelte";
-  import type { ButtonProps } from "./types";
+
+  interface Props extends HTMLButtonAttributes {
+    class?: ClassValue;
+    size?: SizeType;
+    color?: ColorType;
+    onclick?: () => void;
+    loading?: boolean;
+    disabled?: boolean;
+    icon?: Component;
+    iconPosition?: IconPosition;
+    children: Snippet;
+  }
 
   const {
     class: className = "",
     size = "md",
     color = "primary",
-    onclick = () => {},
-    icon = null,
-    iconPosition = "left",
+    onclick,
     loading = false,
     disabled = false,
+    icon = null,
+    iconPosition = "left",
     children,
     ...props
-  }: ButtonProps = $props();
+  }: Props = $props();
 </script>
 
 <BaseButton

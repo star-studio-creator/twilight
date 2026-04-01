@@ -1,2 +1,10 @@
+import type { Component } from "svelte";
+
 export { default as Tabs } from "./Tabs.svelte";
-export type { TabItem } from "./types";
+
+export interface TabItem<T> {
+  name: string;
+  value: T;
+  icon?: Component;
+  disabled?: boolean;
+}

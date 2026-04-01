@@ -5,18 +5,18 @@
   interface Props {
     class?: ClassValue;
     label: string;
-    icon?: Component;
     description?: string;
     error?: string;
+    icon?: Component;
     children: Snippet;
   }
 
   let {
     class: className = "",
     label,
-    icon = null,
     description,
     error,
+    icon = null,
     children,
   }: Props = $props();
 </script>

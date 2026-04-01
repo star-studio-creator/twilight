@@ -19,7 +19,6 @@
     title,
     icon = null,
     children,
-    ...props
   }: Props = $props();
 </script>
 
@@ -38,7 +37,6 @@
     "grid grid-rows-[auto_1fr] grid-cols-[auto_1fr]",
     "border border-current rounded-md",
   ]}
-  {...props}
 >
   {#if icon}
     {@const Icon = icon}

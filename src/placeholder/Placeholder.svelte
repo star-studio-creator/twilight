@@ -8,11 +8,8 @@
     color?: ColorType;
   }
 
-  const {
-    class: className = "",
-    color = "primary",
-    ...props
-  }: PlaceholderProps = $props();
+  const { class: className = "", color = "primary" }: PlaceholderProps =
+    $props();
 </script>
 
 <div
@@ -25,7 +22,6 @@
     "grid place-content-center rounded-md",
     className,
   ]}
-  {...props}
 >
   <div class="flex items-center text-lg gap-1">
     <Hammer size="1em" />
