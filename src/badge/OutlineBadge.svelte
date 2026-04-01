@@ -1,5 +1,16 @@
 <script lang="ts">
-  import type { BadgeProps } from "./types";
+  import type { Component, Snippet } from "svelte";
+  import type { ClassValue } from "svelte/elements";
+  import type { ColorType, IconPosition, SizeType } from "../types";
+
+  interface Props {
+    class?: ClassValue;
+    size?: SizeType;
+    color?: ColorType | "success";
+    icon?: Component;
+    iconPosition?: IconPosition;
+    children: Snippet;
+  }
 
   const {
     class: className,
@@ -8,7 +19,7 @@
     icon = null,
     iconPosition = "left",
     children,
-  }: BadgeProps = $props();
+  }: Props = $props();
 </script>
 
 <span

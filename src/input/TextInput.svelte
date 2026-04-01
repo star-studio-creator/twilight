@@ -1,5 +1,15 @@
 <script lang="ts">
-  import type { TextInputProps } from "./types";
+  import type { ClassValue, HTMLInputAttributes } from "svelte/elements";
+  import type { SizeType } from "../types";
+
+  interface Props extends Omit<HTMLInputAttributes, "size"> {
+    class?: ClassValue;
+    size?: SizeType;
+    value: string;
+    placeholder?: string;
+    disabled?: boolean;
+    shadowed?: boolean;
+  }
 
   let {
     class: className = "",
@@ -9,7 +19,7 @@
     shadowed = false,
     placeholder = "",
     ...props
-  }: TextInputProps = $props();
+  }: Props = $props();
 </script>
 
 <input

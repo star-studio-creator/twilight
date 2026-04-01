@@ -1,14 +1,23 @@
 <script lang="ts">
-  import type { BaseButtonProps } from "./types";
+  import type { Snippet } from "svelte";
+  import type { ClassValue, HTMLButtonAttributes } from "svelte/elements";
+
+  interface Props extends HTMLButtonAttributes {
+    class?: ClassValue;
+    onclick?: () => void;
+    loading?: boolean;
+    disabled?: boolean;
+    children: Snippet;
+  }
 
   const {
     class: className = "",
-    onclick = () => {},
+    onclick,
     loading = false,
     disabled = false,
     children,
     ...props
-  }: BaseButtonProps = $props();
+  }: Props = $props();
 </script>
 
 <button

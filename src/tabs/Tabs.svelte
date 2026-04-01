@@ -1,5 +1,12 @@
 <script lang="ts" generics="T extends string">
-  import type { TabItem } from "./types";
+  import type { Component } from "svelte";
+
+  interface TabItem<T> {
+    name: string;
+    value: T;
+    icon?: Component;
+    disabled?: boolean;
+  }
 
   interface Props {
     active?: T;

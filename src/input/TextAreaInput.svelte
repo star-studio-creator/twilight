@@ -1,5 +1,15 @@
 <script lang="ts">
-  import type { TextAreaInputProps } from "./types";
+  import type { ClassValue, HTMLTextareaAttributes } from "svelte/elements";
+  import type { SizeType } from "../types";
+
+  interface Props extends Omit<HTMLTextareaAttributes, "size"> {
+    class?: ClassValue;
+    size?: SizeType;
+    value: string;
+    rows?: number;
+    placeholder?: string;
+    disabled?: boolean;
+  }
 
   let {
     class: className = "",
@@ -9,7 +19,7 @@
     disabled = false,
     placeholder = "",
     ...props
-  }: TextAreaInputProps = $props();
+  }: Props = $props();
 </script>
 
 <textarea
