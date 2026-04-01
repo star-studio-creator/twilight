@@ -51,7 +51,7 @@
         "text-lg px-4 py-3": size === "lg",
       },
       {
-        "text-primary dark:text-primary-dark": color === "primary",
+        "text-primary dark:text-primary-light": color === "primary",
         "text-neutral-950 dark:text-neutral-300": color === "secondary",
         "text-red-600 dark:text-red-500": color === "danger",
       },
