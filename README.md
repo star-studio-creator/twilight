@@ -34,3 +34,27 @@ setTheme("dark");
 
 toggleTheme();
 ```
+
+## 自定义主题
+
+如需自定义主题，则不需要导入 `theme/default.css`。
+
+您可将该模板复制到主 CSS 文件中，在此基础上进行主题定制：
+
+```css
+body {
+  color: var(--color-neutral-950);
+  background-color: var(--color-neutral-50);
+}
+
+html.dark body {
+  color: var(--color-neutral-50);
+  background-color: var(--color-neutral-950);
+}
+
+@theme {
+  --color-primary: var(--color-blue-600);
+  --color-primary-light: var(--color-blue-400);
+  --color-primary-dark: var(--color-blue-700);
+}
+```
