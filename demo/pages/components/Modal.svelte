@@ -54,7 +54,7 @@
   {title}
   bind:open
   {closeable}
-  icon={withIcon ? AppWindow : null}
+  icon={withIcon ? AppWindow : undefined}
 >
   <SolidButton onclick={() => open = false}>关闭模态窗</SolidButton>
 

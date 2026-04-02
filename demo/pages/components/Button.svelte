@@ -49,7 +49,7 @@
         {color}
         {loading}
         {disabled}
-        icon={withIcon ? Heart : null}
+        icon={withIcon ? Heart : undefined}
         {iconPosition}
       >
         {DEMO_TEXT}
@@ -67,7 +67,7 @@
         {color}
         {loading}
         {disabled}
-        icon={withIcon ? Heart : null}
+        icon={withIcon ? Heart : undefined}
         {iconPosition}
       >
         {DEMO_TEXT}
@@ -85,7 +85,7 @@
         {color}
         {loading}
         {disabled}
-        icon={withIcon ? Heart : null}
+        icon={withIcon ? Heart : undefined}
         {iconPosition}
       >
         {DEMO_TEXT}
@@ -103,7 +103,7 @@
         {color}
         {loading}
         {disabled}
-        icon={withIcon ? Heart : null}
+        icon={withIcon ? Heart : undefined}
         {iconPosition}
       >
         {DEMO_TEXT}

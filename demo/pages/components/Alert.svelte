@@ -16,7 +16,7 @@
 
 {#each SIZES as size}
   {#each COLORS as color}
-    <Alert {size} {color} title={DEMO_TEXT} icon={withIcon ? Heart : null}>
+    <Alert {size} {color} title={DEMO_TEXT} icon={withIcon ? Heart : undefined}>
       {#each { length: 3 } as _}
         <p>{DEMO_TEXT}</p>
       {/each}
