@@ -11,7 +11,7 @@
   }
 
   let {
-    class: className = "",
+    class: className,
     value = $bindable(),
     min,
     max,

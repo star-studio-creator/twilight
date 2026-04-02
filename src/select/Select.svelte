@@ -11,7 +11,7 @@
   }
 
   let {
-    class: className = "",
+    class: className,
     size = "md",
     value = $bindable(),
     options,

@@ -19,7 +19,7 @@
   }
 
   let {
-    class: className = "",
+    class: className,
     size = "md",
     title,
     open = $bindable(),

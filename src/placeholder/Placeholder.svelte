@@ -8,8 +8,7 @@
     color?: ColorType;
   }
 
-  const { class: className = "", color = "primary" }: PlaceholderProps =
-    $props();
+  const { class: className, color = "primary" }: PlaceholderProps = $props();
 </script>
 
 <div

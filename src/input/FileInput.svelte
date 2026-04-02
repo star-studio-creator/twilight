@@ -17,7 +17,7 @@
   let inputElement: HTMLInputElement | null = null;
 
   let {
-    class: className = "",
+    class: className,
     size = "md",
     value = $bindable<File[]>([]),
     placeholder = "点击选择文件",

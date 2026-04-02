@@ -14,7 +14,7 @@
   }
 
   const {
-    class: className = "",
+    class: className,
     size = "md",
     color = "primary",
     title,

@@ -11,7 +11,7 @@
   }
 
   const {
-    class: className = "",
+    class: className,
     onclick,
     loading = false,
     disabled = false,

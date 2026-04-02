@@ -13,7 +13,7 @@
   }
 
   let {
-    class: className = "",
+    class: className,
     label,
     description,
     error,
