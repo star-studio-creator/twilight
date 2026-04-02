@@ -61,7 +61,7 @@
   {#if iconPosition === "left"}
     {#if loading}
       <LoaderCircle class="animate-spin" size="1em" />
-    {:else if icon !== null}
+    {:else if icon}
       <Icon size="1em" />
     {/if}
   {/if}
@@ -71,7 +71,7 @@
   {#if iconPosition === "right"}
     {#if loading}
       <LoaderCircle class="animate-spin" size="1em" />
-    {:else if icon !== null}
+    {:else if icon}
       <Icon size="1em" />
     {/if}
   {/if}

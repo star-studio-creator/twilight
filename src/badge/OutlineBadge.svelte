@@ -47,7 +47,7 @@
 
   {@render children()}
 
-  {#if iconPosition === "right"}
+  {#if icon && iconPosition === "right"}
     {@const Icon = icon}
     <Icon size="1em" />
   {/if}
