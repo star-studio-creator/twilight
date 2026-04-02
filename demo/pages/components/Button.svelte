@@ -8,8 +8,14 @@
     SolidButton,
     TextButton,
   } from "@/button";
+  import { Select } from "@/select";
   import { Switch } from "@/switch";
   import type { IconPosition } from "@/types";
+
+  const iconPositionOptions: Record<string, IconPosition> = {
+    左侧: "left",
+    右侧: "right",
+  };
 
   let loading = $state(false);
   let disabled = $state(false);
@@ -17,7 +23,7 @@
   let iconPosition: IconPosition = $state("left");
 </script>
 
-<div class="flex gap-2">
+<div class="flex items-center gap-2">
   <label class="flex gap-2">
     加载
     <Switch bind:enabled={loading} />
@@ -34,10 +40,7 @@
   </label>
 
   {#if withIcon}
-    <select bind:value={iconPosition}>
-      <option value="left">左侧</option>
-      <option value="right">右侧</option>
-    </select>
+    <Select bind:value={iconPosition} options={iconPositionOptions} />
   {/if}
 </div>
 

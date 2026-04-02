@@ -2,26 +2,28 @@
   import { COLORS, DEMO_TEXT, SIZES } from "@demo/constants";
   import Heart from "@lucide/svelte/icons/heart";
   import { OutlineBadge, SolidBadge } from "@/badge";
+  import { Select } from "@/select";
   import { Switch } from "@/switch";
   import type { ColorType, IconPosition } from "@/types";
 
   const COLORS_FULL: (ColorType | "success")[] = [...COLORS, "success"];
+  const iconPositionOptions: Record<string, IconPosition> = {
+    左侧: "left",
+    右侧: "right",
+  };
 
   let withIcon = $state(false);
   let iconPosition: IconPosition = $state("left");
 </script>
 
-<div class="flex gap-2">
+<div class="flex items-center gap-2">
   <label class="flex gap-2">
     Icon
     <Switch bind:enabled={withIcon} />
   </label>
 
   {#if withIcon}
-    <select bind:value={iconPosition}>
-      <option value="left">左侧</option>
-      <option value="right">右侧</option>
-    </select>
+    <Select bind:value={iconPosition} options={iconPositionOptions} />
   {/if}
 </div>
 
