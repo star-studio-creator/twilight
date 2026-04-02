@@ -5,7 +5,7 @@
   import { cubicOut } from "svelte/easing";
   import type { ClassValue } from "svelte/elements";
   import { fade, scale } from "svelte/transition";
-  import GhostButton from "@/button/GhostButton.svelte";
+  import { IconButton } from "@/button";
   import type { SizeType } from "@/types";
 
   interface Props {
@@ -96,15 +96,13 @@
         </div>
 
         {#if closeable}
-          <GhostButton
-            class="text-xl p-1.5"
-            size="unstyled"
+          <IconButton
+            size="lg"
             color="secondary"
+            label="关闭"
             onclick={handleClose}
-            aria-label="关闭"
-          >
-            <X />
-          </GhostButton>
+            icon={X}
+          />
         {/if}
       </div>
 

@@ -3,6 +3,7 @@
   import Heart from "@lucide/svelte/icons/heart";
   import {
     GhostButton,
+    IconButton,
     OutlineButton,
     SolidButton,
     TextButton,
@@ -108,6 +109,22 @@
       >
         {DEMO_TEXT}
       </TextButton>
+    {/each}
+  </div>
+{/each}
+
+<h2 class="text-xl font-bold">IconButton</h2>
+{#each SIZES as size}
+  <div class="flex gap-4">
+    {#each COLORS as color}
+      <IconButton
+        {size}
+        {color}
+        {loading}
+        {disabled}
+        label="喜欢"
+        icon={Heart}
+      />
     {/each}
   </div>
 {/each}
