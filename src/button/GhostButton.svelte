@@ -25,7 +25,7 @@
     onclick,
     loading = false,
     disabled = false,
-    icon,
+    icon: Icon,
     iconPosition = "left",
     children,
     ...props
@@ -56,12 +56,10 @@
   {disabled}
   {...props}
 >
-  {@const Icon = icon}
-
   {#if iconPosition === "left"}
     {#if loading}
       <LoaderCircle class="animate-spin" size="1em" />
-    {:else if icon}
+    {:else if Icon}
       <Icon size="1em" />
     {/if}
   {/if}
@@ -71,7 +69,7 @@
   {#if iconPosition === "right"}
     {#if loading}
       <LoaderCircle class="animate-spin" size="1em" />
-    {:else if icon}
+    {:else if Icon}
       <Icon size="1em" />
     {/if}
   {/if}

@@ -21,7 +21,7 @@
     size = "md",
     color = "primary",
     title,
-    icon,
+    icon: Icon,
     children,
   }: Props = $props();
 
@@ -66,9 +66,7 @@
   >
     <div class="flex justify-between items-center">
       <div class="flex items-center gap-1">
-        {#if icon}
-          {@const Icon = icon}
-
+        {#if Icon}
           <Icon size="1em" />
         {/if}
 

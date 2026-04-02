@@ -24,7 +24,7 @@
     title,
     open = $bindable(),
     closeable = true,
-    icon,
+    icon: Icon,
     children,
   }: Props = $props();
 
@@ -88,9 +88,7 @@
     >
       <div class="flex justify-between items-center">
         <div class="flex items-center gap-2 text-xl font-bold">
-          {#if icon}
-            {@const Icon = icon}
-
+          {#if Icon}
             <Icon size="1em" />
           {/if}
 

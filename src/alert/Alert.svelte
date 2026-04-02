@@ -18,7 +18,7 @@
     size = "md",
     color = "primary",
     title,
-    icon,
+    icon: Icon,
     children,
   }: Props = $props();
 </script>
@@ -39,9 +39,7 @@
     "border border-current rounded-md",
   ]}
 >
-  {#if icon}
-    {@const Icon = icon}
-
+  {#if Icon}
     <Icon
       class="row-start-1 col-start-1 place-self-center"
       size="1em"
@@ -52,8 +50,8 @@
   <p
     class={[
       {
-        "row-start-1 col-start-2": icon,
-        "row-start-1 col-start-1 col-span-2": !icon,
+        "row-start-1 col-start-2": Icon,
+        "row-start-1 col-start-1 col-span-2": !Icon,
       },
       "font-bold",
     ]}
@@ -64,8 +62,8 @@
   <div
     class={[
       {
-        "row-start-2 col-start-2": icon,
-        "row-start-2 col-start-1 col-span-2": !icon,
+        "row-start-2 col-start-2": Icon,
+        "row-start-2 col-start-1 col-span-2": !Icon,
       },
       className,
     ]}

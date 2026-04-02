@@ -17,7 +17,7 @@
     class: className,
     size = "md",
     color = "primary",
-    icon,
+    icon: Icon,
     iconPosition = "left",
     children,
   }: Props = $props();
@@ -41,15 +41,13 @@
     className,
   ]}
 >
-  {#if icon && iconPosition === "left"}
-    {@const Icon = icon}
+  {#if Icon && iconPosition === "left"}
     <Icon size="1em" />
   {/if}
 
   {@render children()}
 
-  {#if icon && iconPosition === "right"}
-    {@const Icon = icon}
+  {#if Icon && iconPosition === "right"}
     <Icon size="1em" />
   {/if}
 </span>

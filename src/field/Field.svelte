@@ -17,16 +17,14 @@
     label,
     description,
     error,
-    icon,
+    icon: Icon,
     children,
   }: Props = $props();
 </script>
 
 <label class={["flex flex-col gap-1.5", className]}>
   <div class="flex items-center gap-1 text-sm">
-    {#if icon}
-      {@const Icon = icon}
-
+    {#if Icon}
       <Icon size="1em" />
     {/if}
 
