@@ -27,7 +27,4 @@
 
 <Field label="当前值"><p>{value}</p></Field>
 
-<label class="flex items-center gap-2">
-  {DEMO_TEXT}
-  <Slider bind:value {min} {max} {step} {disabled} />
-</label>
+<Slider bind:value {min} {max} {step} {disabled} />

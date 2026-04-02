@@ -15,10 +15,7 @@
 {#each SIZES as size}
   <div class="flex gap-4">
     {#each COLORS as color}
-      <label class="flex gap-2">
-        <Switch {size} {color} bind:enabled {disabled} />
-        {DEMO_TEXT}
-      </label>
+      <Switch {size} {color} bind:enabled {disabled} />
     {/each}
   </div>
 {/each}
