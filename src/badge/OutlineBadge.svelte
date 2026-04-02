@@ -1,5 +1,6 @@
 <script lang="ts">
-  import type { Component, Snippet } from "svelte";
+  import type { LucideIcon } from "@lucide/svelte";
+  import type { Snippet } from "svelte";
   import type { ClassValue } from "svelte/elements";
   import type { ColorType, IconPosition, SizeType } from "../types";
 
@@ -7,7 +8,7 @@
     class?: ClassValue;
     size?: SizeType;
     color?: ColorType | "success";
-    icon?: Component;
+    icon?: LucideIcon;
     iconPosition?: IconPosition;
     children: Snippet;
   }
@@ -16,7 +17,7 @@
     class: className,
     size = "md",
     color = "primary",
-    icon = null,
+    icon: Icon,
     iconPosition = "left",
     children,
   }: Props = $props();
@@ -39,15 +40,13 @@
     className,
   ]}
 >
-  {#if icon && iconPosition === "left"}
-    {@const Icon = icon}
-    <Icon size="1em" />
+  {#if Icon && iconPosition === "left"}
+    <Icon />
   {/if}
 
   {@render children()}
 
-  {#if iconPosition === "right"}
-    {@const Icon = icon}
-    <Icon size="1em" />
+  {#if Icon && iconPosition === "right"}
+    <Icon />
   {/if}
 </span>

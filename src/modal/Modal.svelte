@@ -1,6 +1,7 @@
 <script lang="ts">
+  import type { LucideIcon } from "@lucide/svelte";
   import X from "@lucide/svelte/icons/x";
-  import type { Component, Snippet } from "svelte";
+  import type { Snippet } from "svelte";
   import { cubicOut } from "svelte/easing";
   import type { ClassValue } from "svelte/elements";
   import { fade, scale } from "svelte/transition";
@@ -13,17 +14,17 @@
     title: string;
     open: boolean;
     closeable?: boolean;
-    icon?: Component;
+    icon?: LucideIcon;
     children: Snippet;
   }
 
   let {
-    class: className = "",
+    class: className,
     size = "md",
     title,
     open = $bindable(),
     closeable = true,
-    icon = null,
+    icon: Icon,
     children,
   }: Props = $props();
 
@@ -87,10 +88,8 @@
     >
       <div class="flex justify-between items-center">
         <div class="flex items-center gap-2 text-xl font-bold">
-          {#if icon}
-            {@const Icon = icon}
-
-            <Icon size="1em" />
+          {#if Icon}
+            <Icon />
           {/if}
 
           <h2 id={titleId}>{title}</h2>
@@ -104,7 +103,7 @@
             onclick={handleClose}
             aria-label="关闭"
           >
-            <X size="1em" strokeWidth={2} />
+            <X />
           </GhostButton>
         {/if}
       </div>

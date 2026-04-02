@@ -27,7 +27,7 @@
 
 <Field
   label={DEMO_TEXT}
-  icon={withIcon ? Heart : null}
+  icon={withIcon ? Heart : undefined}
   description={DEMO_TEXT}
   error={error ? DEMO_TEXT : undefined}
 >
@@ -36,7 +36,7 @@
 
 <Field
   label={DEMO_TEXT}
-  icon={withIcon ? Heart : null}
+  icon={withIcon ? Heart : undefined}
   description={DEMO_TEXT}
   error={error ? DEMO_TEXT : undefined}
 >
@@ -45,7 +45,7 @@
 
 <Field
   label={DEMO_TEXT}
-  icon={withIcon ? Heart : null}
+  icon={withIcon ? Heart : undefined}
   description={DEMO_TEXT}
   error={error ? DEMO_TEXT : undefined}
 >

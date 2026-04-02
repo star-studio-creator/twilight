@@ -1,5 +1,6 @@
 <script lang="ts">
-  import type { Component, Snippet } from "svelte";
+  import type { LucideIcon } from "@lucide/svelte";
+  import type { Snippet } from "svelte";
   import type { ClassValue } from "svelte/elements";
 
   interface Props {
@@ -7,26 +8,24 @@
     label: string;
     description?: string;
     error?: string;
-    icon?: Component;
+    icon?: LucideIcon;
     children: Snippet;
   }
 
   let {
-    class: className = "",
+    class: className,
     label,
     description,
     error,
-    icon = null,
+    icon: Icon,
     children,
   }: Props = $props();
 </script>
 
 <label class={["flex flex-col gap-1.5", className]}>
   <div class="flex items-center gap-1 text-sm">
-    {#if icon}
-      {@const Icon = icon}
-
-      <Icon size="1em" />
+    {#if Icon}
+      <Icon />
     {/if}
 
     <p>{label}</p>

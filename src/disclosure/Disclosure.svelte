@@ -1,6 +1,7 @@
 <script lang="ts">
+  import type { LucideIcon } from "@lucide/svelte";
   import ChevronDown from "@lucide/svelte/icons/chevron-down";
-  import type { Component, Snippet } from "svelte";
+  import type { Snippet } from "svelte";
   import { cubicOut } from "svelte/easing";
   import type { ClassValue } from "svelte/elements";
   import { slide } from "svelte/transition";
@@ -11,16 +12,16 @@
     size?: SizeType;
     color?: ColorType;
     title: string;
-    icon?: Component;
+    icon?: LucideIcon;
     children: Snippet;
   }
 
   let {
-    class: className = "",
+    class: className,
     size = "md",
     color = "primary",
     title,
-    icon = null,
+    icon: Icon,
     children,
   }: Props = $props();
 
@@ -65,10 +66,8 @@
   >
     <div class="flex justify-between items-center">
       <div class="flex items-center gap-1">
-        {#if icon}
-          {@const Icon = icon}
-
-          <Icon size="1em" />
+        {#if Icon}
+          <Icon strokeWidth={3} />
         {/if}
 
         <p>{title}</p>
@@ -79,7 +78,6 @@
           open === true && "rotate-180",
           "transition-transform"
         ]}
-        size="1em"
         strokeWidth={3}
       />
     </div>

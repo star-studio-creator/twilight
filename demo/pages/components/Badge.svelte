@@ -32,7 +32,7 @@
       <OutlineBadge
         {size}
         {color}
-        icon={withIcon ? Heart : null}
+        icon={withIcon ? Heart : undefined}
         {iconPosition}
       >
         {DEMO_TEXT}
@@ -45,7 +45,12 @@
 {#each SIZES as size}
   <div class="flex gap-4">
     {#each COLORS_FULL as color}
-      <SolidBadge {size} {color} icon={withIcon ? Heart : null} {iconPosition}>
+      <SolidBadge
+        {size}
+        {color}
+        icon={withIcon ? Heart : undefined}
+        {iconPosition}
+      >
         {DEMO_TEXT}
       </SolidBadge>
     {/each}

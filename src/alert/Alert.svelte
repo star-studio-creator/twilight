@@ -1,5 +1,6 @@
 <script lang="ts">
-  import type { Component, Snippet } from "svelte";
+  import type { LucideIcon } from "@lucide/svelte";
+  import type { Snippet } from "svelte";
   import type { ClassValue, HTMLAttributes } from "svelte/elements";
   import type { ColorType, SizeType } from "../types";
 
@@ -8,16 +9,16 @@
     size?: SizeType;
     color?: ColorType;
     title: string;
-    icon?: Component;
+    icon?: LucideIcon;
     children: Snippet;
   }
 
   const {
-    class: className = "",
+    class: className,
     size = "md",
     color = "primary",
     title,
-    icon = null,
+    icon: Icon,
     children,
   }: Props = $props();
 </script>
@@ -38,21 +39,15 @@
     "border border-current rounded-md",
   ]}
 >
-  {#if icon}
-    {@const Icon = icon}
-
-    <Icon
-      class="row-start-1 col-start-1 place-self-center"
-      size="1em"
-      strokeWidth={3}
-    />
+  {#if Icon}
+    <Icon class="row-start-1 col-start-1 place-self-center" strokeWidth={3} />
   {/if}
 
   <p
     class={[
       {
-        "row-start-1 col-start-2": icon,
-        "row-start-1 col-start-1 col-span-2": !icon,
+        "row-start-1 col-start-2": Icon,
+        "row-start-1 col-start-1 col-span-2": !Icon,
       },
       "font-bold",
     ]}
@@ -63,8 +58,8 @@
   <div
     class={[
       {
-        "row-start-2 col-start-2": icon,
-        "row-start-2 col-start-1 col-span-2": !icon,
+        "row-start-2 col-start-2": Icon,
+        "row-start-2 col-start-1 col-span-2": !Icon,
       },
       className,
     ]}

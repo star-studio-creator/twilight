@@ -12,7 +12,7 @@
   }
 
   let {
-    class: className = "",
+    class: className,
     size = "md",
     value = $bindable(),
     disabled = false,

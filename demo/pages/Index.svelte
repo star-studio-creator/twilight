@@ -1,4 +1,5 @@
 <script lang="ts">
+  import type { LucideIcon } from "@lucide/svelte";
   import AppWindow from "@lucide/svelte/icons/app-window";
   import BellRing from "@lucide/svelte/icons/bell-ring";
   import Check from "@lucide/svelte/icons/check";
@@ -14,12 +15,11 @@
   import Tag from "@lucide/svelte/icons/tag";
   import TextCursorInput from "@lucide/svelte/icons/text-cursor-input";
   import ToggleRight from "@lucide/svelte/icons/toggle-right";
-  import type { Component } from "svelte";
 
   interface Route {
     name: string;
     path: string;
-    icon: Component;
+    icon: LucideIcon;
   }
 
   const routes: Route[] = [
@@ -50,10 +50,10 @@
     {@const Icon = route.icon}
 
     <a
-      class="p-4 border border-neutral-600 rounded-md shadow-md shadow-neutral-600/10 gap-4"
+      class="flex flex-col gap-2 p-4 border border-neutral-600 rounded-md shadow-md shadow-neutral-600/10"
       href={route.path}
     >
-      <Icon />
+      <Icon class="size-6!" />
       <h2 class="text-lg font-bold">{route.name}</h2>
     </a>
   {/each}

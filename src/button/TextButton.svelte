@@ -1,6 +1,7 @@
 <script lang="ts">
+  import type { LucideIcon } from "@lucide/svelte";
   import LoaderCircle from "@lucide/svelte/icons/loader-circle";
-  import type { Component, Snippet } from "svelte";
+  import type { Snippet } from "svelte";
   import type { ClassValue, HTMLButtonAttributes } from "svelte/elements";
   import type { ColorType, IconPosition, SizeType } from "../types";
   import BaseButton from "./BaseButton.svelte";
@@ -12,19 +13,19 @@
     onclick?: () => void;
     loading?: boolean;
     disabled?: boolean;
-    icon?: Component;
+    icon?: LucideIcon;
     iconPosition?: IconPosition;
     children: Snippet;
   }
 
   const {
-    class: className = "",
+    class: className,
     size = "md",
     color = "primary",
     onclick,
     loading = false,
     disabled = false,
-    icon = null,
+    icon: Icon,
     iconPosition = "left",
     children,
     ...props
@@ -55,13 +56,11 @@
   {disabled}
   {...props}
 >
-  {@const Icon = icon}
-
   {#if iconPosition === "left"}
     {#if loading}
-      <LoaderCircle class="animate-spin" size="1em" />
-    {:else if icon !== null}
-      <Icon size="1em" />
+      <LoaderCircle class="animate-spin" />
+    {:else if Icon}
+      <Icon />
     {/if}
   {/if}
 
@@ -69,9 +68,9 @@
 
   {#if iconPosition === "right"}
     {#if loading}
-      <LoaderCircle class="animate-spin" size="1em" />
-    {:else if icon !== null}
-      <Icon size="1em" />
+      <LoaderCircle class="animate-spin" />
+    {:else if Icon}
+      <Icon />
     {/if}
   {/if}
 </BaseButton>
