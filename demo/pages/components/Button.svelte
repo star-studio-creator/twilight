@@ -8,6 +8,7 @@
     SolidButton,
     TextButton,
   } from "@/button";
+  import { Field } from "@/field";
   import { Select } from "@/select";
   import { Switch } from "@/switch";
   import type { IconPosition } from "@/types";
@@ -23,24 +24,17 @@
   let iconPosition: IconPosition = $state("left");
 </script>
 
-<div class="flex items-center gap-2">
-  <label class="flex gap-2">
-    加载
-    <Switch bind:enabled={loading} />
-  </label>
+<div class="flex gap-4">
+  <Field label="加载"><Switch bind:enabled={loading} /></Field>
 
-  <label class="flex gap-2">
-    禁用
-    <Switch bind:enabled={disabled} />
-  </label>
+  <Field label="禁用"><Switch bind:enabled={disabled} /></Field>
 
-  <label class="flex gap-2">
-    Icon
-    <Switch bind:enabled={withIcon} />
-  </label>
+  <Field label="显示图标"><Switch bind:enabled={withIcon} /></Field>
 
   {#if withIcon}
-    <Select bind:value={iconPosition} options={iconPositionOptions} />
+    <Field label="图标位置">
+      <Select bind:value={iconPosition} options={iconPositionOptions} />
+    </Field>
   {/if}
 </div>
 

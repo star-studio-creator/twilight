@@ -2,17 +2,13 @@
   import { COLORS, DEMO_TEXT, SIZES } from "@demo/constants";
   import Heart from "@lucide/svelte/icons/heart";
   import { Alert } from "@/alert";
+  import { Field } from "@/field";
   import { Switch } from "@/switch";
 
   let withIcon = $state(false);
 </script>
 
-<div class="flex gap-2">
-  <label class="flex gap-2">
-    Icon
-    <Switch bind:enabled={withIcon} />
-  </label>
-</div>
+<Field label="显示图标"><Switch bind:enabled={withIcon} /></Field>
 
 {#each SIZES as size}
   {#each COLORS as color}

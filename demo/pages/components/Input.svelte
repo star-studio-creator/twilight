@@ -1,5 +1,6 @@
 <script lang="ts">
   import { DEMO_TEXT, SIZES } from "@demo/constants";
+  import { Field } from "@/field";
   import { FileInput, NumberInput, TextAreaInput, TextInput } from "@/input";
   import { Switch } from "@/switch";
 
@@ -18,47 +19,34 @@
   let textInputValue = $state("");
 </script>
 
-<div class="flex gap-2">
-  <label class="flex gap-2">
-    占位符文本
-    <TextInput bind:value={placeholder} />
-  </label>
+<div class="flex gap-4">
+  <Field label="占位符文本"><TextInput bind:value={placeholder} /></Field>
 
-  <label class="flex gap-2">
-    禁用
-    <Switch bind:enabled={disabled} />
-  </label>
+  <Field label="禁用"><Switch bind:enabled={disabled} /></Field>
 </div>
 
-<div class="flex gap-2">
-  <label class="flex items-center gap-2">
-    文件输入可多选
-    <Switch bind:enabled={fileMultiple} />
-  </label>
+<div class="flex gap-4">
+  <Field label="文件输入可多选"><Switch bind:enabled={fileMultiple} /></Field>
 
-  <label class="flex items-center gap-2">
-    文件输入可清空
+  <Field label="文件输入可清空">
     <Switch bind:enabled={fileClearable} />
-  </label>
+  </Field>
 </div>
 
-<div class="flex gap-2">
-  <label class="flex gap-2">
-    文本块行数
+<div class="flex gap-4">
+  <Field label="文本块行数">
     <NumberInput bind:value={textAreaInputRows} />
-  </label>
+  </Field>
 
-  <label class="flex items-center gap-2">
-    文本输入隐藏内容
+  <Field label="文本输入隐藏内容">
     <Switch bind:enabled={textInputShadowed} />
-  </label>
+  </Field>
 </div>
 
 <h2 class="text-xl font-bold">FileInput</h2>
-<p>
-  <span class="font-bold">文件输入值：</span>
-  {fileInputValue.map((file) => file.name).join(", ")}
-</p>
+<Field label="文件输入值">
+  <p>{fileInputValue.map((file) => file.name).join(", ") || "暂无文件"}</p>
+</Field>
 {#each SIZES as size (size)}
   <FileInput
     {size}
@@ -72,10 +60,7 @@
 {/each}
 
 <h2 class="text-xl font-bold">NumberInput</h2>
-<p>
-  <span class="font-bold">数字输入值：</span>
-  {numberInputValue}
-</p>
+<Field label="数字输入值"><p>{numberInputValue}</p></Field>
 {#each SIZES as size (size)}
   <label class="flex items-center gap-2">
     {DEMO_TEXT}
@@ -89,10 +74,7 @@
 {/each}
 
 <h2 class="text-xl font-bold">TextAreaInput</h2>
-<p>
-  <span class="font-bold">文本块输入值：</span>
-  {textAreaInputValue}
-</p>
+<Field label="文本块输入值"><p>{textAreaInputValue || "暂无内容"}</p></Field>
 {#each SIZES as size (size)}
   <label class="flex items-center gap-2">
     {DEMO_TEXT}
@@ -107,10 +89,7 @@
 {/each}
 
 <h2 class="text-xl font-bold">TextInput</h2>
-<p>
-  <span class="font-bold">文本输入值：</span>
-  {textInputValue}
-</p>
+<Field label="文本输入值"><p>{textInputValue || "暂无内容"}</p></Field>
 {#each SIZES as size (size)}
   <label class="flex items-center gap-2">
     {DEMO_TEXT}

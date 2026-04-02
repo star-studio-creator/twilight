@@ -13,16 +13,10 @@
   let textValue = $state("");
 </script>
 
-<div class="flex gap-2">
-  <label class="flex gap-2">
-    Icon
-    <Switch bind:enabled={withIcon} />
-  </label>
+<div class="flex gap-4">
+  <Field label="显示图标"><Switch bind:enabled={withIcon} /></Field>
 
-  <label class="flex gap-2">
-    错误
-    <Switch bind:enabled={error} />
-  </label>
+  <Field label="错误"><Switch bind:enabled={error} /></Field>
 </div>
 
 <Field

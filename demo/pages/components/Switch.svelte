@@ -1,5 +1,6 @@
 <script lang="ts">
   import { COLORS, DEMO_TEXT, SIZES } from "@demo/constants";
+  import { Field } from "@/field";
   import { Switch } from "@/switch";
 
   let disabled = $state(false);
@@ -7,12 +8,9 @@
   let enabled = $state(false);
 </script>
 
-<label class="flex gap-2">
-  禁用
-  <Switch bind:enabled={disabled} />
-</label>
+<Field label="禁用"><Switch bind:enabled={disabled} /></Field>
 
-<p>当前状态：{enabled ? "已开启" : "未开启"}</p>
+<Field label="当前状态"><p>{enabled ? "已开启" : "未开启"}</p></Field>
 
 {#each SIZES as size}
   <div class="flex gap-4">

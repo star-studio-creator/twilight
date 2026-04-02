@@ -1,5 +1,6 @@
 <script lang="ts">
   import Heart from "@lucide/svelte/icons/heart";
+  import { Field } from "@/field";
   import { type TabItem, Tabs } from "@/tabs";
 
   type TabItemValueType = "tab1" | "tab2" | "tab3";
@@ -13,7 +14,7 @@
   let active = $state<TabItemValueType>("tab1");
 </script>
 
-<p>当前标签：{active}</p>
+<Field label="当前标签"><p>{active}</p></Field>
 
 <Tabs bind:active {items} />
 

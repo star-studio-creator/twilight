@@ -2,6 +2,7 @@
   import { DEMO_TEXT } from "@demo/constants";
   import AppWindow from "@lucide/svelte/icons/app-window";
   import { SolidButton } from "@/button";
+  import { Field } from "@/field";
   import TextInput from "@/input/TextInput.svelte";
   import Modal from "@/modal/Modal.svelte";
   import { Select } from "@/select";
@@ -22,28 +23,18 @@
   let open = $state(false);
 </script>
 
-<div class="flex gap-2">
-  <label class="flex gap-2">
-    尺寸
+<div class="flex gap-4">
+  <Field label="尺寸">
     <Select bind:value={size} options={sizeOptions} />
-  </label>
+  </Field>
 
-  <label class="flex gap-2">
-    标题
-    <TextInput bind:value={title} />
-  </label>
+  <Field label="标题"><TextInput bind:value={title} /></Field>
 </div>
 
-<div class="flex gap-2">
-  <label class="flex gap-2">
-    允许关闭
-    <Switch bind:enabled={closeable} />
-  </label>
+<div class="flex gap-4">
+  <Field label="允许关闭"><Switch bind:enabled={closeable} /></Field>
 
-  <label class="flex gap-2">
-    Icon
-    <Switch bind:enabled={withIcon} />
-  </label>
+  <Field label="显示图标"><Switch bind:enabled={withIcon} /></Field>
 </div>
 
 <SolidButton onclick={() => open = true}>打开模态窗</SolidButton>
@@ -56,7 +47,7 @@
   {closeable}
   icon={withIcon ? AppWindow : undefined}
 >
-  <SolidButton onclick={() => open = false}>关闭模态窗</SolidButton>
+  <SolidButton size="sm" onclick={() => open = false}>关闭模态窗</SolidButton>
 
   {#each { length: 10 } as _}
     <p>{DEMO_TEXT}</p>
