@@ -25,7 +25,7 @@
     onclick,
     loading = false,
     disabled = false,
-    icon = null,
+    icon,
     iconPosition = "left",
     children,
     ...props

@@ -17,7 +17,7 @@
     label,
     description,
     error,
-    icon = null,
+    icon,
     children,
   }: Props = $props();
 </script>

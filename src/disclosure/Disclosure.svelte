@@ -21,7 +21,7 @@
     size = "md",
     color = "primary",
     title,
-    icon = null,
+    icon,
     children,
   }: Props = $props();
 

@@ -24,7 +24,7 @@
     title,
     open = $bindable(),
     closeable = true,
-    icon = null,
+    icon,
     children,
   }: Props = $props();
 

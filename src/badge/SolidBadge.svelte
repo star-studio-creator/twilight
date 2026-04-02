@@ -17,7 +17,7 @@
     class: className,
     size = "md",
     color = "primary",
-    icon = null,
+    icon,
     iconPosition = "left",
     children,
   }: Props = $props();
