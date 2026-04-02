@@ -26,7 +26,7 @@
       </GhostButton>
     {/if}
 
-    <label class="flex gap-2">
+    <label class="flex items-center gap-2">
       暗色主题
       <Switch bind:enabled={isDarkTheme} />
     </label>
