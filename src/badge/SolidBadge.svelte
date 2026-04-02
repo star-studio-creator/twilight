@@ -42,12 +42,12 @@
   ]}
 >
   {#if Icon && iconPosition === "left"}
-    <Icon size="1em" />
+    <Icon />
   {/if}
 
   {@render children()}
 
   {#if Icon && iconPosition === "right"}
-    <Icon size="1em" />
+    <Icon />
   {/if}
 </span>

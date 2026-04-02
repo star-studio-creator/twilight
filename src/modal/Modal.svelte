@@ -89,7 +89,7 @@
       <div class="flex justify-between items-center">
         <div class="flex items-center gap-2 text-xl font-bold">
           {#if Icon}
-            <Icon size="1em" />
+            <Icon />
           {/if}
 
           <h2 id={titleId}>{title}</h2>
@@ -103,7 +103,7 @@
             onclick={handleClose}
             aria-label="关闭"
           >
-            <X size="1em" strokeWidth={2} />
+            <X />
           </GhostButton>
         {/if}
       </div>

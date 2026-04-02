@@ -50,10 +50,10 @@
     {@const Icon = route.icon}
 
     <a
-      class="p-4 border border-neutral-600 rounded-md shadow-md shadow-neutral-600/10 gap-4"
+      class="flex flex-col gap-2 p-4 border border-neutral-600 rounded-md shadow-md shadow-neutral-600/10"
       href={route.path}
     >
-      <Icon />
+      <Icon class="size-6!" />
       <h2 class="text-lg font-bold">{route.name}</h2>
     </a>
   {/each}

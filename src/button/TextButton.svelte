@@ -58,9 +58,9 @@
 >
   {#if iconPosition === "left"}
     {#if loading}
-      <LoaderCircle class="animate-spin" size="1em" />
+      <LoaderCircle class="animate-spin" />
     {:else if Icon}
-      <Icon size="1em" />
+      <Icon />
     {/if}
   {/if}
 
@@ -68,9 +68,9 @@
 
   {#if iconPosition === "right"}
     {#if loading}
-      <LoaderCircle class="animate-spin" size="1em" />
+      <LoaderCircle class="animate-spin" />
     {:else if Icon}
-      <Icon size="1em" />
+      <Icon />
     {/if}
   {/if}
 </BaseButton>

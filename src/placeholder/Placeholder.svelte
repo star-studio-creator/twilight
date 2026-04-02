@@ -23,7 +23,7 @@
   ]}
 >
   <div class="flex items-center text-lg gap-1">
-    <Hammer size="1em" />
+    <Hammer />
     <span>开发中</span>
   </div>
 </div>

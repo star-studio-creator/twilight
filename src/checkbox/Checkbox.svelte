@@ -51,9 +51,9 @@
     <Check
       class={[
         {
-          "top-1 left-0.5 size-3": size === "sm",
-          "top-0.5 left-0.5 size-4": size === "md",
-          "top-0.5 left-0.5 size-5": size === "lg",
+          "top-1 left-0.5 size-3!": size === "sm",
+          "top-0.5 left-0.5 size-4!": size === "md",
+          "top-0.5 left-0.5 size-5!": size === "lg",
         },
         "absolute pointer-events-none text-neutral-50",
       ]}

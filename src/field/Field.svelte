@@ -25,7 +25,7 @@
 <label class={["flex flex-col gap-1.5", className]}>
   <div class="flex items-center gap-1 text-sm">
     {#if Icon}
-      <Icon size="1em" />
+      <Icon />
     {/if}
 
     <p>{label}</p>

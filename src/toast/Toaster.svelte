@@ -27,18 +27,18 @@
 
 <Toaster position="top-right" richColors {theme}>
   {#snippet successIcon()}
-    <CircleCheck size={20} />
+    <CircleCheck class="size-5!" />
   {/snippet}
   {#snippet infoIcon()}
-    <Info size={20} />
+    <Info class="size-5!" />
   {/snippet}
   {#snippet warningIcon()}
-    <CircleAlert size={20} />
+    <CircleAlert class="size-5!" />
   {/snippet}
   {#snippet errorIcon()}
-    <CircleX size={20} />
+    <CircleX class="size-5!" />
   {/snippet}
   {#snippet loadingIcon()}
-    <LoaderCircle size={20} />
+    <LoaderCircle class="size-5!" />
   {/snippet}
 </Toaster>

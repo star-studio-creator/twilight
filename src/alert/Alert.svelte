@@ -40,11 +40,7 @@
   ]}
 >
   {#if Icon}
-    <Icon
-      class="row-start-1 col-start-1 place-self-center"
-      size="1em"
-      strokeWidth={3}
-    />
+    <Icon class="row-start-1 col-start-1 place-self-center" strokeWidth={3} />
   {/if}
 
   <p

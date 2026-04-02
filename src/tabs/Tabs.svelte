@@ -50,7 +50,7 @@
       {#if item.icon}
         {@const Icon = item.icon}
 
-        <Icon size="1em" />
+        <Icon />
       {/if}
 
       <span>{item.name}</span>

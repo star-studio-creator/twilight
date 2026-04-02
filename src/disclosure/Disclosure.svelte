@@ -67,7 +67,7 @@
     <div class="flex justify-between items-center">
       <div class="flex items-center gap-1">
         {#if Icon}
-          <Icon size="1em" />
+          <Icon strokeWidth={3} />
         {/if}
 
         <p>{title}</p>
@@ -78,7 +78,6 @@
           open === true && "rotate-180",
           "transition-transform"
         ]}
-        size="1em"
         strokeWidth={3}
       />
     </div>
