@@ -1,5 +1,6 @@
 <script lang="ts">
   import { SIZES } from "@demo/constants";
+  import { Field } from "@/field";
   import { Select } from "@/select";
   import { Switch } from "@/switch";
 
@@ -18,14 +19,9 @@
   let value = $state("typescript");
 </script>
 
-<div class="flex gap-2">
-  <label class="flex gap-2">
-    禁用
-    <Switch bind:enabled={disabled} />
-  </label>
-</div>
+<Field label="禁用"><Switch bind:enabled={disabled} /></Field>
 
-<p>当前值：{value}</p>
+<Field label="当前值"><p>{value}</p></Field>
 
 {#each SIZES as size}
   <label class="flex items-center gap-2">

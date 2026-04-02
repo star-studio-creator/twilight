@@ -1,18 +1,16 @@
 <script lang="ts">
   import { DEMO_TEXT } from "@demo/constants";
   import { SolidButton } from "@/button";
+  import { Field } from "@/field";
   import { Switch } from "@/switch";
   import { toast } from "@/toast";
 
   let withDescription = $state(false);
 </script>
 
-<label class="flex gap-2">
-  包含描述
-  <Switch bind:enabled={withDescription} />
-</label>
+<Field label="包含描述"><Switch bind:enabled={withDescription} /></Field>
 
-<div class="flex flex-wrap gap-3">
+<div class="flex gap-4">
   <SolidButton
     onclick={() => toast.success(DEMO_TEXT, {description: withDescription ? DEMO_TEXT: undefined})}
   >

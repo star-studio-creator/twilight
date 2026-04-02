@@ -1,5 +1,6 @@
 <script lang="ts">
   import { DEMO_TEXT } from "@demo/constants";
+  import { Field } from "@/field";
   import { NumberInput } from "@/input";
   import { Slider } from "@/slider";
   import { Switch } from "@/switch";
@@ -12,33 +13,18 @@
   let value = $state(0);
 </script>
 
-<div class="flex gap-2">
-  <label class="flex gap-2">
-    最小值
-    <NumberInput bind:value={min} />
-  </label>
+<div class="flex gap-4">
+  <Field label="最小值"><NumberInput bind:value={min} /></Field>
 
-  <label class="flex gap-2">
-    最大值
-    <NumberInput bind:value={max} />
-  </label>
+  <Field label="最大值"><NumberInput bind:value={max} /></Field>
 </div>
 
-<div class="flex gap-2">
-  <label class="flex gap-2">
-    步进
-    <NumberInput bind:value={step} />
-  </label>
+<div class="flex gap-4">
+  <Field label="步进"><NumberInput bind:value={step} /></Field>
 
-  <label class="flex gap-2">
-    禁用
-    <Switch bind:enabled={disabled} />
-  </label>
+  <Field label="禁用"><Switch bind:enabled={disabled} /></Field>
 </div>
 
-<p>当前值：{value}</p>
+<Field label="当前值"><p>{value}</p></Field>
 
-<label class="flex items-center gap-2">
-  {DEMO_TEXT}
-  <Slider bind:value {min} {max} {step} {disabled} />
-</label>
+<Slider bind:value {min} {max} {step} {disabled} />

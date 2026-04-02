@@ -16,9 +16,7 @@
 
 <Toaster />
 
-<div
-  class="relative flex flex-col gap-4 text-neutral-950 dark:text-neutral-50 max-w-[60vw] mx-auto my-8"
->
+<div class="flex flex-col gap-4 w-[90vw] max-w-5xl mx-auto my-8">
   <div class="flex justify-between items-center">
     {#if isActive("/")}
       <h1 class="text-center text-2xl font-bold">暮光 / Twilight</h1>
@@ -28,7 +26,7 @@
       </GhostButton>
     {/if}
 
-    <label class="flex gap-2">
+    <label class="flex items-center gap-2">
       暗色主题
       <Switch bind:enabled={isDarkTheme} />
     </label>

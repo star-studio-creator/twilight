@@ -1,7 +1,8 @@
 {
   "exclude": ["dist/", "node_modules/"],
   "compilerOptions": {
-    "target": "ES2024",
+    "target": "ESNext",
+    "module": "ESNext",
     "moduleResolution": "bundler",
     "verbatimModuleSyntax": true,
     "isolatedModules": true,

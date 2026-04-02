@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { Card } from "@/card";
   import type { LucideIcon } from "@lucide/svelte";
   import AppWindow from "@lucide/svelte/icons/app-window";
   import BellRing from "@lucide/svelte/icons/bell-ring";
@@ -49,12 +50,14 @@
   {#each routes as route}
     {@const Icon = route.icon}
 
-    <a
-      class="flex flex-col gap-2 p-4 border border-neutral-600 rounded-md shadow-md shadow-neutral-600/10"
-      href={route.path}
-    >
-      <Icon class="size-6!" />
-      <h2 class="text-lg font-bold">{route.name}</h2>
+    <a href={route.path} data-preload>
+      <Card
+        class="flex flex-col gap-2 active:scale-95 transition-transform"
+        color="secondary"
+      >
+        <Icon class="text-2xl" />
+        <h2 class="text-lg font-bold">{route.name}</h2>
+      </Card>
     </a>
   {/each}
 </div>
