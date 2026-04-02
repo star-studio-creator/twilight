@@ -13,7 +13,7 @@
     unstyled: true,
     classes: {
       toast: "min-[600px]:min-w-70 overflow-hidden flex gap-1.5 px-3 py-2 border rounded-md shadow-md shadow-current/10",
-      icon: "mt-1",
+      icon: "mt-1 text-[16px]",
       title: "font-bold",
       description: "text-sm",
       success: "text-green-600 bg-green-50 dark:text-green-400 dark:bg-green-950",
@@ -24,15 +24,15 @@
   }}
 >
   {#snippet successIcon()}
-    <CircleCheck class="size-4!" />
+    <CircleCheck />
   {/snippet}
   {#snippet infoIcon()}
-    <Info class="size-4!" />
+    <Info />
   {/snippet}
   {#snippet warningIcon()}
-    <CircleAlert class="size-4!" />
+    <CircleAlert />
   {/snippet}
   {#snippet errorIcon()}
-    <CircleX class="size-4!" />
+    <CircleX />
   {/snippet}
 </Toaster>
