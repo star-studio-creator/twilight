@@ -2,19 +2,22 @@
   "name": "@star-studio/twilight",
   "version": "0.0.0",
   "description": "轻量化的 Svelte 组件库 / A lightweight Svelte component library",
-  "homepage": "https://github.com/star-studio-creator/twilight",
+  "homepage": "https://github.com/star-studio-creator/twilight#readme",
   "license": "MIT",
   "author": "Star Studio (https://github.com/star-studio-creator)",
+  "type": "module",
   "files": [
     "dist"
   ],
-  "type": "module",
   "sideEffects": [
     "**/*.css"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/star-studio-creator/twilight.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "dev": "vite --config vite.demo.config.ts",
