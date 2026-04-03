@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { Card } from "@/card";
   import type { LucideIcon } from "@lucide/svelte";
   import AppWindow from "@lucide/svelte/icons/app-window";
   import BellRing from "@lucide/svelte/icons/bell-ring";
@@ -16,6 +15,7 @@
   import Tag from "@lucide/svelte/icons/tag";
   import TextCursorInput from "@lucide/svelte/icons/text-cursor-input";
   import ToggleRight from "@lucide/svelte/icons/toggle-right";
+  import { Card } from "@/card";
 
   interface Route {
     name: string;
