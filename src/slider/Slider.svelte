@@ -31,26 +31,46 @@
   });
 </script>
 
+<style>
+  @reference "tailwindcss";
+
+  .slider {
+    --slider-fill: var(--color-primary);
+    --slider-rest: var(--color-neutral-300);
+    --slider-progress: 0%;
+
+    background: linear-gradient(
+      to right,
+      var(--slider-fill) 0%,
+      var(--slider-fill) var(--slider-progress),
+      var(--slider-rest) var(--slider-progress),
+      var(--slider-rest) 100%
+    );
+  }
+
+  :global(.dark) .slider {
+    --slider-fill: var(--color-primary-dark);
+    --slider-rest: var(--color-neutral-700);
+  }
+
+  .slider::-webkit-slider-thumb,
+  .slider::-moz-range-thumb {
+    @apply size-4 bg-neutral-50 rounded-full border-3 border-current shadow shadow-current/20 transition-all;
+  }
+
+  .slider:not(:disabled):active::-webkit-slider-thumb,
+  .slider:not(:disabled):active::-moz-range-thumb {
+    @apply scale-95 shadow-md;
+  }
+</style>
+
 <input
   class={[
     {
       "cursor-pointer": !disabled,
       "cursor-not-allowed opacity-70": disabled,
     },
-    "[--slider-fill:var(--color-primary)] dark:[--slider-fill:var(--color-primary-dark)]",
-    "[--slider-rest:var(--color-neutral-300)] dark:[--slider-rest:var(--color-neutral-700)]",
-    "h-1.5 appearance-none rounded-full text-primary dark:text-primary-light",
-    "[&::-webkit-slider-thumb]:size-4 [&::-moz-range-thumb]:size-4",
-    "[&::-webkit-slider-thumb]:appearance-none [&::-moz-range-thumb]:appearance-none",
-    "[&::-webkit-slider-thumb]:bg-neutral-50 [&::-moz-range-thumb]:bg-neutral-50",
-    "[&::-webkit-slider-thumb]:rounded-full [&::-moz-range-thumb]:rounded-full",
-    "[&::-webkit-slider-thumb]:border-3 [&::-moz-range-thumb]:border-3",
-    "[&::-webkit-slider-thumb]:border-current [&::-moz-range-thumb]:border-current",
-    "[&::-webkit-slider-thumb]:shadow [&::-moz-range-thumb]:shadow",
-    "[&::-webkit-slider-thumb]:shadow-current/20 [&::-moz-range-thumb]:shadow-current/20",
-    "[&::-webkit-slider-thumb]:transition-all [&::-moz-range-thumb]:transition-all",
-    !disabled && "active:[&::-webkit-slider-thumb]:shadow-md active:[&::-moz-range-thumb]:shadow-md",
-    !disabled && "active:[&::-webkit-slider-thumb]:scale-95 active:[&::-moz-range-thumb]:scale-95",
+    "slider appearance-none h-1.5 rounded-full text-primary dark:text-primary-light",
     className,
   ]}
   type="range"
@@ -59,6 +79,6 @@
   {max}
   {step}
   {disabled}
-  style={`background: linear-gradient(to right, var(--slider-fill) 0%, var(--slider-fill) ${progress}%, var(--slider-rest) ${progress}%, var(--slider-rest) 100%)`}
+  style={`--slider-progress: ${progress}%`}
   {...props}
 >

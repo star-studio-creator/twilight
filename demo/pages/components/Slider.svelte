@@ -1,12 +1,11 @@
 <script lang="ts">
-  import { DEMO_TEXT } from "@demo/constants";
   import { Field } from "@/field";
   import { NumberInput } from "@/input";
   import { Slider } from "@/slider";
   import { Switch } from "@/switch";
 
-  let min = $state(0);
-  let max = $state(10);
+  let min = $state(1);
+  let max = $state(100);
   let step = $state(1);
   let disabled = $state(false);
 

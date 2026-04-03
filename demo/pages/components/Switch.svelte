@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { COLORS, DEMO_TEXT, SIZES } from "@demo/constants";
+  import { COLORS, SIZES } from "@demo/constants";
   import { Field } from "@/field";
   import { Switch } from "@/switch";
 
