@@ -1,23 +1,21 @@
-name: CI
+name: Release
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+  release:
+    types: [published]
 
 concurrency:
-  group: ci-${{ github.ref }}
+  group: release-${{ github.event.release.tag_name }}
   cancel-in-progress: true
 
 permissions:
   contents: read
 
 jobs:
-  ci:
-    name: CI
+  release:
+    name: Release
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
 
     steps:
       - name: Checkout
@@ -46,3 +44,11 @@ jobs:
 
       - name: Type check with TypeScript
         run: bun run ci:typecheck
+
+      - name: Build package
+        run: bun run build
+
+      - name: Publish package
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: bun publish

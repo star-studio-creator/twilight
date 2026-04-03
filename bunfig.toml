@@ -1,0 +1,2 @@
+[install.scopes]
+"@star-studio" = { url = "https://registry.npmjs.org/", token = "$NPM_TOKEN" }
