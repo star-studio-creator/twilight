@@ -6,6 +6,7 @@
     "moduleResolution": "bundler",
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
+    "types": ["node"],
     "paths": {
       "@/*": ["./src/*"],
       "@demo/*": ["./demo/*"]
