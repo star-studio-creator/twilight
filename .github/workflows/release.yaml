@@ -1,0 +1,54 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+concurrency:
+  group: release-${{ github.event.release.tag_name }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - name: Setup Bun
+        id: setup-bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Cache dependencies
+        uses: actions/cache@v5
+        with:
+          path: ~/.bun/install/cache
+          key: bun-${{ runner.os }}-${{ steps.setup-bun.outputs.bun-version }}-${{ hashFiles('bun.lock') }}
+          restore-keys: |
+            bun-${{ runner.os }}-${{ steps.setup-bun.outputs.bun-version }}
+            bun-${{ runner.os }}
+
+      - name: Install dependencies
+        run: bun ci
+
+      - name: Lint with Biome
+        run: bun run ci:lint
+
+      - name: Type check with TypeScript
+        run: bun run ci:typecheck
+
+      - name: Build package
+        run: bun run build
+
+      - name: Publish package
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: bun publish
