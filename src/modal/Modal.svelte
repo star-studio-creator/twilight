@@ -5,8 +5,8 @@
   import { cubicOut } from "svelte/easing";
   import type { ClassValue } from "svelte/elements";
   import { fade, scale } from "svelte/transition";
-  import { IconButton } from "@/button";
-  import type { SizeType } from "@/types";
+  import { IconButton } from "../button";
+  import type { SizeType } from "../types";
 
   interface Props {
     class?: ClassValue;

@@ -1,8 +1,8 @@
 <script lang="ts">
   import Trash from "@lucide/svelte/icons/trash";
   import type { ClassValue, HTMLInputAttributes } from "svelte/elements";
-  import { OutlineBadge } from "@/badge";
-  import { OutlineButton } from "@/button";
+  import { OutlineBadge } from "../badge";
+  import { OutlineButton } from "../button";
   import type { SizeType } from "../types";
 
   interface Props extends Omit<HTMLInputAttributes, "size"> {
