@@ -23,8 +23,7 @@
     "format": "biome format --write",
     "ci:lint": "biome ci",
     "ci:typecheck": "svelte-check --fail-on-warnings --diagnostic-sources 'js,svelte' --output machine",
-    "build": "svelte-package -i src",
-    "publish": "bun publish"
+    "build": "svelte-package -i src"
   },
   "exports": {
     "./index.css": "./dist/index.css",
