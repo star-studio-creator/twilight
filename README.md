@@ -15,8 +15,8 @@
 ```css
 @import "tailwindcss";
 
-@import "./node_modules/@star-studio/twilight/index.css";
-@import "./node_modules/@star-studio/twilight/theme/default.css";
+@import "@star-studio/twilight/index.css";
+@import "@star-studio/twilight/theme/default.css";
 
 @source "./node_modules/@star-studio/twilight";
 
