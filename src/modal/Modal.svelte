@@ -34,6 +34,14 @@
     document.body.appendChild(node);
   }
 
+  function scrollLock() {
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }
+
   function handleClose() {
     if (!closeable) {
       return;
@@ -69,6 +77,7 @@
     onclick={handleBackdropClick}
     transition:fade={{ duration: 100 }}
     {@attach portal}
+    {@attach scrollLock}
   >
     <div
       class={[
