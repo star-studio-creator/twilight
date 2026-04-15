@@ -53,12 +53,18 @@
     --slider-rest: var(--color-neutral-700);
   }
 
-  .slider::-webkit-slider-thumb,
+  .slider::-webkit-slider-thumb {
+    @apply size-4 bg-neutral-50 rounded-full border-3 border-current shadow shadow-current/20 transition-all;
+  }
+
   .slider::-moz-range-thumb {
     @apply size-4 bg-neutral-50 rounded-full border-3 border-current shadow shadow-current/20 transition-all;
   }
 
-  .slider:not(:disabled):active::-webkit-slider-thumb,
+  .slider:not(:disabled):active::-webkit-slider-thumb {
+    @apply scale-95 shadow-md;
+  }
+
   .slider:not(:disabled):active::-moz-range-thumb {
     @apply scale-95 shadow-md;
   }
