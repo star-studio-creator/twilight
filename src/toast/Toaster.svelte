@@ -3,10 +3,10 @@
   import CircleCheck from "@lucide/svelte/icons/circle-check";
   import CircleX from "@lucide/svelte/icons/circle-x";
   import Info from "@lucide/svelte/icons/info";
-  import { Toaster } from "svelte-sonner";
+  import { Toaster as SonnerToaster } from "svelte-sonner";
 </script>
 
-<Toaster
+<SonnerToaster
   position="top-right"
   expand
   toastOptions={{
@@ -35,4 +35,4 @@
   {#snippet errorIcon()}
     <CircleX />
   {/snippet}
-</Toaster>
+</SonnerToaster>
