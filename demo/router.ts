@@ -1,6 +1,6 @@
-import { createRouter } from "sv-router";
+import { createRouter, type Path, type Routes } from "sv-router";
 
-export const { p, navigate, isActive, preload, route } = createRouter({
+const routes = {
   "/": () => import("@demo/pages/Index.svelte"),
   "/components": {
     "/alert": () => import("@demo/pages/components/Alert.svelte"),
@@ -19,4 +19,8 @@ export const { p, navigate, isActive, preload, route } = createRouter({
     "/tabs": () => import("@demo/pages/components/Tabs.svelte"),
     "/toast": () => import("@demo/pages/components/Toast.svelte"),
   },
-});
+} satisfies Routes;
+
+export const { p, navigate, isActive, preload, route } = createRouter(routes);
+
+export type RouteType = Path<typeof routes>;

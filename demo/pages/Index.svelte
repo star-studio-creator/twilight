@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { p, type RouteType } from "@demo/router";
   import type { LucideIcon } from "@lucide/svelte";
   import AppWindow from "@lucide/svelte/icons/app-window";
   import BellRing from "@lucide/svelte/icons/bell-ring";
@@ -19,7 +20,7 @@
 
   interface Route {
     name: string;
-    path: string;
+    path: RouteType;
     icon: LucideIcon;
   }
 
@@ -50,7 +51,7 @@
   {#each routes as route}
     {@const Icon = route.icon}
 
-    <a href={route.path} data-preload>
+    <a href={p(route.path)} data-preload>
       <Card
         class="flex flex-col gap-2 active:scale-95 transition-transform"
         color="secondary"
