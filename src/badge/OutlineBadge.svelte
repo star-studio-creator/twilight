@@ -7,7 +7,7 @@
   interface Props {
     class?: ClassValue;
     size?: SizeType;
-    color?: ColorType | "success";
+    color?: ColorType;
     icon?: LucideIcon;
     iconPosition?: IconPosition;
     children: Snippet;
@@ -33,8 +33,9 @@
     {
       "text-primary dark:text-primary-light": color === "primary",
       "text-neutral-950 dark:text-neutral-300": color === "secondary",
-      "text-danger dark:text-danger-light": color === "danger",
       "text-success dark:text-success-light": color === "success",
+      "text-warning dark:text-warning-light": color === "warning",
+      "text-danger dark:text-danger-light": color === "danger",
     },
     "flex items-center border rounded-md",
     className,

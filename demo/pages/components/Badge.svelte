@@ -5,9 +5,8 @@
   import { Field } from "@/field";
   import { Select } from "@/select";
   import { Switch } from "@/switch";
-  import type { ColorType, IconPosition } from "@/types";
+  import type { IconPosition } from "@/types";
 
-  const COLORS_FULL: (ColorType | "success")[] = [...COLORS, "success"];
   const iconPositionOptions: Record<string, IconPosition> = {
     左侧: "left",
     右侧: "right",
@@ -30,7 +29,7 @@
 <h2 class="text-xl font-bold">OutlineBadge</h2>
 {#each SIZES as size}
   <div class="flex gap-4">
-    {#each COLORS_FULL as color}
+    {#each COLORS as color}
       <OutlineBadge
         {size}
         {color}
@@ -46,7 +45,7 @@
 <h2 class="text-xl font-bold">SolidBadge</h2>
 {#each SIZES as size}
   <div class="flex gap-4">
-    {#each COLORS_FULL as color}
+    {#each COLORS as color}
       <SolidBadge
         {size}
         {color}

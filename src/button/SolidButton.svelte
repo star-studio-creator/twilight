@@ -43,6 +43,8 @@
       "text-neutral-50": color !== "unstyled",
       "bg-primary shadow-primary/20 dark:bg-primary-dark dark:shadow-primary-dark/20": color === "primary",
       "bg-neutral-950 shadow-neutral-950/20 dark:bg-neutral-600 dark:shadow-neutral-600/20": color === "secondary",
+      "bg-success shadow-success/20 dark:bg-success-dark dark:shadow-success-dark/20": color === "success",
+      "bg-warning shadow-warning/20 dark:bg-warning-dark dark:shadow-warning-dark/20": color === "warning",
       "bg-danger shadow-danger/20 dark:bg-danger-dark dark:shadow-danger-dark/20": color === "danger",
     },
     {

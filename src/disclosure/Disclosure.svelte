@@ -37,6 +37,8 @@
     {
       "border-primary dark:border-primary-light": color === "primary",
       "border-neutral-950 dark:border-neutral-300": color === "secondary",
+      "border-success dark:border-success-light": color === "success",
+      "border-warning dark:border-warning-light": color === "warning",
       "border-danger dark:border-danger-light": color === "danger",
     },
     "border rounded-md"
@@ -54,6 +56,8 @@
       {
         "text-primary dark:text-primary-light": color === "primary",
         "text-neutral-950 dark:text-neutral-300": color === "secondary",
+        "text-success dark:text-success-light": color === "success",
+        "text-warning dark:text-warning-light": color === "warning",
         "text-danger dark:text-danger-light": color === "danger",
       },
       open && "border-b border-current",
