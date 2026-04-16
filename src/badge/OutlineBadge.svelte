@@ -34,7 +34,7 @@
       "text-primary dark:text-primary-light": color === "primary",
       "text-neutral-950 dark:text-neutral-300": color === "secondary",
       "text-danger dark:text-danger-light": color === "danger",
-      "text-green-600 dark:text-green-500": color === "success",
+      "text-success dark:text-success-light": color === "success",
     },
     "flex items-center border rounded-md",
     className,
