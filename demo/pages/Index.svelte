@@ -1,6 +1,8 @@
 <script lang="ts">
-  import { p, type RouteType } from "@demo/router";
+  import type { RouteType } from "@demo/router";
   import type { LucideIcon } from "@lucide/svelte";
+  import { p } from "@demo/router";
+  import { BaseLink } from "@/link";
   import AppWindow from "@lucide/svelte/icons/app-window";
   import BellRing from "@lucide/svelte/icons/bell-ring";
   import Check from "@lucide/svelte/icons/check";
@@ -53,7 +55,7 @@
   {#each routes as route}
     {@const Icon = route.icon}
 
-    <a href={p(route.path)} data-preload>
+    <BaseLink type="internal" href={p(route.path)} preload>
       <Card
         class="flex flex-col gap-2 active:scale-95 transition-transform"
         color="secondary"
@@ -61,6 +63,6 @@
         <Icon class="text-2xl" />
         <h2 class="text-lg font-bold">{route.name}</h2>
       </Card>
-    </a>
+    </BaseLink>
   {/each}
 </div>
