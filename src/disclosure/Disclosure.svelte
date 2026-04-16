@@ -37,7 +37,7 @@
     {
       "border-primary dark:border-primary-light": color === "primary",
       "border-neutral-950 dark:border-neutral-300": color === "secondary",
-      "border-red-600 dark:border-red-500": color === "danger",
+      "border-danger dark:border-danger-light": color === "danger",
     },
     "border rounded-md"
   ]}
@@ -54,7 +54,7 @@
       {
         "text-primary dark:text-primary-light": color === "primary",
         "text-neutral-950 dark:text-neutral-300": color === "secondary",
-        "text-red-600 dark:text-red-500": color === "danger",
+        "text-danger dark:text-danger-light": color === "danger",
       },
       open && "border-b border-current",
       "w-full font-bold shadow hover:shadow-md cursor-pointer",
