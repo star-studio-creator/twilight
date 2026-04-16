@@ -11,6 +11,7 @@ const routes = {
     "/disclosure": () => import("@demo/pages/components/Disclosure.svelte"),
     "/field": () => import("@demo/pages/components/Field.svelte"),
     "/input": () => import("@demo/pages/components/Input.svelte"),
+    "/link": () => import("@demo/pages/components/Link.svelte"),
     "/modal": () => import("@demo/pages/components/Modal.svelte"),
     "/placeholder": () => import("@demo/pages/components/Placeholder.svelte"),
     "/select": () => import("@demo/pages/components/Select.svelte"),

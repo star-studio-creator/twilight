@@ -8,6 +8,7 @@
   import FormInput from "@lucide/svelte/icons/form-input";
   import Hammer from "@lucide/svelte/icons/hammer";
   import Info from "@lucide/svelte/icons/info";
+  import LinkIcon from "@lucide/svelte/icons/link";
   import PanelsTopLeft from "@lucide/svelte/icons/panels-top-left";
   import Settings2 from "@lucide/svelte/icons/settings-2";
   import SquareFunction from "@lucide/svelte/icons/square-function";
@@ -37,6 +38,7 @@
     },
     { name: "Field", path: "/components/field", icon: FormInput },
     { name: "Input", path: "/components/input", icon: TextCursorInput },
+    { name: "Link", path: "/components/link", icon: LinkIcon },
     { name: "Modal", path: "/components/modal", icon: AppWindow },
     { name: "Placeholder", path: "/components/placeholder", icon: Hammer },
     { name: "Select", path: "/components/select", icon: SquareMousePointer },
