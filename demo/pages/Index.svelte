@@ -1,8 +1,7 @@
 <script lang="ts">
   import type { RouteType } from "@demo/router";
-  import type { LucideIcon } from "@lucide/svelte";
   import { p } from "@demo/router";
-  import { BaseLink } from "@/link";
+  import type { LucideIcon } from "@lucide/svelte";
   import AppWindow from "@lucide/svelte/icons/app-window";
   import BellRing from "@lucide/svelte/icons/bell-ring";
   import Check from "@lucide/svelte/icons/check";
@@ -20,6 +19,7 @@
   import TextCursorInput from "@lucide/svelte/icons/text-cursor-input";
   import ToggleRight from "@lucide/svelte/icons/toggle-right";
   import { Card } from "@/card";
+  import { BaseLink } from "@/link";
 
   interface Route {
     name: string;

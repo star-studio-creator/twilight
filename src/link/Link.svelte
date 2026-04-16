@@ -1,8 +1,17 @@
 <script lang="ts">
-  import type { ComponentProps } from "svelte";
+  import type { Snippet } from "svelte";
+  import type { ClassValue, HTMLAnchorAttributes } from "svelte/elements";
   import BaseLink from "./BaseLink.svelte";
 
-  type Props = ComponentProps<typeof BaseLink>;
+  interface Props
+    extends Omit<HTMLAnchorAttributes, "href" | "target" | "rel"> {
+    class?: ClassValue;
+    type: "internal" | "external";
+    href: string;
+    preload?: boolean;
+    newTab?: boolean;
+    children: Snippet;
+  }
 
   const { class: className, ...props }: Props = $props();
 </script>
