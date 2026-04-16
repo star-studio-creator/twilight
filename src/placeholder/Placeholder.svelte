@@ -16,7 +16,7 @@
     {
       "text-primary bg-primary/10 dark:text-primary-light dark:bg-primary-dark/20": color === "primary",
       "text-neutral-950 bg-neutral-950/10 dark:text-neutral-300 dark:bg-neutral-300/10": color === "secondary",
-      "text-red-600 bg-red-600/10 dark:text-red-500 dark:bg-red-500/20": color === "danger",
+      "text-danger bg-danger/10 dark:text-danger-light dark:bg-danger-light/20": color === "danger",
     },
     "grid place-content-center rounded-md",
     className,

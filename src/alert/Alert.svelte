@@ -33,7 +33,7 @@
     {
       "text-primary dark:text-primary-light": color === "primary",
       "text-neutral-950 dark:text-neutral-300": color === "secondary",
-      "text-red-600 dark:text-red-500": color === "danger",
+      "text-danger dark:text-danger-light": color === "danger",
     },
     "grid grid-rows-[auto_1fr] grid-cols-[auto_1fr]",
     "border border-current rounded-md",

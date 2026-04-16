@@ -28,7 +28,7 @@
     {
       "border-primary shadow-primary/20 dark:border-primary-light dark:shadow-primary-light/20": color === "primary",
       "border-neutral-950 shadow-neutral-950/20 dark:border-neutral-300 dark:shadow-neutral-300/20": color === "secondary",
-      "border-red-600 shadow-red-600/20 dark:border-red-500 dark:shadow-red-500/20": color === "danger",
+      "border-danger shadow-danger/20 dark:border-danger-light dark:shadow-danger-light/20": color === "danger",
     },
     "border rounded-md shadow",
     className,

@@ -56,5 +56,8 @@ html.dark body {
   --color-primary: var(--color-blue-600);
   --color-primary-light: var(--color-blue-400);
   --color-primary-dark: var(--color-blue-700);
+  --color-danger: var(--color-red-600);
+  --color-danger-light: var(--color-red-500);
+  --color-danger-dark: var(--color-red-700);
 }
 ```

@@ -34,7 +34,7 @@
       "text-neutral-50": color !== "unstyled",
       "bg-primary dark:bg-primary-dark": color === "primary",
       "bg-neutral-950 dark:bg-neutral-600": color === "secondary",
-      "bg-red-600 dark:bg-red-700": color === "danger",
+      "bg-danger dark:bg-danger-dark": color === "danger",
       "bg-green-600 dark:bg-green-700": color === "success",
     },
     "flex items-center rounded-md",

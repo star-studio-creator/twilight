@@ -37,7 +37,7 @@
     enabled && {
       "bg-primary shadow-primary/20 dark:bg-primary-dark dark:shadow-primary-dark/20": color === "primary",
       "bg-neutral-950 shadow-neutral-950/20 dark:bg-neutral-600 dark:shadow-neutral-600/20": color === "secondary",
-      "bg-red-600 shadow-red-600/20 dark:bg-red-700 dark:shadow-red-700/20": color === "danger",
+      "bg-danger shadow-danger/20 dark:bg-danger-dark dark:shadow-danger-dark/20": color === "danger",
     },
     {
       "cursor-pointer active:scale-95 hover:shadow-md": !disabled,
