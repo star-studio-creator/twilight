@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { p, type RouteType } from "@demo/router";
+  import type { RouteType } from "@demo/router";
+  import { p } from "@demo/router";
   import type { LucideIcon } from "@lucide/svelte";
   import AppWindow from "@lucide/svelte/icons/app-window";
   import BellRing from "@lucide/svelte/icons/bell-ring";
@@ -8,6 +9,7 @@
   import FormInput from "@lucide/svelte/icons/form-input";
   import Hammer from "@lucide/svelte/icons/hammer";
   import Info from "@lucide/svelte/icons/info";
+  import LinkIcon from "@lucide/svelte/icons/link";
   import PanelsTopLeft from "@lucide/svelte/icons/panels-top-left";
   import Settings2 from "@lucide/svelte/icons/settings-2";
   import SquareFunction from "@lucide/svelte/icons/square-function";
@@ -17,6 +19,7 @@
   import TextCursorInput from "@lucide/svelte/icons/text-cursor-input";
   import ToggleRight from "@lucide/svelte/icons/toggle-right";
   import { Card } from "@/card";
+  import { BaseLink } from "@/link";
 
   interface Route {
     name: string;
@@ -37,6 +40,7 @@
     },
     { name: "Field", path: "/components/field", icon: FormInput },
     { name: "Input", path: "/components/input", icon: TextCursorInput },
+    { name: "Link", path: "/components/link", icon: LinkIcon },
     { name: "Modal", path: "/components/modal", icon: AppWindow },
     { name: "Placeholder", path: "/components/placeholder", icon: Hammer },
     { name: "Select", path: "/components/select", icon: SquareMousePointer },
@@ -51,7 +55,7 @@
   {#each routes as route}
     {@const Icon = route.icon}
 
-    <a href={p(route.path)} data-preload>
+    <BaseLink type="internal" href={p(route.path)} preload>
       <Card
         class="flex flex-col gap-2 active:scale-95 transition-transform"
         color="secondary"
@@ -59,6 +63,6 @@
         <Icon class="text-2xl" />
         <h2 class="text-lg font-bold">{route.name}</h2>
       </Card>
-    </a>
+    </BaseLink>
   {/each}
 </div>
