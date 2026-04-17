@@ -37,11 +37,11 @@
       for={itemId}
       class={[
         {
-          "text-primary dark:text-primary-light border-current shadow-current/20 peer-focus-visible:outline": item.value === active,
-          "text-neutral-950 border-neutral-300 shadow-neutral-300/20 dark:text-neutral-300 dark:border-neutral-700 dark:shadow-neutral-700/20": item.value !== active,
+          "text-primary dark:text-primary-light border-current peer-focus-visible:outline": item.value === active,
+          "text-secondary dark:text-secondary-light border-secondary-light dark:border-secondary": item.value !== active,
         },
         {
-          "cursor-pointer active:scale-95 hover:bg-current/5 dark:hover:bg-current/10 hover:shadow": !item.disabled,
+          "cursor-pointer active:scale-95 hover:bg-current/5 dark:hover:bg-current/10": !item.disabled,
           "cursor-not-allowed opacity-70": item.disabled,
         },
         "flex gap-1.5 items-center border-b-2 rounded-t px-3 py-1.5 transition-all",

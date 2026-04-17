@@ -12,14 +12,14 @@
   toastOptions={{
     unstyled: true,
     classes: {
-      toast: "min-[600px]:min-w-70 overflow-hidden flex gap-1.5 px-3 py-2 border rounded-md shadow-md shadow-current/10 backdrop-blur",
+      toast: "min-[600px]:min-w-70 flex gap-1.5 px-3 py-2 border border-current/50 rounded-md bg-current/10 dark:bg-current/20 shadow-md shadow-current/10 dark:shadow-current/20 backdrop-blur",
       icon: "mt-1 text-[16px]",
       title: "font-bold",
       description: "text-sm",
-      success: "text-success bg-success/10 dark:text-success-light dark:bg-success-dark/20",
-      info: "text-primary bg-primary/10 dark:text-primary-light dark:bg-primary-dark/20",
-      warning: "text-warning bg-warning/10 dark:text-warning-light dark:bg-warning-dark/20",
-      error: "text-danger bg-danger/10 dark:text-danger-light dark:bg-danger-dark/20",
+      success: "text-success dark:text-success-light",
+      info: "text-primary dark:text-primary-light",
+      warning: "text-warning dark:text-warning-light",
+      error: "text-danger dark:text-danger-light",
     }
   }}
 >

@@ -41,16 +41,16 @@
     },
     {
       "text-primary dark:text-primary-light": color === "primary",
-      "text-neutral-950 dark:text-neutral-300": color === "secondary",
+      "text-secondary dark:text-secondary-light": color === "secondary",
       "text-success dark:text-success-light": color === "success",
       "text-warning dark:text-warning-light": color === "warning",
       "text-danger dark:text-danger-light": color === "danger",
     },
     {
-      "active:scale-95 hover:bg-current/5 dark:hover:bg-current/10 hover:shadow-md": !disabled && !loading,
+      "shadow hover:shadow-md shadow-current/20 active:scale-95 hover:bg-current/10 dark:hover:bg-current/20": !disabled && !loading,
       "opacity-70": disabled,
     },
-    "flex items-center border border-current rounded-md shadow shadow-current/20 transition-all",
+    "flex items-center border border-current/50 rounded-md transition-all",
     className,
   ]}
   {onclick}

@@ -35,11 +35,11 @@
 <div
   class={[
     {
-      "border-primary dark:border-primary-light": color === "primary",
-      "border-neutral-950 dark:border-neutral-300": color === "secondary",
-      "border-success dark:border-success-light": color === "success",
-      "border-warning dark:border-warning-light": color === "warning",
-      "border-danger dark:border-danger-light": color === "danger",
+      "border-primary/50 dark:border-primary-light/50": color === "primary",
+      "border-secondary/50 dark:border-secondary-light/50": color === "secondary",
+      "border-success/50 dark:border-success-light/50": color === "success",
+      "border-warning/50 dark:border-warning-light/50": color === "warning",
+      "border-danger/50 dark:border-danger-light/50": color === "danger",
     },
     "border rounded-md"
   ]}
@@ -55,14 +55,14 @@
       },
       {
         "text-primary dark:text-primary-light": color === "primary",
-        "text-neutral-950 dark:text-neutral-300": color === "secondary",
+        "text-secondary dark:text-secondary-light": color === "secondary",
         "text-success dark:text-success-light": color === "success",
         "text-warning dark:text-warning-light": color === "warning",
         "text-danger dark:text-danger-light": color === "danger",
       },
-      open && "border-b border-current",
+      open && "border-b border-current/50",
       "w-full font-bold shadow hover:shadow-md cursor-pointer",
-      "hover:bg-current/5 dark:hover:bg-current/10 shadow-current/5 dark:shadow-current/10 transition-colors"
+      "bg-current/5 hover:bg-current/10 shadow-current/10 dark:shadow-current/20 transition-colors"
     ]}
     onclick={() => open = !open}
     aria-expanded={open}

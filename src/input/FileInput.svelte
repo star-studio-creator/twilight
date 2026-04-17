@@ -58,7 +58,7 @@
       "flex flex-col": value.length !== 0,
       "grid place-content-center": value.length === 0,
     },
-    "border rounded-md shadow border-neutral-300 shadow-neutral-300/20 dark:border-neutral-600 dark:shadow-neutral-600/20 transition-shadow",
+    "border rounded-md shadow border-secondary-light shadow-secondary-light/20 dark:border-secondary dark:shadow-secondary/20 transition-shadow",
     className,
   ]}
 >
@@ -73,7 +73,7 @@
   >
 
   {#if value.length === 0}
-    <p class="text-neutral-600 dark:text-neutral-500">{placeholder}</p>
+    <p class="text-secondary dark:text-secondary-light">{placeholder}</p>
   {:else}
     <div class="flex flex-1 flex-wrap gap-2">
       {#each value as file}
@@ -84,7 +84,7 @@
     </div>
 
     <div class="flex justify-between items-end">
-      <p class="text-sm text-neutral-600 dark:text-neutral-500">
+      <p class="text-sm text-secondary dark:text-secondary-light">
         已选择 {value.length} 个文件
       </p>
 
