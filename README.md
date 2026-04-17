@@ -56,7 +56,7 @@ html.dark body {
   --color-primary: var(--color-blue-600);
   --color-primary-light: var(--color-blue-400);
   --color-primary-dark: var(--color-blue-700);
-  --color-secondary: var(--color-neutral-700);
+  --color-secondary: var(--color-neutral-600);
   --color-secondary-light: var(--color-neutral-300);
   --color-secondary-dark: var(--color-neutral-700);
   --color-success: var(--color-green-600);

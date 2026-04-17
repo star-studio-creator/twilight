@@ -38,7 +38,7 @@
       class={[
         {
           "text-primary dark:text-primary-light border-current shadow-current/20 peer-focus-visible:outline": item.value === active,
-          "text-neutral-950 border-neutral-300 shadow-neutral-300/20 dark:text-neutral-300 dark:border-neutral-700 dark:shadow-neutral-700/20": item.value !== active,
+          "text-secondary border-secondary-light shadow-secondary-light/20 dark:text-secondary-light dark:border-secondary-dark dark:shadow-secondary-dark/20": item.value !== active,
         },
         {
           "cursor-pointer active:scale-95 hover:bg-current/5 dark:hover:bg-current/10 hover:shadow": !item.disabled,

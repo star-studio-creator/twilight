@@ -33,7 +33,7 @@
       "after:translate-x-4": size === "md",
       "after:translate-x-5": size === "lg",
     },
-    !enabled && "bg-neutral-300 shadow-neutral-300/20 dark:bg-neutral-700 dark:shadow-neutral-700/20",
+    !enabled && "bg-secondary-light shadow-secondary-light/20 dark:bg-secondary dark:shadow-secondary/20",
     enabled && {
       "bg-primary shadow-primary/20 dark:bg-primary-dark dark:shadow-primary-dark/20": color === "primary",
       "bg-secondary shadow-secondary/20 dark:bg-secondary-dark dark:shadow-secondary-dark/20": color === "secondary",

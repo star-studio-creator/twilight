@@ -36,7 +36,7 @@
 
   .slider {
     --slider-fill: var(--color-primary);
-    --slider-rest: var(--color-neutral-300);
+    --slider-rest: var(--color-secondary-light);
     --slider-progress: 0%;
 
     background: linear-gradient(
@@ -49,8 +49,8 @@
   }
 
   :global(.dark) .slider {
-    --slider-fill: var(--color-primary-dark);
-    --slider-rest: var(--color-neutral-700);
+    --slider-fill: var(--color-primary-light);
+    --slider-rest: var(--color-secondary-dark);
   }
 
   .slider::-webkit-slider-thumb {
