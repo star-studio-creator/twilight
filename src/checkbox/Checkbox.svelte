@@ -30,7 +30,7 @@
         "size-5": size === "md",
         "size-6": size === "lg",
       },
-      !checked && "bg-secondary-light shadow-secondary-light/20 dark:bg-secondary-dark dark:shadow-secondary-dark/20",
+      !checked && "bg-secondary-light shadow-secondary-light/20 dark:bg-secondary dark:shadow-secondary/20",
       checked && {
         "bg-primary shadow-primary/20 dark:bg-primary-dark dark:shadow-primary-dark/20": color === "primary",
         "bg-secondary shadow-secondary/20 dark:bg-secondary-dark dark:shadow-secondary-dark/20": color === "secondary",
