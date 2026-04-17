@@ -36,7 +36,7 @@
   class={[
     {
       "border-primary/50 dark:border-primary-light/50": color === "primary",
-      "border-neutral-950/50 dark:border-neutral-300/50": color === "secondary",
+      "border-secondary/50 dark:border-secondary-light/50": color === "secondary",
       "border-success/50 dark:border-success-light/50": color === "success",
       "border-warning/50 dark:border-warning-light/50": color === "warning",
       "border-danger/50 dark:border-danger-light/50": color === "danger",
@@ -55,7 +55,7 @@
       },
       {
         "text-primary dark:text-primary-light": color === "primary",
-        "text-neutral-950 dark:text-neutral-300": color === "secondary",
+        "text-secondary dark:text-secondary-light": color === "secondary",
         "text-success dark:text-success-light": color === "success",
         "text-warning dark:text-warning-light": color === "warning",
         "text-danger dark:text-danger-light": color === "danger",
