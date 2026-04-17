@@ -37,8 +37,8 @@
       "text-warning dark:text-warning-light": color === "warning",
       "text-danger dark:text-danger-light": color === "danger",
     },
-    "grid grid-rows-[auto_1fr] grid-cols-[auto_1fr]",
-    "border border-current rounded-md",
+    "grid grid-rows-[auto_1fr] grid-cols-[auto_1fr] border rounded-md",
+    "bg-current/10 border-current/50",
   ]}
 >
   {#if Icon}

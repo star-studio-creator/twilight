@@ -48,10 +48,10 @@
       "bg-danger shadow-danger/20 dark:bg-danger-dark dark:shadow-danger-dark/20": color === "danger",
     },
     {
-      "active:scale-95 hover:shadow-md": !disabled && !loading,
+      "active:scale-95 shadow hover:shadow-md": !disabled && !loading,
       "opacity-70": disabled,
     },
-    "flex items-center rounded-md shadow transition-all",
+    "flex items-center rounded-md transition-all",
     className,
   ]}
   {onclick}

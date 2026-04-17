@@ -14,13 +14,13 @@
 <div
   class={[
     {
-      "text-primary bg-primary/10 dark:text-primary-light dark:bg-primary-dark/20": color === "primary",
-      "text-neutral-950 bg-neutral-950/10 dark:text-neutral-300 dark:bg-neutral-300/10": color === "secondary",
-      "text-success bg-success/10 dark:text-success-light dark:bg-success-dark/20": color === "success",
-      "text-warning bg-warning/10 dark:text-warning-light dark:bg-warning-dark/20": color === "warning",
-      "text-danger bg-danger/10 dark:text-danger-light dark:bg-danger-light/20": color === "danger",
+      "text-primary dark:text-primary-light": color === "primary",
+      "text-neutral-950 dark:text-neutral-300": color === "secondary",
+      "text-success dark:text-success-light": color === "success",
+      "text-warning dark:text-warning-light": color === "warning",
+      "text-danger dark:text-danger-light": color === "danger",
     },
-    "grid place-content-center rounded-md",
+    "grid place-content-center rounded-md bg-current/10 dark:bg-current/20",
     className,
   ]}
 >
