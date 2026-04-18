@@ -14,7 +14,7 @@
 <Field label="当前状态"><p>{checked ? "已勾选" : "未勾选"}</p></Field>
 
 {#each SIZES as size}
-  <div class="flex gap-4">
+  <div class="flex flex-wrap gap-4">
     {#each COLORS as color}
       <label class="flex gap-2">
         <Checkbox {size} {color} bind:checked {disabled} />

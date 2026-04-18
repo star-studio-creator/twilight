@@ -38,45 +38,9 @@
   {/if}
 </div>
 
-<h2 class="text-xl font-bold">GhostButton</h2>
-{#each SIZES as size}
-  <div class="flex gap-4">
-    {#each COLORS as color}
-      <GhostButton
-        {size}
-        {color}
-        {loading}
-        {disabled}
-        icon={withIcon ? Heart : undefined}
-        {iconPosition}
-      >
-        {DEMO_TEXT}
-      </GhostButton>
-    {/each}
-  </div>
-{/each}
-
-<h2 class="text-xl font-bold">OutlineButton</h2>
-{#each SIZES as size}
-  <div class="flex gap-4">
-    {#each COLORS as color}
-      <OutlineButton
-        {size}
-        {color}
-        {loading}
-        {disabled}
-        icon={withIcon ? Heart : undefined}
-        {iconPosition}
-      >
-        {DEMO_TEXT}
-      </OutlineButton>
-    {/each}
-  </div>
-{/each}
-
 <h2 class="text-xl font-bold">SolidButton</h2>
 {#each SIZES as size}
-  <div class="flex gap-4">
+  <div class="flex flex-wrap gap-4">
     {#each COLORS as color}
       <SolidButton
         {size}
@@ -92,9 +56,45 @@
   </div>
 {/each}
 
+<h2 class="text-xl font-bold">OutlineButton</h2>
+{#each SIZES as size}
+  <div class="flex flex-wrap gap-4">
+    {#each COLORS as color}
+      <OutlineButton
+        {size}
+        {color}
+        {loading}
+        {disabled}
+        icon={withIcon ? Heart : undefined}
+        {iconPosition}
+      >
+        {DEMO_TEXT}
+      </OutlineButton>
+    {/each}
+  </div>
+{/each}
+
+<h2 class="text-xl font-bold">GhostButton</h2>
+{#each SIZES as size}
+  <div class="flex flex-wrap gap-4">
+    {#each COLORS as color}
+      <GhostButton
+        {size}
+        {color}
+        {loading}
+        {disabled}
+        icon={withIcon ? Heart : undefined}
+        {iconPosition}
+      >
+        {DEMO_TEXT}
+      </GhostButton>
+    {/each}
+  </div>
+{/each}
+
 <h2 class="text-xl font-bold">TextButton</h2>
 {#each SIZES as size}
-  <div class="flex gap-4">
+  <div class="flex flex-wrap gap-4">
     {#each COLORS as color}
       <TextButton
         {size}

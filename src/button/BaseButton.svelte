@@ -29,7 +29,7 @@
       "cursor-wait": loading && !disabled,
       "cursor-not-allowed": disabled,
     },
-    "w-min text-nowrap",
+    "w-fit",
     className,
   ]}
   {onclick}

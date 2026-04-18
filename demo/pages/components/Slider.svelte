@@ -26,4 +26,4 @@
 
 <Field label="当前值"><p>{value}</p></Field>
 
-<Slider bind:value {min} {max} {step} {disabled} />
+<Slider class="max-w-lg" bind:value {min} {max} {step} {disabled} />

@@ -8,9 +8,9 @@
   let withIcon = $state(false);
   let error = $state(false);
 
+  let textValue = $state("");
   let numberValue = $state(0);
   let textAreaValue = $state("");
-  let textValue = $state("");
 </script>
 
 <div class="flex gap-4">
@@ -19,29 +19,31 @@
   <Field label="错误"><Switch bind:enabled={error} /></Field>
 </div>
 
-<Field
-  label={DEMO_TEXT}
-  icon={withIcon ? Heart : undefined}
-  description={DEMO_TEXT}
-  error={error ? DEMO_TEXT : undefined}
->
-  <NumberInput bind:value={numberValue} />
-</Field>
+<div class="flex flex-col gap-4 max-w-lg">
+  <Field
+    label={DEMO_TEXT}
+    icon={withIcon ? Heart : undefined}
+    description={DEMO_TEXT}
+    error={error ? DEMO_TEXT : undefined}
+  >
+    <TextInput bind:value={textValue} />
+  </Field>
 
-<Field
-  label={DEMO_TEXT}
-  icon={withIcon ? Heart : undefined}
-  description={DEMO_TEXT}
-  error={error ? DEMO_TEXT : undefined}
->
-  <TextAreaInput bind:value={textAreaValue} />
-</Field>
+  <Field
+    label={DEMO_TEXT}
+    icon={withIcon ? Heart : undefined}
+    description={DEMO_TEXT}
+    error={error ? DEMO_TEXT : undefined}
+  >
+    <NumberInput bind:value={numberValue} />
+  </Field>
 
-<Field
-  label={DEMO_TEXT}
-  icon={withIcon ? Heart : undefined}
-  description={DEMO_TEXT}
-  error={error ? DEMO_TEXT : undefined}
->
-  <TextInput bind:value={textValue} />
-</Field>
+  <Field
+    label={DEMO_TEXT}
+    icon={withIcon ? Heart : undefined}
+    description={DEMO_TEXT}
+    error={error ? DEMO_TEXT : undefined}
+  >
+    <TextAreaInput bind:value={textAreaValue} />
+  </Field>
+</div>
