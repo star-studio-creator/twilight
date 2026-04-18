@@ -17,7 +17,7 @@
 <Toaster />
 
 <div class="flex flex-col gap-4 w-[90vw] max-w-5xl mx-auto my-8">
-  <div class="flex justify-between items-center">
+  <div class="flex items-center justify-between">
     {#if isActive("/")}
       <h1 class="text-center text-2xl font-bold">暮光 / Twilight</h1>
     {:else}

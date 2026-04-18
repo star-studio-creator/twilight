@@ -68,7 +68,7 @@
     aria-expanded={open}
     aria-controls={panelId}
   >
-    <div class="flex justify-between items-center">
+    <div class="flex items-center justify-between">
       <div class="flex items-center gap-1">
         {#if Icon}
           <Icon strokeWidth={3} />

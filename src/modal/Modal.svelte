@@ -73,7 +73,7 @@
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div
-    class="fixed top-0 left-0 z-20 grid w-screen h-screen place-content-center bg-black/10 dark:bg-white/10 backdrop-blur-xs"
+    class="fixed inset-0 z-20 grid place-content-center bg-black/10 dark:bg-white/20 backdrop-blur-xs"
     onclick={handleBackdropClick}
     transition:fade={{ duration: 100 }}
     {@attach portal}
@@ -95,7 +95,7 @@
       in:scale={{ start: 0.95, duration: 150, easing: cubicOut }}
       out:scale={{ start: 0.98, duration: 100 }}
     >
-      <div class="flex justify-between items-center">
+      <div class="flex items-center justify-between">
         <div class="flex items-center gap-2 text-xl font-bold">
           {#if Icon}
             <Icon />
