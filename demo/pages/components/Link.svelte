@@ -1,7 +1,6 @@
 <script lang="ts">
   import { DEMO_TEXT } from "@demo/constants";
   import { p } from "@demo/router";
-  import { SolidBadge } from "@/badge";
   import { Field } from "@/field";
   import { Link } from "@/link";
   import { Switch } from "@/switch";
