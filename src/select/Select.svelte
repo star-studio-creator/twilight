@@ -1,4 +1,4 @@
-<script lang="ts" generics="T">
+<script lang="ts" generics="T extends string | number">
   import type { ClassValue, HTMLSelectAttributes } from "svelte/elements";
   import type { SizeType } from "../types";
 
