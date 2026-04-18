@@ -37,7 +37,7 @@
       "text-warning dark:text-warning-light": color === "warning",
       "text-danger dark:text-danger-light": color === "danger",
     },
-    "flex items-center border rounded-md",
+    "w-fit flex items-center border rounded-md",
     className,
   ]}
 >

@@ -4,7 +4,7 @@
 </script>
 
 {#each SIZES as size}
-  <div class="flex gap-4">
+  <div class="flex flex-wrap gap-4">
     {#each COLORS as color}
       <Card
         class={[

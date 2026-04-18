@@ -38,7 +38,7 @@
       "bg-warning dark:bg-warning-dark": color === "warning",
       "bg-danger dark:bg-danger-dark": color === "danger",
     },
-    "flex items-center rounded-md",
+    "w-fit flex items-center rounded-md",
     className,
   ]}
 >

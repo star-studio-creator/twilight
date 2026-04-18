@@ -10,17 +10,19 @@
 
 <Field label="显示图标"><Switch bind:enabled={withIcon} /></Field>
 
-{#each SIZES as size}
-  {#each COLORS as color}
-    <Disclosure
-      {size}
-      {color}
-      title={DEMO_TEXT}
-      icon={withIcon ? Heart : undefined}
-    >
-      {#each { length: 5 } as _}
-        <p>{DEMO_TEXT}</p>
-      {/each}
-    </Disclosure>
+<div class="flex flex-col gap-4 max-w-lg">
+  {#each SIZES as size}
+    {#each COLORS as color}
+      <Disclosure
+        {size}
+        {color}
+        title={DEMO_TEXT}
+        icon={withIcon ? Heart : undefined}
+      >
+        {#each { length: 5 } as _}
+          <p>{DEMO_TEXT}</p>
+        {/each}
+      </Disclosure>
+    {/each}
   {/each}
-{/each}
+</div>

@@ -13,7 +13,7 @@
 <Field label="当前状态"><p>{enabled ? "已开启" : "未开启"}</p></Field>
 
 {#each SIZES as size}
-  <div class="flex gap-4">
+  <div class="flex flex-wrap gap-4">
     {#each COLORS as color}
       <Switch {size} {color} bind:enabled {disabled} />
     {/each}

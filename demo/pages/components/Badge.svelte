@@ -26,25 +26,9 @@
   {/if}
 </div>
 
-<h2 class="text-xl font-bold">OutlineBadge</h2>
-{#each SIZES as size}
-  <div class="flex gap-4">
-    {#each COLORS as color}
-      <OutlineBadge
-        {size}
-        {color}
-        icon={withIcon ? Heart : undefined}
-        {iconPosition}
-      >
-        {DEMO_TEXT}
-      </OutlineBadge>
-    {/each}
-  </div>
-{/each}
-
 <h2 class="text-xl font-bold">SolidBadge</h2>
 {#each SIZES as size}
-  <div class="flex gap-4">
+  <div class="flex flex-wrap gap-4">
     {#each COLORS as color}
       <SolidBadge
         {size}
@@ -54,6 +38,22 @@
       >
         {DEMO_TEXT}
       </SolidBadge>
+    {/each}
+  </div>
+{/each}
+
+<h2 class="text-xl font-bold">OutlineBadge</h2>
+{#each SIZES as size}
+  <div class="flex flex-wrap gap-4">
+    {#each COLORS as color}
+      <OutlineBadge
+        {size}
+        {color}
+        icon={withIcon ? Heart : undefined}
+        {iconPosition}
+      >
+        {DEMO_TEXT}
+      </OutlineBadge>
     {/each}
   </div>
 {/each}

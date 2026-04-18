@@ -1,6 +1,7 @@
 <script lang="ts">
   import { DEMO_TEXT } from "@demo/constants";
   import AppWindow from "@lucide/svelte/icons/app-window";
+  import X from "@lucide/svelte/icons/x";
   import { SolidButton } from "@/button";
   import { Field } from "@/field";
   import TextInput from "@/input/TextInput.svelte";
@@ -47,7 +48,7 @@
   {closeable}
   icon={withIcon ? AppWindow : undefined}
 >
-  <SolidButton size="sm" onclick={() => open = false}>关闭模态窗</SolidButton>
+  <SolidButton onclick={() => open = false} icon={X}>关闭模态窗</SolidButton>
 
   {#each { length: 10 } as _}
     <p>{DEMO_TEXT}</p>
