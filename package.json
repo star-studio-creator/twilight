@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "Star Studio (https://github.com/star-studio-creator)",
   "type": "module",
-  "packageManager": "bun@1.3.11",
+  "packageManager": "bun@1.3.14",
   "files": [
     "dist"
   ],
@@ -102,20 +102,20 @@
     }
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4",
-    "@sveltejs/package": "^2.5",
-    "@sveltejs/vite-plugin-svelte": "^7.0",
-    "@tailwindcss/vite": "^4.2",
-    "@types/node": "^25.6",
-    "sv-router": "^0.16",
-    "svelte-check": "^4.4",
-    "typescript": "^6.0",
-    "vite": "^8.0"
+    "@biomejs/biome": "^2.4.0",
+    "@sveltejs/package": "^2.5.0",
+    "@sveltejs/vite-plugin-svelte": "^7.0.0",
+    "@tailwindcss/vite": "^4.2.0",
+    "@types/node": "^25.6.0",
+    "sv-router": "^0.16.0",
+    "svelte-check": "^4.4.0",
+    "typescript": "^6.0.0",
+    "vite": "^8.0.0"
   },
   "peerDependencies": {
-    "@lucide/svelte": "^1.7",
-    "svelte": "^5.55",
-    "svelte-sonner": "^1.1",
-    "tailwindcss": "^4.2"
+    "@lucide/svelte": "^1.7.0",
+    "svelte": "^5.55.0",
+    "svelte-sonner": "^1.1.0",
+    "tailwindcss": "^4.2.0"
   }
 }
