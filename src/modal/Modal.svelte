@@ -89,7 +89,7 @@
           "w-2xl": size === "lg",
         },
         "flex flex-col gap-4 max-w-[90vw] max-h-[90vh] p-5",
-        "bg-bg shadow-bg/30 rounded-lg shadow-lg",
+        "bg-bg shadow-muted-shadow rounded-lg shadow-lg",
       ]}
       role="dialog"
       aria-modal="true"

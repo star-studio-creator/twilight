@@ -36,7 +36,7 @@
   {#if error}
     <p class="text-xs text-danger-text">{error}</p>
   {:else if description}
-    <p class="text-xs text-secondary-text/70">
+    <p class="text-xs text-muted-text">
       {description}
     </p>
   {/if}

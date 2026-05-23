@@ -56,7 +56,7 @@
       "after:translate-x-4": size === "md",
       "after:translate-x-5": size === "lg",
     },
-    !enabled && "bg-secondary-soft shadow-secondary-shadow",
+    !enabled && "bg-muted-bg shadow-muted-shadow",
     enabled && colorVariants[color],
     enabled ? afterColorVariants[color] : "after:bg-bg dark:after:bg-fg",
     {

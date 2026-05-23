@@ -33,6 +33,7 @@
 
 <style>
   @reference "tailwindcss";
+  @reference "@/theme/default.css";
 
   .slider {
     --slider-progress: 0%;
@@ -41,8 +42,8 @@
       to right,
       var(--twilight-color-primary-bg) 0%,
       var(--twilight-color-primary-bg) var(--slider-progress),
-      var(--twilight-color-secondary-soft) var(--slider-progress),
-      var(--twilight-color-secondary-soft) 100%
+      var(--twilight-color-muted-bg) var(--slider-progress),
+      var(--twilight-color-muted-bg) 100%
     );
   }
 
