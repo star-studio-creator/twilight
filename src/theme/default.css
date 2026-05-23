@@ -6,9 +6,9 @@ html {
   --twilight-color-muted-bg: var(--color-neutral-300);
   --twilight-color-muted-border: var(--color-neutral-300);
   --twilight-color-muted-shadow: --alpha(
-      var(--twilight-color-muted-border) /
-      30%
-    );
+    var(--twilight-color-muted-border) /
+    30%
+  );
 
   --twilight-color-primary-text: var(--color-blue-600);
   --twilight-color-primary-bg: var(--color-blue-600);
@@ -79,9 +79,9 @@ html.dark {
   --twilight-color-muted-bg: var(--color-neutral-700);
   --twilight-color-muted-border: var(--color-neutral-700);
   --twilight-color-muted-shadow: --alpha(
-      var(--twilight-color-muted-border) /
-      30%
-    );
+    var(--twilight-color-muted-border) /
+    30%
+  );
 
   --twilight-color-primary-text: var(--color-blue-400);
   --twilight-color-primary-bg: var(--color-blue-600);
