@@ -50,10 +50,10 @@
     },
     colorVariants[color],
     {
-      "active:scale-95": !disabled && !loading,
+      "active:scale-95 focus:outline-none focus-visible:ring-2": !disabled && !loading,
       "opacity-70": disabled,
     },
-    "flex items-center transition-all",
+    "flex items-center rounded-md transition-all",
     className,
   ]}
   {onclick}

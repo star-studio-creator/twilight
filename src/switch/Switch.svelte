@@ -20,17 +20,26 @@
     ...props
   }: Props = $props();
 
-  const colorVariants = {
+  const enabledColorVariants = {
     primary:
-      "bg-primary-bg hover:bg-primary-hover active:bg-primary-active shadow-primary-shadow",
+      "bg-primary-bg ring-primary-border hover:bg-primary-hover active:bg-primary-active shadow-primary-shadow",
     secondary:
-      "bg-secondary-bg hover:bg-secondary-hover active:bg-secondary-active shadow-secondary-shadow",
+      "bg-secondary-bg ring-secondary-border hover:bg-secondary-hover active:bg-secondary-active shadow-secondary-shadow",
     success:
-      "bg-success-bg hover:bg-success-hover active:bg-success-active shadow-success-shadow",
+      "bg-success-bg ring-success-border hover:bg-success-hover active:bg-success-active shadow-success-shadow",
     warning:
-      "bg-warning-bg hover:bg-warning-hover active:bg-warning-active shadow-warning-shadow",
+      "bg-warning-bg ring-warning-border hover:bg-warning-hover active:bg-warning-active shadow-warning-shadow",
     danger:
-      "bg-danger-bg hover:bg-danger-hover active:bg-danger-active shadow-danger-shadow",
+      "bg-danger-bg ring-danger-border hover:bg-danger-hover active:bg-danger-active shadow-danger-shadow",
+    unstyled: "",
+  } satisfies Record<ColorType, ClassValue>;
+
+  const notEnabledColorVariants = {
+    primary: "ring-primary-border",
+    secondary: "ring-secondary-border",
+    success: "ring-success-border",
+    warning: "ring-warning-border",
+    danger: "ring-danger-border",
     unstyled: "",
   } satisfies Record<ColorType, ClassValue>;
 
@@ -57,10 +66,11 @@
       "after:translate-x-5": size === "lg",
     },
     !enabled && "bg-muted-bg shadow-muted-shadow",
-    enabled && colorVariants[color],
+    enabled && enabledColorVariants[color],
+    !enabled && notEnabledColorVariants[color],
     enabled ? afterColorVariants[color] : "after:bg-bg dark:after:bg-fg",
     {
-      "cursor-pointer active:scale-95 hover:shadow-md": !disabled,
+      "cursor-pointer active:scale-95 hover:shadow-md focus:outline-none focus-visible:ring-2": !disabled,
       "cursor-not-allowed opacity-50": disabled,
     },
     "relative appearance-none rounded-full shadow transition-all",

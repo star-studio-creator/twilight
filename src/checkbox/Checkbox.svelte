@@ -55,7 +55,7 @@
       },
       colorVariants[color],
       {
-        "cursor-pointer active:scale-95 hover:shadow-md": !disabled,
+        "cursor-pointer active:scale-95 hover:shadow-md focus:outline-none focus-visible:border-3": !disabled,
         "cursor-not-allowed opacity-50": disabled,
       },
       "peer appearance-none rounded border shadow transition-all",
