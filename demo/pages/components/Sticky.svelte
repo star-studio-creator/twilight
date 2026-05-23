@@ -20,9 +20,7 @@
   <Select bind:value={position} options={positionOptions} />
 </Field>
 
-<div
-  class="w-full h-128 overflow-auto border border-secondary/50 dark:border-secondary-light/50 rounded"
->
+<div class="w-full h-128 overflow-auto border border-border rounded">
   <div
     class={[
       {
@@ -38,7 +36,7 @@
           "w-full h-16": position === "top" || position === "bottom",
           "h-full w-32": position === "left" || position === "right",
         },
-        "grid place-content-center bg-red-100 dark:bg-red-900",
+        "grid place-content-center text-primary-contrast bg-primary-bg",
       ]}
       {position}
     >

@@ -22,15 +22,15 @@
 
   const colorVariants = {
     primary:
-      "border-primary-border hover:bg-primary-soft checked:border-primary checked:bg-primary checked:shadow-primary-shadow checked:hover:bg-primary-hover checked:hover:border-primary-hover checked:active:bg-primary-active checked:active:border-primary-active",
+      "border-primary-border hover:bg-primary-soft checked:border-primary-bg checked:bg-primary-bg checked:shadow-primary-shadow checked:hover:bg-primary-hover checked:hover:border-primary-hover checked:active:bg-primary-active checked:active:border-primary-active",
     secondary:
-      "border-secondary-border hover:bg-secondary-soft checked:border-secondary checked:bg-secondary checked:shadow-secondary-shadow checked:hover:bg-secondary-hover checked:hover:border-secondary-hover checked:active:bg-secondary-active checked:active:border-secondary-active",
+      "border-secondary-border hover:bg-secondary-soft checked:border-secondary-bg checked:bg-secondary-bg checked:shadow-secondary-shadow checked:hover:bg-secondary-hover checked:hover:border-secondary-hover checked:active:bg-secondary-active checked:active:border-secondary-active",
     success:
-      "border-success-border hover:bg-success-soft checked:border-success checked:bg-success checked:shadow-success-shadow checked:hover:bg-success-hover checked:hover:border-success-hover checked:active:bg-success-active checked:active:border-success-active",
+      "border-success-border hover:bg-success-soft checked:border-success-bg checked:bg-success-bg checked:shadow-success-shadow checked:hover:bg-success-hover checked:hover:border-success-hover checked:active:bg-success-active checked:active:border-success-active",
     warning:
-      "border-warning-border hover:bg-warning-soft checked:border-warning checked:bg-warning checked:shadow-warning-shadow checked:hover:bg-warning-hover checked:hover:border-warning-hover checked:active:bg-warning-active checked:active:border-warning-active",
+      "border-warning-border hover:bg-warning-soft checked:border-warning-bg checked:bg-warning-bg checked:shadow-warning-shadow checked:hover:bg-warning-hover checked:hover:border-warning-hover checked:active:bg-warning-active checked:active:border-warning-active",
     danger:
-      "border-danger-border hover:bg-danger-soft checked:border-danger checked:bg-danger checked:shadow-danger-shadow checked:hover:bg-danger-hover checked:hover:border-danger-hover checked:active:bg-danger-active checked:active:border-danger-active",
+      "border-danger-border hover:bg-danger-soft checked:border-danger-bg checked:bg-danger-bg checked:shadow-danger-shadow checked:hover:bg-danger-hover checked:hover:border-danger-hover checked:active:bg-danger-active checked:active:border-danger-active",
     unstyled: "",
   } satisfies Record<ColorType, ClassValue>;
 

@@ -33,15 +33,15 @@
 
   const colorVariants = {
     primary:
-      "text-primary-contrast bg-primary hover:bg-primary-hover active:bg-primary-active shadow-primary-shadow",
+      "text-primary-contrast bg-primary-bg hover:bg-primary-hover active:bg-primary-active shadow-primary-shadow",
     secondary:
-      "text-secondary-contrast bg-secondary hover:bg-secondary-hover active:bg-secondary-active shadow-secondary-shadow",
+      "text-secondary-contrast bg-secondary-bg hover:bg-secondary-hover active:bg-secondary-active shadow-secondary-shadow",
     success:
-      "text-success-contrast bg-success hover:bg-success-hover active:bg-success-active shadow-success-shadow",
+      "text-success-contrast bg-success-bg hover:bg-success-hover active:bg-success-active shadow-success-shadow",
     warning:
-      "text-warning-contrast bg-warning hover:bg-warning-hover active:bg-warning-active shadow-warning-shadow",
+      "text-warning-contrast bg-warning-bg hover:bg-warning-hover active:bg-warning-active shadow-warning-shadow",
     danger:
-      "text-danger-contrast bg-danger hover:bg-danger-hover active:bg-danger-active shadow-danger-shadow",
+      "text-danger-contrast bg-danger-bg hover:bg-danger-hover active:bg-danger-active shadow-danger-shadow",
     unstyled: "",
   } satisfies Record<ColorType, ClassValue>;
 </script>

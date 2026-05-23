@@ -17,10 +17,10 @@
       icon: "mt-1 text-[16px]",
       title: "font-bold",
       description: "text-sm",
-      success: "text-success bg-success-soft border-success-border shadow-success-shadow",
-      info: "text-primary bg-primary-soft border-primary-border shadow-primary-shadow",
-      warning: "text-warning bg-warning-soft border-warning-border shadow-warning-shadow",
-      error: "text-danger bg-danger-soft border-danger-border shadow-danger-shadow",
+      success: "text-success-text bg-success-soft border-success-border shadow-success-shadow",
+      info: "text-primary-text bg-primary-soft border-primary-border shadow-primary-shadow",
+      warning: "text-warning-text bg-warning-soft border-warning-border shadow-warning-shadow",
+      error: "text-danger-text bg-danger-soft border-danger-border shadow-danger-shadow",
     }
   }}
 >

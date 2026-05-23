@@ -42,7 +42,7 @@
             "cursor-not-allowed opacity-70": item.disabled,
           },
           "flex gap-1.5 items-center border-b-2 rounded-t px-3 py-1.5 transition-all",
-          "text-secondary border-secondary-border peer-checked:text-primary peer-checked:border-primary-border",
+          "text-secondary-text border-secondary-border peer-checked:text-primary-text peer-checked:border-primary-border",
         ]}
       >
         {#if item.icon}

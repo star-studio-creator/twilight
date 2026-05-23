@@ -9,11 +9,11 @@
   }
 
   const colorVariants = {
-    primary: "text-primary bg-primary-soft",
-    secondary: "text-secondary bg-secondary-soft",
-    success: "text-success bg-success-soft",
-    warning: "text-warning bg-warning-soft",
-    danger: "text-danger bg-danger-soft",
+    primary: "text-primary-text bg-primary-soft",
+    secondary: "text-secondary-text bg-secondary-soft",
+    success: "text-success-text bg-success-soft",
+    warning: "text-warning-text bg-warning-soft",
+    danger: "text-danger-text bg-danger-soft",
     unstyled: "",
   } satisfies Record<ColorType, ClassValue>;
 

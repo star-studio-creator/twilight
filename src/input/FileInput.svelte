@@ -73,7 +73,7 @@
   >
 
   {#if value.length === 0}
-    <p class="text-secondary">{placeholder}</p>
+    <p class="text-secondary-text">{placeholder}</p>
   {:else}
     <div class="flex flex-1 flex-wrap gap-2">
       {#each value as file}
@@ -84,7 +84,7 @@
     </div>
 
     <div class="flex justify-between items-end">
-      <p class="text-sm text-secondary">已选择 {value.length} 个文件</p>
+      <p class="text-sm text-secondary-text">已选择 {value.length} 个文件</p>
 
       {#if clearable && value.length > 0}
         <OutlineButton size="sm" color="secondary" onclick={clear} icon={Trash}>

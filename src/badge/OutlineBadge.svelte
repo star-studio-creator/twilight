@@ -23,11 +23,11 @@
   }: Props = $props();
 
   const colorVariants = {
-    primary: "text-primary border-primary-border",
-    secondary: "text-secondary border-secondary-border",
-    success: "text-success border-success-border",
-    warning: "text-warning border-warning-border",
-    danger: "text-danger border-danger-border",
+    primary: "text-primary-text border-primary-border",
+    secondary: "text-secondary-text border-secondary-border",
+    success: "text-success-text border-success-border",
+    warning: "text-warning-text border-warning-border",
+    danger: "text-danger-text border-danger-border",
     unstyled: "",
   } satisfies Record<ColorType, ClassValue>;
 </script>
