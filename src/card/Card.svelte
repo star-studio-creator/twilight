@@ -10,6 +10,15 @@
     children: Snippet;
   }
 
+  const colorVariants = {
+    primary: "bg-primary-soft text-primary border-primary-border",
+    secondary: "bg-secondary-soft text-secondary border-secondary-border",
+    success: "bg-success-soft text-success border-success-border",
+    warning: "bg-warning-soft text-warning border-warning-border",
+    danger: "bg-danger-soft text-danger border-danger-border",
+    unstyled: "",
+  } satisfies Record<ColorType, ClassValue>;
+
   const {
     class: className,
     size = "md",
@@ -25,13 +34,7 @@
       "p-4": size === "md",
       "p-6": size === "lg",
     },
-    {
-      "border-primary/50 shadow-primary/20 dark:border-primary-light/50 dark:shadow-primary-light/20": color === "primary",
-      "border-secondary/50 shadow-secondary/20 dark:border-secondary-light/50 dark:shadow-secondary-light/20": color === "secondary",
-      "border-success/50 shadow-success/20 dark:border-success-light/50 dark:shadow-success-light/20": color === "success",
-      "border-warning/50 shadow-warning/20 dark:border-warning-light/50 dark:shadow-warning-light/20": color === "warning",
-      "border-danger/50 shadow-danger/20 dark:border-danger-light/50 dark:shadow-danger-light/20": color === "danger",
-    },
+    colorVariants[color],
     "border rounded-md shadow",
     className,
   ]}
