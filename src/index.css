@@ -1,3 +1,8 @@
+body {
+  color: var(--twilight-color-fg);
+  background-color: var(--twilight-color-bg);
+}
+
 .theme-switching *,
 .theme-switching *::before,
 .theme-switching *::after {
