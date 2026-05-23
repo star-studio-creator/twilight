@@ -19,6 +19,29 @@
     disabled = false,
     ...props
   }: Props = $props();
+
+  const colorVariants = {
+    primary:
+      "bg-primary hover:bg-primary-hover active:bg-primary-active shadow-primary-shadow",
+    secondary:
+      "bg-secondary hover:bg-secondary-hover active:bg-secondary-active shadow-secondary-shadow",
+    success:
+      "bg-success hover:bg-success-hover active:bg-success-active shadow-success-shadow",
+    warning:
+      "bg-warning hover:bg-warning-hover active:bg-warning-active shadow-warning-shadow",
+    danger:
+      "bg-danger hover:bg-danger-hover active:bg-danger-active shadow-danger-shadow",
+    unstyled: "",
+  } satisfies Record<ColorType, ClassValue>;
+
+  const afterColorVariants = {
+    primary: "after:bg-primary-contrast",
+    secondary: "after:bg-secondary-contrast",
+    success: "after:bg-success-contrast",
+    warning: "after:bg-warning-contrast",
+    danger: "after:bg-danger-contrast",
+    unstyled: "",
+  } satisfies Record<ColorType, ClassValue>;
 </script>
 
 <input
@@ -33,20 +56,15 @@
       "after:translate-x-4": size === "md",
       "after:translate-x-5": size === "lg",
     },
-    !enabled && "bg-secondary-light shadow-secondary-light/20 dark:bg-secondary dark:shadow-secondary/20",
-    enabled && {
-      "bg-primary shadow-primary/20 dark:bg-primary-dark dark:shadow-primary-dark/20": color === "primary",
-      "bg-secondary shadow-secondary/20 dark:bg-secondary-dark dark:shadow-secondary-dark/20": color === "secondary",
-      "bg-success shadow-success/20 dark:bg-success-dark dark:shadow-success-dark/20": color === "success",
-      "bg-warning shadow-warning/20 dark:bg-warning-dark dark:shadow-warning-dark/20": color === "warning",
-      "bg-danger shadow-danger/20 dark:bg-danger-dark dark:shadow-danger-dark/20": color === "danger",
-    },
+    !enabled && "bg-secondary-soft shadow-secondary-shadow",
+    enabled && colorVariants[color],
+    enabled ? afterColorVariants[color] : "after:bg-bg dark:after:bg-fg",
     {
       "cursor-pointer active:scale-95 hover:shadow-md": !disabled,
       "cursor-not-allowed opacity-50": disabled,
     },
-    "relative appearance-none rounded-full transition-all",
-    "after:absolute after:top-1 after:left-1 after:rounded-full after:bg-neutral-50 after:transition-transform after:content-['']",
+    "relative appearance-none rounded-full shadow transition-all",
+    "after:content-[''] after:absolute after:top-1 after:left-1 after:rounded-full after:transition-transform",
     className,
   ]}
   type="checkbox"
