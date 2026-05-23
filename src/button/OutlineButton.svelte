@@ -20,15 +20,15 @@
 
   const colorVariants = {
     primary:
-      "text-primary-text border-primary-border hover:bg-primary-soft active:bg-primary-soft shadow-primary-shadow",
+      "text-primary-text border-primary-border not-disabled:hover:bg-primary-soft not-disabled:active:bg-primary-soft shadow-primary-shadow",
     secondary:
-      "text-secondary-text border-secondary-border hover:bg-secondary-soft active:bg-secondary-soft shadow-secondary-shadow",
+      "text-secondary-text border-secondary-border not-disabled:hover:bg-secondary-soft not-disabled:active:bg-secondary-soft shadow-secondary-shadow",
     success:
-      "text-success-text border-success-border hover:bg-success-soft active:bg-success-soft shadow-success-shadow",
+      "text-success-text border-success-border not-disabled:hover:bg-success-soft not-disabled:active:bg-success-soft shadow-success-shadow",
     warning:
-      "text-warning-text border-warning-border hover:bg-warning-soft active:bg-warning-soft shadow-warning-shadow",
+      "text-warning-text border-warning-border not-disabled:hover:bg-warning-soft not-disabled:active:bg-warning-soft shadow-warning-shadow",
     danger:
-      "text-danger-text border-danger-border hover:bg-danger-soft active:bg-danger-soft shadow-danger-shadow",
+      "text-danger-text border-danger-border not-disabled:hover:bg-danger-soft not-disabled:active:bg-danger-soft shadow-danger-shadow",
     unstyled: "",
   } satisfies Record<ColorType, ClassValue>;
 
