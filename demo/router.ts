@@ -16,6 +16,7 @@ const routes = {
     "/placeholder": () => import("@demo/pages/components/Placeholder.svelte"),
     "/select": () => import("@demo/pages/components/Select.svelte"),
     "/slider": () => import("@demo/pages/components/Slider.svelte"),
+    "/sticky": () => import("@demo/pages/components/Sticky.svelte"),
     "/switch": () => import("@demo/pages/components/Switch.svelte"),
     "/tabs": () => import("@demo/pages/components/Tabs.svelte"),
     "/toast": () => import("@demo/pages/components/Toast.svelte"),
