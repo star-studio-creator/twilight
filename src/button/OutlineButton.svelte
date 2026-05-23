@@ -18,6 +18,20 @@
     children: Snippet;
   }
 
+  const colorVariants = {
+    primary:
+      "text-primary-text border-primary-border not-disabled:hover:bg-primary-soft not-disabled:active:bg-primary-soft shadow-primary-shadow",
+    secondary:
+      "text-secondary-text border-secondary-border not-disabled:hover:bg-secondary-soft not-disabled:active:bg-secondary-soft shadow-secondary-shadow",
+    success:
+      "text-success-text border-success-border not-disabled:hover:bg-success-soft not-disabled:active:bg-success-soft shadow-success-shadow",
+    warning:
+      "text-warning-text border-warning-border not-disabled:hover:bg-warning-soft not-disabled:active:bg-warning-soft shadow-warning-shadow",
+    danger:
+      "text-danger-text border-danger-border not-disabled:hover:bg-danger-soft not-disabled:active:bg-danger-soft shadow-danger-shadow",
+    unstyled: "",
+  } satisfies Record<ColorType, ClassValue>;
+
   const {
     class: className,
     size = "md",
@@ -39,18 +53,12 @@
       "gap-1 px-2 py-1.5": size === "md",
       "gap-1 text-lg px-2 py-1.5": size === "lg",
     },
+    colorVariants[color],
     {
-      "text-primary dark:text-primary-light": color === "primary",
-      "text-secondary dark:text-secondary-light": color === "secondary",
-      "text-success dark:text-success-light": color === "success",
-      "text-warning dark:text-warning-light": color === "warning",
-      "text-danger dark:text-danger-light": color === "danger",
-    },
-    {
-      "shadow hover:shadow-md shadow-current/20 active:scale-95 hover:bg-current/10 dark:hover:bg-current/20": !disabled && !loading,
+      "shadow hover:shadow-md active:scale-95": !disabled && !loading,
       "opacity-70": disabled,
     },
-    "flex items-center border border-current/50 rounded-md transition-all",
+    "flex items-center border rounded-md transition-all",
     className,
   ]}
   {onclick}

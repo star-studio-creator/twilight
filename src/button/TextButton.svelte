@@ -18,6 +18,15 @@
     children: Snippet;
   }
 
+  const colorVariants = {
+    primary: "text-primary-text",
+    secondary: "text-secondary-text",
+    success: "text-success-text",
+    warning: "text-warning-text",
+    danger: "text-danger-text",
+    unstyled: "",
+  } satisfies Record<ColorType, ClassValue>;
+
   const {
     class: className,
     size = "md",
@@ -39,13 +48,7 @@
       "gap-1 px-2 py-1.5": size === "md",
       "gap-1 text-lg px-2 py-1.5": size === "lg",
     },
-    {
-      "text-primary dark:text-primary-light": color === "primary",
-      "text-secondary dark:text-secondary-light": color === "secondary",
-      "text-success dark:text-success-light": color === "success",
-      "text-warning dark:text-warning-light": color === "warning",
-      "text-danger dark:text-danger-light": color === "danger",
-    },
+    colorVariants[color],
     {
       "active:scale-95": !disabled && !loading,
       "opacity-70": disabled,

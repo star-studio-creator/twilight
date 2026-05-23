@@ -16,6 +16,29 @@
     children: Snippet;
   }
 
+  const colorVariants = {
+    primary:
+      "text-primary-text hover:bg-primary-soft active:bg-primary-soft shadow-primary-shadow",
+    secondary:
+      "text-secondary-text hover:bg-secondary-soft active:bg-secondary-soft shadow-secondary-shadow",
+    success:
+      "text-success-text hover:bg-success-soft active:bg-success-soft shadow-success-shadow",
+    warning:
+      "text-warning-text hover:bg-warning-soft active:bg-warning-soft shadow-warning-shadow",
+    danger:
+      "text-danger-text hover:bg-danger-soft active:bg-danger-soft shadow-danger-shadow",
+    unstyled: "",
+  } satisfies Record<ColorType, ClassValue>;
+
+  const borderVariants = {
+    primary: "border-primary-border",
+    secondary: "border-secondary-border",
+    success: "border-success-border",
+    warning: "border-warning-border",
+    danger: "border-danger-border",
+    unstyled: "",
+  } satisfies Record<ColorType, ClassValue>;
+
   let {
     class: className,
     size = "md",
@@ -34,14 +57,8 @@
 
 <div
   class={[
-    {
-      "border-primary/50 dark:border-primary-light/50": color === "primary",
-      "border-secondary/50 dark:border-secondary-light/50": color === "secondary",
-      "border-success/50 dark:border-success-light/50": color === "success",
-      "border-warning/50 dark:border-warning-light/50": color === "warning",
-      "border-danger/50 dark:border-danger-light/50": color === "danger",
-    },
-    "border rounded-md"
+    borderVariants[color],
+    "border rounded-md overflow-hidden"
   ]}
 >
   <button
@@ -53,16 +70,10 @@
         "px-4 py-2": size === "md",
         "text-lg px-4 py-3": size === "lg",
       },
-      {
-        "text-primary dark:text-primary-light": color === "primary",
-        "text-secondary dark:text-secondary-light": color === "secondary",
-        "text-success dark:text-success-light": color === "success",
-        "text-warning dark:text-warning-light": color === "warning",
-        "text-danger dark:text-danger-light": color === "danger",
-      },
-      open && "border-b border-current/50",
-      "w-full font-bold shadow hover:shadow-md cursor-pointer",
-      "bg-current/5 hover:bg-current/10 shadow-current/10 dark:shadow-current/20 transition-colors"
+      colorVariants[color],
+      open && borderVariants[color],
+      open && "border-b",
+      "w-full font-bold hover:shadow cursor-pointer transition-all"
     ]}
     onclick={() => {
       // biome-ignore lint/suspicious/noGlobalAssign: 误报

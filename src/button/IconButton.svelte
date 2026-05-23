@@ -16,6 +16,20 @@
     icon: LucideIcon;
   }
 
+  const colorVariants = {
+    primary:
+      "text-primary-text not-disabled:hover:bg-primary-soft not-disabled:active:bg-primary-soft",
+    secondary:
+      "text-secondary-text not-disabled:hover:bg-secondary-soft not-disabled:active:bg-secondary-soft",
+    success:
+      "text-success-text not-disabled:hover:bg-success-soft not-disabled:active:bg-success-soft",
+    warning:
+      "text-warning-text not-disabled:hover:bg-warning-soft not-disabled:active:bg-warning-soft",
+    danger:
+      "text-danger-text not-disabled:hover:bg-danger-soft not-disabled:active:bg-danger-soft",
+    unstyled: "",
+  } satisfies Record<ColorType, ClassValue>;
+
   const {
     class: className,
     size = "md",
@@ -36,15 +50,9 @@
       "p-1.5": size === "md",
       "text-lg p-2": size === "lg",
     },
+    colorVariants[color],
     {
-      "text-primary dark:text-primary-light": color === "primary",
-      "text-secondary dark:text-secondary-light": color === "secondary",
-      "text-success dark:text-success-light": color === "success",
-      "text-warning dark:text-warning-light": color === "warning",
-      "text-danger dark:text-danger-light": color === "danger",
-    },
-    {
-      "active:scale-95 hover:bg-current/10 dark:hover:bg-current/20": !disabled && !loading,
+      "active:scale-95": !disabled && !loading,
       "opacity-70": disabled,
     },
     "rounded-md transition-all",

@@ -21,6 +21,15 @@
     icon: Icon,
     children,
   }: Props = $props();
+
+  const colorVariants = {
+    primary: "bg-primary-soft text-primary-text border-primary-border",
+    secondary: "bg-secondary-soft text-secondary-text border-secondary-border",
+    success: "bg-success-soft text-success-text border-success-border",
+    warning: "bg-warning-soft text-warning-text border-warning-border",
+    danger: "bg-danger-soft text-danger-text border-danger-border",
+    unstyled: "",
+  } satisfies Record<ColorType, ClassValue>;
 </script>
 
 <div
@@ -30,15 +39,8 @@
       "px-4 py-3 gap-1.5": size === "md",
       "text-lg px-4 py-3 gap-2": size === "lg",
     },
-    {
-      "text-primary dark:text-primary-light": color === "primary",
-      "text-secondary dark:text-secondary-light": color === "secondary",
-      "text-success dark:text-success-light": color === "success",
-      "text-warning dark:text-warning-light": color === "warning",
-      "text-danger dark:text-danger-light": color === "danger",
-    },
+    colorVariants[color],
     "grid grid-rows-[auto_1fr] grid-cols-[auto_1fr] border rounded-md",
-    "bg-current/10 border-current/50",
   ]}
 >
   {#if Icon}

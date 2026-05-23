@@ -23,37 +23,36 @@
   {#each items as item (item.value)}
     {@const itemId = `${tabsId}-item-${item.value}`}
 
-    <input
-      id={itemId}
-      type="radio"
-      class="peer sr-only"
-      name={tabsId}
-      checked={item.value === active}
-      onchange={() => active = item.value}
-      disabled={item.disabled}
-    >
+    <div>
+      <input
+        id={itemId}
+        type="radio"
+        class="peer sr-only"
+        name={tabsId}
+        checked={item.value === active}
+        onchange={() => active = item.value}
+        disabled={item.disabled}
+      >
 
-    <label
-      for={itemId}
-      class={[
-        {
-          "text-primary dark:text-primary-light border-current peer-focus-visible:outline": item.value === active,
-          "text-secondary dark:text-secondary-light border-secondary-light dark:border-secondary": item.value !== active,
-        },
-        {
-          "cursor-pointer active:scale-95 hover:bg-current/5 dark:hover:bg-current/10": !item.disabled,
-          "cursor-not-allowed opacity-70": item.disabled,
-        },
-        "flex gap-1.5 items-center border-b-2 rounded-t px-3 py-1.5 transition-all",
-      ]}
-    >
-      {#if item.icon}
-        {@const Icon = item.icon}
+      <label
+        for={itemId}
+        class={[
+          {
+            "cursor-pointer active:scale-95 hover:bg-secondary-soft peer-checked:hover:bg-primary-soft": !item.disabled,
+            "cursor-not-allowed opacity-70": item.disabled,
+          },
+          "flex gap-1.5 items-center border-b-2 rounded-t px-3 py-1.5 transition-all",
+          "text-secondary-text border-secondary-border peer-checked:text-primary-text peer-checked:border-primary-border",
+        ]}
+      >
+        {#if item.icon}
+          {@const Icon = item.icon}
 
-        <Icon />
-      {/if}
+          <Icon />
+        {/if}
 
-      <span>{item.name}</span>
-    </label>
+        <span>{item.name}</span>
+      </label>
+    </div>
   {/each}
 </div>

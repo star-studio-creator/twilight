@@ -31,7 +31,7 @@
       "hover:shadow-md": !disabled,
       "cursor-not-allowed opacity-70": disabled,
     },
-    "border rounded-md shadow border-secondary-light shadow-secondary-light/20 dark:border-secondary dark:shadow-secondary/20 transition-shadow",
+    "border rounded-md shadow border-muted-border shadow-muted-shadow transition-shadow",
     className,
   ]}
   type="number"

@@ -58,7 +58,7 @@
       "flex flex-col": value.length !== 0,
       "grid place-content-center": value.length === 0,
     },
-    "border rounded-md shadow border-secondary-light shadow-secondary-light/20 dark:border-secondary dark:shadow-secondary/20 transition-shadow",
+    "border rounded-md shadow border-muted-border shadow-muted-shadow transition-shadow",
     className,
   ]}
 >
@@ -73,7 +73,7 @@
   >
 
   {#if value.length === 0}
-    <p class="text-secondary dark:text-secondary-light">{placeholder}</p>
+    <p class="text-secondary-text">{placeholder}</p>
   {:else}
     <div class="flex flex-1 flex-wrap gap-2">
       {#each value as file}
@@ -84,9 +84,7 @@
     </div>
 
     <div class="flex justify-between items-end">
-      <p class="text-sm text-secondary dark:text-secondary-light">
-        已选择 {value.length} 个文件
-      </p>
+      <p class="text-sm text-secondary-text">已选择 {value.length} 个文件</p>
 
       {#if clearable && value.length > 0}
         <OutlineButton size="sm" color="secondary" onclick={clear} icon={Trash}>

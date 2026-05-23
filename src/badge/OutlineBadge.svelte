@@ -21,6 +21,15 @@
     iconPosition = "left",
     children,
   }: Props = $props();
+
+  const colorVariants = {
+    primary: "text-primary-text border-primary-border",
+    secondary: "text-secondary-text border-secondary-border",
+    success: "text-success-text border-success-border",
+    warning: "text-warning-text border-warning-border",
+    danger: "text-danger-text border-danger-border",
+    unstyled: "",
+  } satisfies Record<ColorType, ClassValue>;
 </script>
 
 <span
@@ -30,13 +39,7 @@
       "gap-1 px-1.5": size === "md",
       "gap-1 text-lg px-2": size === "lg",
     },
-    {
-      "text-primary dark:text-primary-light": color === "primary",
-      "text-secondary dark:text-secondary-light": color === "secondary",
-      "text-success dark:text-success-light": color === "success",
-      "text-warning dark:text-warning-light": color === "warning",
-      "text-danger dark:text-danger-light": color === "danger",
-    },
+    colorVariants[color],
     "w-fit flex items-center border rounded-md",
     className,
   ]}
