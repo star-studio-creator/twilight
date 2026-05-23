@@ -33,7 +33,7 @@
 
 <style>
   @reference "tailwindcss";
-  @reference "@/theme/default.css";
+  @reference "../theme/default.css";
 
   .slider {
     --slider-progress: 0%;
