@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.4.12/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.4.15/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -23,32 +23,11 @@
   "linter": {
     "rules": {
       "complexity": {
-        "useLiteralKeys": "off",
-        "noImportantStyles": "off"
-      },
-      "suspicious": {
-        "noExplicitAny": "off"
+        "useLiteralKeys": "off"
       },
       "style": {
         "useTemplate": "off"
       }
     }
-  },
-  "overrides": [
-    {
-      "includes": ["**/*.svelte"],
-      "linter": {
-        "rules": {
-          "correctness": {
-            "noUnusedVariables": "off",
-            "noUnusedImports": "off"
-          },
-          "suspicious": {
-            "noAssignInExpressions": "off",
-            "noGlobalAssign": "off"
-          }
-        }
-      }
-    }
-  ]
+  }
 }

@@ -1,6 +1,7 @@
 .theme-switching *,
 .theme-switching *::before,
 .theme-switching *::after {
+  /* biome-ignore lint/complexity/noImportantStyles: 主题切换时临时禁用动画 */
   transition: none !important;
 }
 
