@@ -23,7 +23,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 ```
 
-## 明暗主题切换
+## 浅色 / 深色主题切换
 
 ```typescript
 import { getTheme, setTheme, toggleTheme } from "@star-studio/twilight/theme";
@@ -188,3 +188,11 @@ html.dark {
   );
 }
 ```
+
+## 禁用深色主题
+
+您可以在自定义主题时删除 `html.dark` 块，以禁用深色主题能力。这将从组件库中移除深色主题所用到的 CSS 变量，从而略微减小打包体积。
+
+禁用深色主题后，尝试切换主题不会抛出异常，但将不会对页面样式生效。
+
+即使禁用了深色主题，您依然需要保留 `@custom-variant dark (&:where(.dark, .dark *));` ，以保证 Tailwind CSS 正确判断当前主题。
