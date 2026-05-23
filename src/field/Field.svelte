@@ -34,9 +34,9 @@
   {@render children()}
 
   {#if error}
-    <p class="text-sm text-danger dark:text-danger-light">{error}</p>
+    <p class="text-sm text-danger">{error}</p>
   {:else if description}
-    <p class="text-sm text-secondary dark:text-secondary-light">
+    <p class="text-xs text-secondary/70">
       {description}
     </p>
   {/if}
