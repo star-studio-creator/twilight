@@ -30,10 +30,12 @@
 
   const titleId = $props.id();
 
+  // biome-ignore lint/correctness/noUnusedVariables: 误报
   function portal(node: HTMLElement) {
     document.body.appendChild(node);
   }
 
+  // biome-ignore lint/correctness/noUnusedVariables: 误报
   function scrollLock() {
     document.body.style.overflow = "hidden";
 

@@ -38,7 +38,14 @@
   <Field label="显示图标"><Switch bind:enabled={withIcon} /></Field>
 </div>
 
-<SolidButton onclick={() => open = true}>打开模态窗</SolidButton>
+<SolidButton
+  onclick={() => {
+    // biome-ignore lint/suspicious/noGlobalAssign: 误报
+    open = true;
+  }}
+>
+  打开模态窗
+</SolidButton>
 
 <Modal
   class="flex flex-col gap-1"
@@ -48,7 +55,15 @@
   {closeable}
   icon={withIcon ? AppWindow : undefined}
 >
-  <SolidButton onclick={() => open = false} icon={X}>关闭模态窗</SolidButton>
+  <SolidButton
+    onclick={() => {
+      // biome-ignore lint/suspicious/noGlobalAssign: 误报
+      open = false;
+    }}
+    icon={X}
+  >
+    关闭模态窗
+  </SolidButton>
 
   {#each { length: 10 } as _}
     <p>{DEMO_TEXT}</p>

@@ -64,7 +64,10 @@
       "w-full font-bold shadow hover:shadow-md cursor-pointer",
       "bg-current/5 hover:bg-current/10 shadow-current/10 dark:shadow-current/20 transition-colors"
     ]}
-    onclick={() => open = !open}
+    onclick={() => {
+      // biome-ignore lint/suspicious/noGlobalAssign: 误报
+      open = !open;
+    }}
     aria-expanded={open}
     aria-controls={panelId}
   >
