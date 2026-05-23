@@ -33,7 +33,7 @@
       "hover:shadow-md": !disabled,
       "cursor-not-allowed opacity-70": disabled,
     },
-    "border rounded-md shadow border-secondary-light shadow-secondary-light/20 dark:border-secondary-dark dark:shadow-secondary-dark/20 transition-shadow",
+    "border rounded-md shadow border-border shadow-shadow transition-shadow",
     className,
   ]}
   type={shadowed ? "password" : "text"}
