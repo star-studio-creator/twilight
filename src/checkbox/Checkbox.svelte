@@ -19,6 +19,29 @@
     disabled = false,
     ...props
   }: Props = $props();
+
+  const colorVariants = {
+    primary:
+      "border-primary-border hover:bg-primary-soft checked:border-primary checked:bg-primary checked:shadow-primary-shadow checked:hover:bg-primary-hover checked:hover:border-primary-hover checked:active:bg-primary-active checked:active:border-primary-active",
+    secondary:
+      "border-secondary-border hover:bg-secondary-soft checked:border-secondary checked:bg-secondary checked:shadow-secondary-shadow checked:hover:bg-secondary-hover checked:hover:border-secondary-hover checked:active:bg-secondary-active checked:active:border-secondary-active",
+    success:
+      "border-success-border hover:bg-success-soft checked:border-success checked:bg-success checked:shadow-success-shadow checked:hover:bg-success-hover checked:hover:border-success-hover checked:active:bg-success-active checked:active:border-success-active",
+    warning:
+      "border-warning-border hover:bg-warning-soft checked:border-warning checked:bg-warning checked:shadow-warning-shadow checked:hover:bg-warning-hover checked:hover:border-warning-hover checked:active:bg-warning-active checked:active:border-warning-active",
+    danger:
+      "border-danger-border hover:bg-danger-soft checked:border-danger checked:bg-danger checked:shadow-danger-shadow checked:hover:bg-danger-hover checked:hover:border-danger-hover checked:active:bg-danger-active checked:active:border-danger-active",
+    unstyled: "",
+  } satisfies Record<ColorType, ClassValue>;
+
+  const iconColorVariants = {
+    primary: "text-primary-contrast",
+    secondary: "text-secondary-contrast",
+    success: "text-success-contrast",
+    warning: "text-warning-contrast",
+    danger: "text-danger-contrast",
+    unstyled: "",
+  } satisfies Record<ColorType, ClassValue>;
 </script>
 
 <div class="relative">
@@ -30,36 +53,28 @@
         "size-5": size === "md",
         "size-6": size === "lg",
       },
-      !checked && "bg-secondary-light shadow-secondary-light/20 dark:bg-secondary dark:shadow-secondary/20",
-      checked && {
-        "bg-primary shadow-primary/20 dark:bg-primary-dark dark:shadow-primary-dark/20": color === "primary",
-        "bg-secondary shadow-secondary/20 dark:bg-secondary-dark dark:shadow-secondary-dark/20": color === "secondary",
-        "bg-success shadow-success/20 dark:bg-success-dark dark:shadow-success-dark/20": color === "success",
-        "bg-warning shadow-warning/20 dark:bg-warning-dark dark:shadow-warning-dark/20": color === "warning",
-        "bg-danger shadow-danger/20 dark:bg-danger-dark dark:shadow-danger-dark/20": color === "danger",
-      },
+      colorVariants[color],
       {
         "cursor-pointer active:scale-95 hover:shadow-md": !disabled,
         "cursor-not-allowed opacity-50": disabled,
       },
-      "appearance-none rounded-md shadow transition-all",
+      "peer appearance-none rounded border shadow transition-all",
       className,
     ]}
     bind:checked
     {disabled}
     {...props}
   >
-  {#if checked}
-    <Check
-      class={[
-        {
-          "top-1 left-0.5 text-xs": size === "sm",
-          "top-0.5 left-0.5 text-[16px]": size === "md",
-          "top-0.5 left-0.5 text-xl": size === "lg",
-        },
-        "absolute pointer-events-none text-neutral-50",
-      ]}
-      strokeWidth={3}
-    />
-  {/if}
+  <Check
+    class={[
+      {
+        "top-1 left-0.5 text-xs": size === "sm",
+        "top-0.5 left-0.5 text-[16px]": size === "md",
+        "top-0.5 left-0.5 text-xl": size === "lg",
+      },
+      iconColorVariants[color],
+      "absolute pointer-events-none opacity-0 peer-checked:opacity-100 transition-opacity",
+    ]}
+    strokeWidth={3}
+  />
 </div>
