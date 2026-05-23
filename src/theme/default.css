@@ -52,7 +52,7 @@ html.dark {
   --twilight-color-primary-active: var(--color-blue-500);
   --twilight-color-primary-soft: var(--color-blue-950);
   --twilight-color-primary-contrast: var(--color-neutral-50);
-  --twilight-color-primary-border: var(--color-blue-700);
+  --twilight-color-primary-border: var(--color-blue-500);
   --twilight-color-primary-shadow: --alpha(var(--twilight-color-primary-border) / 30%);
 
   --twilight-color-secondary: var(--color-neutral-200);
@@ -68,7 +68,7 @@ html.dark {
   --twilight-color-success-active: var(--color-green-600);
   --twilight-color-success-soft: var(--color-green-950);
   --twilight-color-success-contrast: var(--color-neutral-50);
-  --twilight-color-success-border: var(--color-green-700);
+  --twilight-color-success-border: var(--color-green-600);
   --twilight-color-success-shadow: --alpha(var(--twilight-color-success-border) / 30%);
 
   --twilight-color-warning: var(--color-orange-600);
@@ -76,7 +76,7 @@ html.dark {
   --twilight-color-warning-active: var(--color-orange-600);
   --twilight-color-warning-soft: var(--color-orange-950);
   --twilight-color-warning-contrast: var(--color-neutral-50);
-  --twilight-color-warning-border: var(--color-orange-700);
+  --twilight-color-warning-border: var(--color-orange-600);
   --twilight-color-warning-shadow: --alpha(var(--twilight-color-warning-border) / 30%);
 
   --twilight-color-danger: var(--color-red-600);
@@ -84,7 +84,7 @@ html.dark {
   --twilight-color-danger-active: var(--color-red-600);
   --twilight-color-danger-soft: var(--color-red-950);
   --twilight-color-danger-contrast: var(--color-neutral-50);
-  --twilight-color-danger-border: var(--color-red-700);
+  --twilight-color-danger-border: var(--color-red-600);
   --twilight-color-danger-shadow: --alpha(var(--twilight-color-danger-border) / 30%);
 }
 
