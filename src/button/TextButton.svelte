@@ -19,11 +19,11 @@
   }
 
   const colorVariants = {
-    primary: "text-primary-text",
-    secondary: "text-secondary-text",
-    success: "text-success-text",
-    warning: "text-warning-text",
-    danger: "text-danger-text",
+    primary: "text-primary-text ring-primary-border",
+    secondary: "text-secondary-text ring-secondary-border",
+    success: "text-success-text ring-success-border",
+    warning: "text-warning-text ring-warning-border",
+    danger: "text-danger-text ring-danger-border",
     unstyled: "",
   } satisfies Record<ColorType, ClassValue>;
 
@@ -50,7 +50,7 @@
     },
     colorVariants[color],
     {
-      "active:scale-95": !disabled && !loading,
+      "active:scale-95 focus:outline-none focus-visible:ring-2": !disabled && !loading,
       "opacity-70": disabled,
     },
     "flex items-center transition-all",

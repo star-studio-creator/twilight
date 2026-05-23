@@ -55,7 +55,7 @@
     },
     colorVariants[color],
     {
-      "shadow hover:shadow-md active:scale-95": !disabled && !loading,
+      "shadow hover:shadow-md active:scale-95 focus:outline-none focus-visible:ring": !disabled && !loading,
       "opacity-70": disabled,
     },
     "flex items-center border rounded-md transition-all",

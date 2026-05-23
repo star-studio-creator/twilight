@@ -33,15 +33,15 @@
 
   const colorVariants = {
     primary:
-      "text-primary-contrast bg-primary-bg not-disabled:hover:bg-primary-hover not-disabled:active:bg-primary-active shadow-primary-shadow",
+      "text-primary-contrast bg-primary-bg not-disabled:focus-visible:ring-primary-border not-disabled:hover:bg-primary-hover not-disabled:active:bg-primary-active shadow-primary-shadow",
     secondary:
-      "text-secondary-contrast bg-secondary-bg not-disabled:hover:bg-secondary-hover not-disabled:active:bg-secondary-active shadow-secondary-shadow",
+      "text-secondary-contrast bg-secondary-bg not-disabled:focus-visible:ring-secondary-border not-disabled:hover:bg-secondary-hover not-disabled:active:bg-secondary-active shadow-secondary-shadow",
     success:
-      "text-success-contrast bg-success-bg not-disabled:hover:bg-success-hover not-disabled:active:bg-success-active shadow-success-shadow",
+      "text-success-contrast bg-success-bg not-disabled:focus-visible:ring-success-border not-disabled:hover:bg-success-hover not-disabled:active:bg-success-active shadow-success-shadow",
     warning:
-      "text-warning-contrast bg-warning-bg not-disabled:hover:bg-warning-hover not-disabled:active:bg-warning-active shadow-warning-shadow",
+      "text-warning-contrast bg-warning-bg not-disabled:focus-visible:ring-warning-border not-disabled:hover:bg-warning-hover not-disabled:active:bg-warning-active shadow-warning-shadow",
     danger:
-      "text-danger-contrast bg-danger-bg not-disabled:hover:bg-danger-hover not-disabled:active:bg-danger-active shadow-danger-shadow",
+      "text-danger-contrast bg-danger-bg not-disabled:focus-visible:ring-danger-border not-disabled:hover:bg-danger-hover not-disabled:active:bg-danger-active shadow-danger-shadow",
     unstyled: "",
   } satisfies Record<ColorType, ClassValue>;
 </script>
@@ -55,7 +55,7 @@
     },
     colorVariants[color],
     {
-      "active:scale-95 shadow hover:shadow-md": !disabled && !loading,
+      "active:scale-95 shadow hover:shadow-md focus:outline-none focus-visible:ring-2": !disabled && !loading,
       "opacity-70": disabled,
     },
     "flex items-center rounded-md transition-all",
