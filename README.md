@@ -6,7 +6,7 @@
 
 - 导入 Tailwind CSS
 - 导入组件库基础 CSS
-- 导入默认主题 CSS
+- 导入默认主题 CSS（如需自定义主题可跳过）
 - 将组件库路径加入 Tailwind CSS 扫描范围
 - 设置暗色主题应用条件
 
@@ -23,7 +23,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 ```
 
-## 明暗主题切换
+## 浅色 / 深色主题切换
 
 ```typescript
 import { getTheme, setTheme, toggleTheme } from "@star-studio/twilight/theme";
@@ -42,31 +42,157 @@ toggleTheme();
 您可将该模板复制到主 CSS 文件中，在此基础上进行主题定制：
 
 ```css
-body {
-  color: var(--color-neutral-950);
-  background-color: var(--color-neutral-50);
+html {
+  --twilight-color-bg: var(--color-neutral-50);
+  --twilight-color-fg: var(--color-neutral-950);
+
+  --twilight-color-muted-text: var(--color-neutral-500);
+  --twilight-color-muted-bg: var(--color-neutral-300);
+  --twilight-color-muted-border: var(--color-neutral-300);
+  --twilight-color-muted-shadow: --alpha(
+    var(--twilight-color-muted-border) /
+    30%
+  );
+
+  --twilight-color-primary-text: var(--color-blue-600);
+  --twilight-color-primary-bg: var(--color-blue-600);
+  --twilight-color-primary-hover: var(--color-blue-700);
+  --twilight-color-primary-active: var(--color-blue-800);
+  --twilight-color-primary-soft: var(--color-blue-100);
+  --twilight-color-primary-contrast: var(--color-neutral-50);
+  --twilight-color-primary-border: var(--color-blue-500);
+  --twilight-color-primary-shadow: --alpha(
+    var(--twilight-color-primary-border) /
+    30%
+  );
+
+  --twilight-color-secondary-text: var(--color-neutral-800);
+  --twilight-color-secondary-bg: var(--color-neutral-800);
+  --twilight-color-secondary-hover: var(--color-neutral-900);
+  --twilight-color-secondary-active: var(--color-neutral-950);
+  --twilight-color-secondary-soft: var(--color-neutral-200);
+  --twilight-color-secondary-contrast: var(--color-neutral-50);
+  --twilight-color-secondary-border: var(--color-neutral-500);
+  --twilight-color-secondary-shadow: --alpha(
+    var(--twilight-color-secondary-border) /
+    30%
+  );
+
+  --twilight-color-success-text: var(--color-green-700);
+  --twilight-color-success-bg: var(--color-green-700);
+  --twilight-color-success-hover: var(--color-green-800);
+  --twilight-color-success-active: var(--color-green-900);
+  --twilight-color-success-soft: var(--color-green-100);
+  --twilight-color-success-contrast: var(--color-neutral-50);
+  --twilight-color-success-border: var(--color-green-600);
+  --twilight-color-success-shadow: --alpha(
+    var(--twilight-color-success-border) /
+    30%
+  );
+
+  --twilight-color-warning-text: var(--color-orange-600);
+  --twilight-color-warning-bg: var(--color-orange-600);
+  --twilight-color-warning-hover: var(--color-orange-700);
+  --twilight-color-warning-active: var(--color-orange-800);
+  --twilight-color-warning-soft: var(--color-orange-100);
+  --twilight-color-warning-contrast: var(--color-neutral-50);
+  --twilight-color-warning-border: var(--color-orange-500);
+  --twilight-color-warning-shadow: --alpha(
+    var(--twilight-color-warning-border) /
+    30%
+  );
+
+  --twilight-color-danger-text: var(--color-red-600);
+  --twilight-color-danger-bg: var(--color-red-600);
+  --twilight-color-danger-hover: var(--color-red-700);
+  --twilight-color-danger-active: var(--color-red-800);
+  --twilight-color-danger-soft: var(--color-red-100);
+  --twilight-color-danger-contrast: var(--color-neutral-50);
+  --twilight-color-danger-border: var(--color-red-500);
+  --twilight-color-danger-shadow: --alpha(
+    var(--twilight-color-danger-border) /
+    30%
+  );
 }
 
-html.dark body {
-  color: var(--color-neutral-50);
-  background-color: var(--color-neutral-950);
-}
+html.dark {
+  --twilight-color-bg: var(--color-neutral-950);
+  --twilight-color-fg: var(--color-neutral-50);
 
-@theme {
-  --color-primary: var(--color-blue-600);
-  --color-primary-light: var(--color-blue-400);
-  --color-primary-dark: var(--color-blue-700);
-  --color-secondary: var(--color-neutral-600);
-  --color-secondary-light: var(--color-neutral-300);
-  --color-secondary-dark: var(--color-neutral-700);
-  --color-success: var(--color-green-600);
-  --color-success-light: var(--color-green-500);
-  --color-success-dark: var(--color-green-700);
-  --color-warning: var(--color-orange-600);
-  --color-warning-light: var(--color-orange-500);
-  --color-warning-dark: var(--color-orange-700);
-  --color-danger: var(--color-red-600);
-  --color-danger-light: var(--color-red-500);
-  --color-danger-dark: var(--color-red-700);
+  --twilight-color-muted-text: var(--color-neutral-400);
+  --twilight-color-muted-bg: var(--color-neutral-700);
+  --twilight-color-muted-border: var(--color-neutral-700);
+  --twilight-color-muted-shadow: --alpha(
+    var(--twilight-color-muted-border) /
+    30%
+  );
+
+  --twilight-color-primary-text: var(--color-blue-400);
+  --twilight-color-primary-bg: var(--color-blue-600);
+  --twilight-color-primary-hover: var(--color-blue-500);
+  --twilight-color-primary-active: var(--color-blue-600);
+  --twilight-color-primary-soft: var(--color-blue-950);
+  --twilight-color-primary-contrast: var(--color-neutral-50);
+  --twilight-color-primary-border: var(--color-blue-500);
+  --twilight-color-primary-shadow: --alpha(
+    var(--twilight-color-primary-border) /
+    30%
+  );
+
+  --twilight-color-secondary-text: var(--color-neutral-300);
+  --twilight-color-secondary-bg: var(--color-neutral-300);
+  --twilight-color-secondary-hover: var(--color-neutral-200);
+  --twilight-color-secondary-active: var(--color-neutral-300);
+  --twilight-color-secondary-soft: var(--color-neutral-800);
+  --twilight-color-secondary-contrast: var(--color-neutral-950);
+  --twilight-color-secondary-border: var(--color-neutral-500);
+  --twilight-color-secondary-shadow: --alpha(
+    var(--twilight-color-secondary-border) /
+    30%
+  );
+
+  --twilight-color-success-text: var(--color-green-600);
+  --twilight-color-success-bg: var(--color-green-700);
+  --twilight-color-success-hover: var(--color-green-600);
+  --twilight-color-success-active: var(--color-green-700);
+  --twilight-color-success-soft: var(--color-green-950);
+  --twilight-color-success-contrast: var(--color-neutral-50);
+  --twilight-color-success-border: var(--color-green-600);
+  --twilight-color-success-shadow: --alpha(
+    var(--twilight-color-success-border) /
+    30%
+  );
+
+  --twilight-color-warning-text: var(--color-orange-500);
+  --twilight-color-warning-bg: var(--color-orange-600);
+  --twilight-color-warning-hover: var(--color-orange-500);
+  --twilight-color-warning-active: var(--color-orange-600);
+  --twilight-color-warning-soft: var(--color-orange-950);
+  --twilight-color-warning-contrast: var(--color-neutral-50);
+  --twilight-color-warning-border: var(--color-orange-600);
+  --twilight-color-warning-shadow: --alpha(
+    var(--twilight-color-warning-border) /
+    30%
+  );
+
+  --twilight-color-danger-text: var(--color-red-500);
+  --twilight-color-danger-bg: var(--color-red-600);
+  --twilight-color-danger-hover: var(--color-red-500);
+  --twilight-color-danger-active: var(--color-red-600);
+  --twilight-color-danger-soft: var(--color-red-950);
+  --twilight-color-danger-contrast: var(--color-neutral-50);
+  --twilight-color-danger-border: var(--color-red-600);
+  --twilight-color-danger-shadow: --alpha(
+    var(--twilight-color-danger-border) /
+    30%
+  );
 }
 ```
+
+## 禁用深色主题
+
+您可以在自定义主题时删除 `html.dark` 块，以禁用深色主题能力。这将从组件库中移除深色主题所用到的 CSS 变量，从而略微减小打包体积。
+
+禁用深色主题后，尝试切换主题不会抛出异常，但将不会对页面样式生效。
+
+即使禁用了深色主题，您依然需要保留 `@custom-variant dark (&:where(.dark, .dark *));` ，以保证 Tailwind CSS 正确判断当前主题。
