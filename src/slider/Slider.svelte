@@ -35,30 +35,23 @@
   @reference "tailwindcss";
 
   .slider {
-    --slider-fill: var(--color-primary);
-    --slider-rest: var(--color-secondary-light);
     --slider-progress: 0%;
 
     background: linear-gradient(
       to right,
-      var(--slider-fill) 0%,
-      var(--slider-fill) var(--slider-progress),
-      var(--slider-rest) var(--slider-progress),
-      var(--slider-rest) 100%
+      var(--twilight-color-primary) 0%,
+      var(--twilight-color-primary) var(--slider-progress),
+      var(--twilight-color-secondary-soft) var(--slider-progress),
+      var(--twilight-color-secondary-soft) 100%
     );
   }
 
-  :global(.dark) .slider {
-    --slider-fill: var(--color-primary-light);
-    --slider-rest: var(--color-secondary-dark);
-  }
-
   .slider::-webkit-slider-thumb {
-    @apply size-4 bg-neutral-50 rounded-full border-3 border-current shadow shadow-current/20 transition-all;
+    @apply size-5 rounded-full bg-primary border-none shadow shadow-primary-shadow transition-all;
   }
 
   .slider::-moz-range-thumb {
-    @apply size-4 bg-neutral-50 rounded-full border-3 border-current shadow shadow-current/20 transition-all;
+    @apply size-5 rounded-full bg-primary border-none shadow shadow-primary-shadow transition-all;
   }
 
   .slider:not(:disabled):active::-webkit-slider-thumb {
@@ -76,7 +69,7 @@
       "cursor-pointer": !disabled,
       "cursor-not-allowed opacity-70": disabled,
     },
-    "slider appearance-none h-1.5 rounded-full text-primary dark:text-primary-light",
+    "slider appearance-none h-1.5 rounded-full text-primary",
     className,
   ]}
   type="range"
