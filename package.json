@@ -83,6 +83,10 @@
       "svelte": "./dist/slider/index.js",
       "types": "./dist/slider/index.d.ts"
     },
+    "./sticky": {
+      "svelte": "./dist/sticky/index.js",
+      "types": "./dist/sticky/index.d.ts"
+    },
     "./switch": {
       "svelte": "./dist/switch/index.js",
       "types": "./dist/switch/index.d.ts"

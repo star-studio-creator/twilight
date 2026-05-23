@@ -15,6 +15,7 @@
   import SquareFunction from "@lucide/svelte/icons/square-function";
   import SquareMenu from "@lucide/svelte/icons/square-menu";
   import SquareMousePointer from "@lucide/svelte/icons/square-mouse-pointer";
+  import Sticker from "@lucide/svelte/icons/sticker";
   import Tag from "@lucide/svelte/icons/tag";
   import TextCursorInput from "@lucide/svelte/icons/text-cursor-input";
   import ToggleRight from "@lucide/svelte/icons/toggle-right";
@@ -45,6 +46,7 @@
     { name: "Placeholder", path: "/components/placeholder", icon: Hammer },
     { name: "Select", path: "/components/select", icon: SquareMousePointer },
     { name: "Slider", path: "/components/slider", icon: Settings2 },
+    { name: "Sticky", path: "/components/sticky", icon: Sticker },
     { name: "Switch", path: "/components/switch", icon: ToggleRight },
     { name: "Tabs", path: "/components/tabs", icon: PanelsTopLeft },
     { name: "Toast", path: "/components/toast", icon: Info },
