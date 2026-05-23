@@ -18,6 +18,20 @@
     children: Snippet;
   }
 
+  const colorVariants = {
+    primary:
+      "text-primary border-primary-border hover:bg-primary-soft active:bg-primary-soft shadow-primary-shadow",
+    secondary:
+      "text-secondary border-secondary-border hover:bg-secondary-soft active:bg-secondary-soft shadow-secondary-shadow",
+    success:
+      "text-success border-success-border hover:bg-success-soft active:bg-success-soft shadow-success-shadow",
+    warning:
+      "text-warning border-warning-border hover:bg-warning-soft active:bg-warning-soft shadow-warning-shadow",
+    danger:
+      "text-danger border-danger-border hover:bg-danger-soft active:bg-danger-soft shadow-danger-shadow",
+    unstyled: "",
+  } satisfies Record<ColorType, ClassValue>;
+
   const {
     class: className,
     size = "md",
@@ -39,18 +53,12 @@
       "gap-1 px-2 py-1.5": size === "md",
       "gap-1 text-lg px-2 py-1.5": size === "lg",
     },
+    colorVariants[color],
     {
-      "text-primary dark:text-primary-light": color === "primary",
-      "text-secondary dark:text-secondary-light": color === "secondary",
-      "text-success dark:text-success-light": color === "success",
-      "text-warning dark:text-warning-light": color === "warning",
-      "text-danger dark:text-danger-light": color === "danger",
-    },
-    {
-      "shadow hover:shadow-md shadow-current/20 active:scale-95 hover:bg-current/10 dark:hover:bg-current/20": !disabled && !loading,
+      "shadow hover:shadow-md active:scale-95": !disabled && !loading,
       "opacity-70": disabled,
     },
-    "flex items-center border border-current/50 rounded-md transition-all",
+    "flex items-center border rounded-md transition-all",
     className,
   ]}
   {onclick}

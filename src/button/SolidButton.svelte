@@ -30,6 +30,20 @@
     children,
     ...props
   }: Props = $props();
+
+  const colorVariants = {
+    primary:
+      "text-primary-contrast bg-primary hover:bg-primary-hover active:bg-primary-active shadow-primary-shadow",
+    secondary:
+      "text-secondary-contrast bg-secondary hover:bg-secondary-hover active:bg-secondary-active shadow-secondary-shadow",
+    success:
+      "text-success-contrast bg-success hover:bg-success-hover active:bg-success-active shadow-success-shadow",
+    warning:
+      "text-warning-contrast bg-warning hover:bg-warning-hover active:bg-warning-active shadow-warning-shadow",
+    danger:
+      "text-danger-contrast bg-danger hover:bg-danger-hover active:bg-danger-active shadow-danger-shadow",
+    unstyled: "",
+  } satisfies Record<ColorType, ClassValue>;
 </script>
 
 <BaseButton
@@ -39,14 +53,7 @@
       "gap-1 px-2 py-1.5": size === "md",
       "gap-1 text-lg px-2 py-1.5": size === "lg",
     },
-    {
-      "text-neutral-50": color !== "unstyled",
-      "bg-primary shadow-primary/20 dark:bg-primary-dark dark:shadow-primary-dark/20": color === "primary",
-      "bg-secondary shadow-secondary/20 dark:bg-secondary-dark dark:shadow-secondary-dark/20": color === "secondary",
-      "bg-success shadow-success/20 dark:bg-success-dark dark:shadow-success-dark/20": color === "success",
-      "bg-warning shadow-warning/20 dark:bg-warning-dark dark:shadow-warning-dark/20": color === "warning",
-      "bg-danger shadow-danger/20 dark:bg-danger-dark dark:shadow-danger-dark/20": color === "danger",
-    },
+    colorVariants[color],
     {
       "active:scale-95 shadow hover:shadow-md": !disabled && !loading,
       "opacity-70": disabled,
