@@ -2,13 +2,19 @@ html {
   --twilight-color-bg: var(--color-neutral-50);
   --twilight-color-fg: var(--color-neutral-950);
 
+  --twilight-color-border: var(--color-neutral-300);
+  --twilight-color-shadow: --alpha(var(--twilight-color-border) / 30%);
+
   --twilight-color-primary: var(--color-blue-600);
   --twilight-color-primary-hover: var(--color-blue-700);
   --twilight-color-primary-active: var(--color-blue-800);
   --twilight-color-primary-soft: var(--color-blue-100);
   --twilight-color-primary-contrast: var(--color-neutral-50);
   --twilight-color-primary-border: var(--color-blue-500);
-  --twilight-color-primary-shadow: --alpha(var(--twilight-color-primary-border) / 30%);
+  --twilight-color-primary-shadow: --alpha(
+    var(--twilight-color-primary-border) /
+    30%
+  );
 
   --twilight-color-secondary: var(--color-neutral-800);
   --twilight-color-secondary-hover: var(--color-neutral-900);
@@ -16,7 +22,10 @@ html {
   --twilight-color-secondary-soft: var(--color-neutral-200);
   --twilight-color-secondary-contrast: var(--color-neutral-50);
   --twilight-color-secondary-border: var(--color-neutral-500);
-  --twilight-color-secondary-shadow: --alpha(var(--twilight-color-secondary-border) / 30%);
+  --twilight-color-secondary-shadow: --alpha(
+    var(--twilight-color-secondary-border) /
+    30%
+  );
 
   --twilight-color-success: var(--color-green-600);
   --twilight-color-success-hover: var(--color-green-700);
@@ -24,7 +33,10 @@ html {
   --twilight-color-success-soft: var(--color-green-100);
   --twilight-color-success-contrast: var(--color-neutral-50);
   --twilight-color-success-border: var(--color-green-500);
-  --twilight-color-success-shadow: --alpha(var(--twilight-color-success-border) / 30%);
+  --twilight-color-success-shadow: --alpha(
+    var(--twilight-color-success-border) /
+    30%
+  );
 
   --twilight-color-warning: var(--color-orange-600);
   --twilight-color-warning-hover: var(--color-orange-700);
@@ -32,7 +44,10 @@ html {
   --twilight-color-warning-soft: var(--color-orange-100);
   --twilight-color-warning-contrast: var(--color-neutral-50);
   --twilight-color-warning-border: var(--color-orange-500);
-  --twilight-color-warning-shadow: --alpha(var(--twilight-color-warning-border) / 30%);
+  --twilight-color-warning-shadow: --alpha(
+    var(--twilight-color-warning-border) /
+    30%
+  );
 
   --twilight-color-danger: var(--color-red-600);
   --twilight-color-danger-hover: var(--color-red-700);
@@ -40,12 +55,18 @@ html {
   --twilight-color-danger-soft: var(--color-red-100);
   --twilight-color-danger-contrast: var(--color-neutral-50);
   --twilight-color-danger-border: var(--color-red-500);
-  --twilight-color-danger-shadow: --alpha(var(--twilight-color-danger-border) / 30%);
+  --twilight-color-danger-shadow: --alpha(
+    var(--twilight-color-danger-border) /
+    30%
+  );
 }
 
 html.dark {
   --twilight-color-bg: var(--color-neutral-950);
   --twilight-color-fg: var(--color-neutral-50);
+
+  --twilight-color-border: var(--color-neutral-600);
+  --twilight-color-shadow: --alpha(var(--twilight-color-border) / 30%);
 
   --twilight-color-primary: var(--color-blue-500);
   --twilight-color-primary-hover: var(--color-blue-400);
@@ -53,7 +74,10 @@ html.dark {
   --twilight-color-primary-soft: var(--color-blue-950);
   --twilight-color-primary-contrast: var(--color-neutral-50);
   --twilight-color-primary-border: var(--color-blue-500);
-  --twilight-color-primary-shadow: --alpha(var(--twilight-color-primary-border) / 30%);
+  --twilight-color-primary-shadow: --alpha(
+    var(--twilight-color-primary-border) /
+    30%
+  );
 
   --twilight-color-secondary: var(--color-neutral-200);
   --twilight-color-secondary-hover: var(--color-neutral-100);
@@ -61,7 +85,10 @@ html.dark {
   --twilight-color-secondary-soft: var(--color-neutral-800);
   --twilight-color-secondary-contrast: var(--color-neutral-950);
   --twilight-color-secondary-border: var(--color-neutral-500);
-  --twilight-color-secondary-shadow: --alpha(var(--twilight-color-secondary-border) / 30%);
+  --twilight-color-secondary-shadow: --alpha(
+    var(--twilight-color-secondary-border) /
+    30%
+  );
 
   --twilight-color-success: var(--color-green-600);
   --twilight-color-success-hover: var(--color-green-500);
@@ -69,7 +96,10 @@ html.dark {
   --twilight-color-success-soft: var(--color-green-950);
   --twilight-color-success-contrast: var(--color-neutral-50);
   --twilight-color-success-border: var(--color-green-600);
-  --twilight-color-success-shadow: --alpha(var(--twilight-color-success-border) / 30%);
+  --twilight-color-success-shadow: --alpha(
+    var(--twilight-color-success-border) /
+    30%
+  );
 
   --twilight-color-warning: var(--color-orange-600);
   --twilight-color-warning-hover: var(--color-orange-500);
@@ -77,7 +107,10 @@ html.dark {
   --twilight-color-warning-soft: var(--color-orange-950);
   --twilight-color-warning-contrast: var(--color-neutral-50);
   --twilight-color-warning-border: var(--color-orange-600);
-  --twilight-color-warning-shadow: --alpha(var(--twilight-color-warning-border) / 30%);
+  --twilight-color-warning-shadow: --alpha(
+    var(--twilight-color-warning-border) /
+    30%
+  );
 
   --twilight-color-danger: var(--color-red-600);
   --twilight-color-danger-hover: var(--color-red-500);
@@ -85,10 +118,19 @@ html.dark {
   --twilight-color-danger-soft: var(--color-red-950);
   --twilight-color-danger-contrast: var(--color-neutral-50);
   --twilight-color-danger-border: var(--color-red-600);
-  --twilight-color-danger-shadow: --alpha(var(--twilight-color-danger-border) / 30%);
+  --twilight-color-danger-shadow: --alpha(
+    var(--twilight-color-danger-border) /
+    30%
+  );
 }
 
 @theme inline {
+  --color-fg: var(--twilight-color-fg);
+  --color-bg: var(--twilight-color-bg);
+
+  --color-border: var(--twilight-color-border);
+  --color-shadow: var(--twilight-color-shadow);
+
   --color-primary: var(--twilight-color-primary);
   --color-primary-hover: var(--twilight-color-primary-hover);
   --color-primary-active: var(--twilight-color-primary-active);

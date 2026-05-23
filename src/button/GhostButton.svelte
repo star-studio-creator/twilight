@@ -20,7 +20,8 @@
 
   const colorVariants = {
     primary: "text-primary hover:bg-primary-soft active:bg-primary-soft",
-    secondary: "text-secondary hover:bg-secondary-soft active:bg-secondary-soft",
+    secondary:
+      "text-secondary hover:bg-secondary-soft active:bg-secondary-soft",
     success: "text-success hover:bg-success-soft active:bg-success-soft",
     warning: "text-warning hover:bg-warning-soft active:bg-warning-soft",
     danger: "text-danger hover:bg-danger-soft active:bg-danger-soft",

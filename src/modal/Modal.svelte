@@ -75,7 +75,7 @@
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div
-    class="fixed inset-0 z-20 grid place-content-center bg-black/10 dark:bg-white/20 backdrop-blur-xs"
+    class="fixed inset-0 z-20 grid place-content-center bg-fg/10 backdrop-blur-xs"
     onclick={handleBackdropClick}
     transition:fade={{ duration: 100 }}
     {@attach portal}
@@ -89,7 +89,7 @@
           "w-2xl": size === "lg",
         },
         "flex flex-col gap-4 max-w-[90vw] max-h-[90vh] p-5",
-        "bg-neutral-50 shadow-neutral-50/20 dark:bg-neutral-950 dark:shadow-neutral-950/20 rounded-lg shadow-lg",
+        "bg-bg shadow-bg/30 rounded-lg shadow-lg",
       ]}
       role="dialog"
       aria-modal="true"
