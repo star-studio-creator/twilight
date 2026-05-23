@@ -19,7 +19,7 @@
 <BaseLink
   class={[
     "transition-colors hover:underline decoration-2 underline-offset-4",
-    "text-primary hover:text-primary-dark dark:text-primary-light dark:hover:text-primary",
+    "text-primary hover:text-primary-hover",
     className,
   ]}
   {...props}
