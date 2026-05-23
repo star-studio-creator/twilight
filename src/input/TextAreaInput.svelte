@@ -33,7 +33,7 @@
       "hover:shadow-md": !disabled,
       "cursor-not-allowed opacity-70": disabled,
     },
-    "border rounded-md shadow border-muted-border shadow-muted-shadow transition-shadow",
+    "border rounded-md shadow border-muted-border shadow-muted-shadow focus:outline-none focus:border-primary-border transition-all",
     className,
   ]}
   bind:value

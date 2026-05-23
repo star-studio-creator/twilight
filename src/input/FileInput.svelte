@@ -58,7 +58,7 @@
       "flex flex-col": value.length !== 0,
       "grid place-content-center": value.length === 0,
     },
-    "border rounded-md shadow border-muted-border shadow-muted-shadow transition-shadow",
+    "border rounded-md shadow border-muted-border shadow-muted-shadow focus:outline-none focus:border-primary-border transition-all",
     className,
   ]}
 >
