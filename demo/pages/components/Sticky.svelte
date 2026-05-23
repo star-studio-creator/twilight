@@ -20,7 +20,7 @@
   <Select bind:value={position} options={positionOptions} />
 </Field>
 
-<div class="w-full h-128 overflow-auto border border-border rounded">
+<div class="w-full h-128 overflow-auto border border-muted-border rounded">
   <div
     class={[
       {
